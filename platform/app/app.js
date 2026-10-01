@@ -122,8 +122,8 @@ function viewLogin() {
     h('section', { class: 'login-form' }, form),
     h('section', { class: 'login-art' },
       h('div', { class: 'art-card' },
-        doodle('butterfly', 'doodle d1'), doodle('sparkles', 'doodle d2'), doodle('flower', 'doodle d3'), doodle('heart', 'doodle d4'),
-        h('img', { class: 'logo', src: 'brand/logo.png', alt: 'Femme Digital' })))));
+        doodle('butterfly-cream', 'doodle d1'), doodle('sparkles-cream', 'doodle d2'), doodle('flower-cream', 'doodle d3'), doodle('heart-cream', 'doodle d4'),
+        h('img', { class: 'logo', src: 'brand/logo-cream.png', alt: 'Femme Digital' })))));
   setTimeout(() => $('#u') && $('#u').focus(), 50);
 }
 
