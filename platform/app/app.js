@@ -121,8 +121,9 @@ function viewLogin() {
   root.replaceChildren(h('main', { class: 'login' },
     h('section', { class: 'login-form' }, form),
     h('section', { class: 'login-art' },
-      doodle('butterfly', 'doodle d1'), doodle('sparkles', 'doodle d2'), doodle('flower', 'doodle d3'), doodle('heart', 'doodle d4'),
-      h('img', { class: 'logo', src: 'brand/logo.png', alt: 'Femme Digital' }))));
+      h('div', { class: 'art-card' },
+        doodle('butterfly', 'doodle d1'), doodle('sparkles', 'doodle d2'), doodle('flower', 'doodle d3'), doodle('heart', 'doodle d4'),
+        h('img', { class: 'logo', src: 'brand/logo.png', alt: 'Femme Digital' })))));
   setTimeout(() => $('#u') && $('#u').focus(), 50);
 }
 
