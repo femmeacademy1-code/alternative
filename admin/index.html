@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>עריכת האתר</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body data-view="edit">
+
+<!-- Login -->
+<main id="login" class="login" hidden>
+  <form id="loginForm" class="card">
+    <h1>עריכת האתר</h1>
+    <p class="muted">הזינו את קוד הגישה שקיבלתם כדי לערוך את תוכן האתר.</p>
+    <label class="field"><span class="lbl">קוד גישה</span>
+      <input id="token" type="password" dir="ltr" autocomplete="current-password" required placeholder="github_pat_…">
+    </label>
+    <label class="check"><input id="remember" type="checkbox" checked> <span>זכור אותי במכשיר הזה</span></label>
+    <p id="loginError" class="error" hidden></p>
+    <button class="btn primary" type="submit">כניסה</button>
+    <button class="link" type="button" id="helpBtn">איך משיגים קוד גישה?</button>
+  </form>
+</main>
+
+<!-- Editor -->
+<div id="editor" hidden>
+  <header class="bar">
+    <strong class="bar-title">עריכת האתר</strong>
+    <span id="chip" class="chip" data-s="clean">אין שינויים</span>
+    <span class="spacer"></span>
+    <button class="btn ghost" id="historyBtn" type="button" title="גרסאות קודמות">היסטוריה</button>
+    <button class="btn ghost" id="discardBtn" type="button" disabled>ביטול שינויים</button>
+    <a class="btn ghost" id="liveLink" href="../" target="_blank" rel="noopener">צפייה באתר ↗</a>
+    <button class="btn primary" id="publishBtn" type="button" disabled>פרסום באתר</button>
+    <button class="btn ghost" id="logoutBtn" type="button" title="יציאה">יציאה</button>
+  </header>
+
+  <div class="split">
+    <aside class="side" id="side">
+      <nav id="tabs" class="tabs" aria-label="חלקי האתר"></nav>
+      <div id="panels"></div>
+    </aside>
+    <section class="preview" id="previewWrap">
+      <div class="preview-bar">
+        <span class="muted">תצוגה מקדימה חיה — לחצו על טקסט או תמונה כדי לערוך אותם</span>
+        <span class="spacer"></span>
+        <div class="seg" role="group" aria-label="גודל תצוגה">
+          <button type="button" data-w="desktop" aria-pressed="true">מחשב</button>
+          <button type="button" data-w="mobile" aria-pressed="false">נייד</button>
+        </div>
+      </div>
+      <div class="frame-wrap" id="frameWrap"><iframe id="frame" title="תצוגה מקדימה"></iframe></div>
+    </section>
+  </div>
+
+  <nav class="mobile-switch" aria-label="מעבר בין עריכה לתצוגה">
+    <button type="button" data-v="edit" aria-pressed="true">✏️ עריכה</button>
+    <button type="button" data-v="preview" aria-pressed="false">👁 תצוגה</button>
+  </nav>
+</div>
+
+<dialog id="historyDlg">
+  <form method="dialog"><h2>גרסאות קודמות</h2>
+    <p class="muted">בחרו גרסה לטעינה לעורך. היא לא תפורסם עד שתלחצו "פרסום באתר".</p>
+    <ul id="historyList" class="history"></ul>
+    <menu><button class="btn">סגירה</button></menu>
+  </form>
+</dialog>
+
+<dialog id="helpDlg">
+  <form method="dialog"><h2>איך משיגים קוד גישה?</h2>
+    <p>קוד הגישה נוצר פעם אחת ע״י בעל האתר ב-GitHub:</p>
+    <ol class="steps">
+      <li>נכנסים ל-<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub ← Fine-grained token חדש</a>.</li>
+      <li>ב-<b>Repository access</b> בוחרים <b>Only select repositories</b> ואת הריפו של האתר.</li>
+      <li>ב-<b>Permissions ← Repository permissions</b> מגדירים <b>Contents: Read and write</b>.</li>
+      <li>קובעים תוקף, לוחצים <b>Generate token</b> ומעתיקים את הקוד.</li>
+      <li>מדביקים אותו כאן. אפשר לבטל אותו בכל רגע מ-GitHub.</li>
+    </ol>
+    <menu><button class="btn">הבנתי</button></menu>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="../js/icons.js"></script>
+<script src="config.js"></script>
+<script src="schema.js"></script>
+<script src="github.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

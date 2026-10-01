@@ -1,30 +1,60 @@
-# Handoff: Alternative Dream – Glamping Tent Catalog
+# Alternative Dream – קטלוג אוהלי גלאמפינג
 
-## Task for Claude Code
-Publish this catalog as a live website. **Do not rebuild it** — `index.html` is final, self-contained (all images, fonts, CSS inlined), and ships as-is.
+אתר נחיתה בעברית (RTL), מתפרסם ב-GitHub Pages: `https://femmeacademy1-code.github.io/alternative/`
 
-1. Push the contents of this folder to `https://github.com/femmeacademy1-code/alternative` on branch `main` (the repo is currently empty):
-   ```
-   git init && git branch -M main
-   git remote add origin https://github.com/femmeacademy1-code/alternative.git
-   git add . && git commit -m "Alternative Dream catalog"
-   git push -u origin main
-   ```
-2. Enable GitHub Pages: the included `.github/workflows/pages.yml` deploys on every push to `main`. In the repo go to **Settings → Pages → Source: GitHub Actions** (or run `gh api -X POST repos/femmeacademy1-code/alternative/pages -f build_type=workflow`).
-3. The repo must be **public** for Pages on a free account.
-4. Live URL: `https://femmeacademy1-code.github.io/alternative/`
+**הלקוח עורך את האתר ב-`/admin/` – בלי לגעת בקוד.**
+`https://femmeacademy1-code.github.io/alternative/admin/`
 
-## About the page
-- Hebrew, RTL, mobile-first catalog for Alternative Dream (altnativedream.com).
-- Sections: hero → why us → Lotus models → Bell models → what's included → delivery CTA → contact footer.
-- Size cards per model (swipe on mobile, grid on desktop), photo gallery per model, VAT toggle (18%), sticky WhatsApp button (wa.me/972515490099).
-- Fonts: Assistant (body), Ploni (headings — commercial, falls back to Assistant unless installed/licensed).
-- Colors: green `#52725a`, brown `#72544b`, orange `#c46a2f`, background `#f3ece2`.
+## איך זה עובד
 
-## Notes
-- Lotus 9M specs (height 450cm, weight 100kg, capacity) are estimates — confirm with supplier.
-- To update later: edit in Claude Design, re-export `index.html`, replace and push.
+```
+index.html        שלד הדף (לא נוגעים)
+css/style.css     עיצוב
+js/site.js        בונה את הדף מתוך content.json
+content.json      ← כל הטקסטים, המחירים, הצבעים ונתיבי התמונות
+assets/           תמונות ופונטים (העלאות הלקוח נשמרות ב-assets/uploads/)
+admin/            מערכת העריכה
+```
 
-## Files
-- `index.html` — the full site (standalone)
-- `.github/workflows/pages.yml` — GitHub Pages deploy workflow
+מערכת העריכה היא דף סטטי (בלי שרת). היא מציגה טפסים בעברית + תצוגה מקדימה חיה של האתר
+(לחיצה על טקסט או תמונה בתצוגה קופצת לשדה העריכה שלו). לחיצה על **פרסום באתר** יוצרת commit ב-GitHub
+עם `content.json` והתמונות החדשות, ו-GitHub Actions מפרסם את האתר מחדש (בערך דקה).
+
+מה אפשר לערוך: כותרות וטקסטים, תמונות (העלאה, החלפה, סדר), יתרונות ואייקונים, דגמים (הוספה/מחיקה/סדר),
+גדלים, מפרטים ומחירים (כולל חישוב מע״מ), "מה כלול", באנר, פרטי קשר, צבעי האתר, כותרת ותיאור לגוגל,
+הצגה/הסתרה של קטעים. כולל **היסטוריית גרסאות** עם שחזור, ובדיקת התנגשות אם שני אנשים עורכים במקביל.
+
+## הגדרה חד-פעמית
+
+1. **GitHub Pages** – בריפו: Settings → Pages → Source: **GitHub Actions** (הריפו ציבורי בחשבון חינמי).
+2. **ענף** – מערכת העריכה כותבת ל-`main` (ניתן לשינוי ב-`admin/config.js`).
+3. **קוד גישה ללקוח** – לכל לקוח יוצרים קוד גישה (Fine-grained token):
+   1. https://github.com/settings/personal-access-tokens/new
+   2. Repository access → **Only select repositories** → הריפו הזה
+   3. Repository permissions → **Contents: Read and write**
+   4. קובעים תוקף (למשל שנה), Generate token, ושולחים ללקוח.
+   5. הלקוח נכנס ל-`/admin/`, מדביק את הקוד ומסמן "זכור אותי".
+
+   ביטול גישה ללקוח: מוחקים את ה-token ב-GitHub (Settings → Developer settings). אפשר גם להזמין את הלקוח
+   כ-Collaborator ולתת לו ליצור token בעצמו – אז השינויים יירשמו על שמו.
+
+## הערות אבטחה
+
+- הקוד נשמר בדפדפן של הלקוח (localStorage) רק אם סימן "זכור אותי".
+- הלקוח **לא רואה קוד** ב-UI, אבל טכנית ל-token יש הרשאת כתיבה לכל הריפו. אם צריך הפרדה מלאה
+  (לקוחות שאי אפשר לתת להם כתיבה לקוד בכלל) – מפרידים את התוכן לריפו נפרד, או מוסיפים שרת OAuth קטן.
+- כל טקסט שהלקוח מזין עובר escape בעת הרינדור, כך שאי אפשר להזריק קוד דרך השדות.
+
+## עבודה על הקוד (למפתח)
+
+- להוספת שדה שניתן לעריכה: מוסיפים אותו ל-`content.json`, מציגים אותו ב-`js/site.js`
+  ומתארים אותו ב-`admin/schema.js` – הטופס נבנה אוטומטית מהסכמה.
+- בדיקה מקומית: `python3 -m http.server` מתיקיית הפרויקט, ואז `http://localhost:8000/`.
+  (מסך העריכה מדבר עם GitHub האמיתי ולכן עובד מול הריפו המפורסם.)
+- אפשר להעתיק את `admin/`, `js/`, `content.json` ו-`css/` לדף נחיתה נוסף ולהתאים את `admin/config.js` ואת הסכמה.
+
+## הערות תוכן
+
+- נתוני Lotus 9M (גובה 450 ס״מ, משקל 100 ק״ג, קיבולת) הם הערכה – יש לאשר מול הספק.
+- פונט הכותרות Ploni הוא מסחרי; ללא רישיון/התקנה האתר משתמש ב-Assistant.
+- צבעים מקוריים: ירוק `#52725a`, חום `#72544b`, כתום `#c46a2f`, רקע `#f3ece2`.
