@@ -1,49 +1,49 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><title>Client Portal Mockup</title>
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><title>Femme Digital Client Portal</title>
 <style>
-:root{--g:#52725a;--b:#72544b;--o:#c46a2f;--bg:#f3ece2;--card:#fffaf3;--ink:#2f2a26;--mut:#8a7d72;--line:#e3d8c9}
+:root{--g:#b85150;--b:#47454d;--o:#b85150;--bg:#fff8f4;--card:#ffffff;--ink:#47454d;--mut:#8a7d72;--line:#eee0d6}
 *{box-sizing:border-box;margin:0}body{font-family:Assistant,"Segoe UI",Arial,sans-serif;background:#d9d2c6;color:var(--ink)}
 .screen{width:1440px;height:900px;background:var(--bg);position:relative;overflow:hidden;margin-bottom:40px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--g);font-size:22px}
-.logo i{width:38px;height:38px;border-radius:50%;background:var(--g);display:grid;place-items:center;color:#fff;font-style:normal}
+.logo{width:208px;height:112px;overflow:hidden;position:relative;background:#fff8f4;border-radius:14px}.logo img{position:absolute;left:-548px;top:-102px;width:1080px;max-width:none}
+
 .btn{background:var(--o);color:#fff;border:0;border-radius:10px;padding:13px 22px;font-weight:700;font-size:16px;font-family:inherit}
 /* login */
 .login{display:grid;grid-template-columns:1fr 1fr;height:100%}
-.login .l{background:linear-gradient(160deg,var(--g),#3c5643);color:#fff;padding:70px;display:flex;flex-direction:column;justify-content:space-between}
+.login .l{background:linear-gradient(160deg,#ddf5ee,#ffd6bc);color:#47454d;padding:70px;display:flex;flex-direction:column;justify-content:space-between}
 .login .l h1{font-size:46px;line-height:1.2;margin-bottom:18px}.login .l p{opacity:.85;font-size:19px;max-width:440px}
-.login .l .logo{color:#fff}.login .l .logo i{background:var(--o)}
-.pills{display:flex;gap:10px;flex-wrap:wrap}.pills span{background:#ffffff22;padding:8px 16px;border-radius:99px;font-size:15px}
-.login .r{display:grid;place-items:center}.box{width:420px;background:var(--card);padding:44px;border-radius:20px;box-shadow:0 20px 50px #72544b22}
+
+.pills{display:flex;gap:10px;flex-wrap:wrap}.pills span{background:#ffffffaa;padding:8px 16px;border-radius:99px;font-size:15px}
+.login .r{display:grid;place-items:center}.box{width:420px;background:var(--card);padding:44px;border-radius:20px;box-shadow:0 20px 50px #47454d22}
 .box h2{font-size:28px;margin-bottom:6px}.box small{color:var(--mut)}
 .f{margin-top:20px}.f label{display:block;font-size:14px;color:var(--b);font-weight:700;margin-bottom:6px}
 .f div{border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;background:#fff;color:var(--mut)}
 .box .btn{width:100%;margin-top:26px}.pw{margin-top:22px;text-align:center;color:var(--mut);font-size:13px}
 /* app */
 .app{display:grid;grid-template-columns:240px 1fr;height:100%}
-.side{background:var(--b);color:#f3ece2;padding:28px 20px}.side .logo{color:#fff;margin-bottom:36px}.side .logo i{background:var(--o)}
-.side a{display:flex;gap:12px;padding:12px 14px;border-radius:10px;margin-bottom:6px;font-size:16px;opacity:.85}.side a.on{background:#ffffff24;opacity:1;font-weight:700}
+.side{background:var(--b);color:#fff8f4;padding:28px 20px}.side .logo{margin-bottom:30px}
+.side a{display:flex;gap:12px;padding:12px 14px;border-radius:10px;margin-bottom:6px;font-size:16px;opacity:.85}.side a.on{background:#ffffff26;opacity:1;font-weight:700}
 .side .pam{position:absolute;bottom:24px;font-size:12px;opacity:.7;width:200px;border-top:1px solid #ffffff30;padding-top:14px}
 .main{padding:30px 38px;overflow:hidden}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.top h1{font-size:28px}.top .sub{color:var(--mut);font-size:15px;margin-top:2px}
 .user{display:flex;gap:10px;align-items:center;font-size:14px}.av{width:40px;height:40px;border-radius:50%;background:var(--o);color:#fff;display:grid;place-items:center;font-weight:800}
-.badge{display:inline-flex;gap:6px;align-items:center;background:#e3ecdf;color:var(--g);padding:5px 12px;border-radius:99px;font-size:13px;font-weight:700}
+.badge{display:inline-flex;gap:6px;align-items:center;background:#ddf5ee;color:#2f7a64;padding:5px 12px;border-radius:99px;font-size:13px;font-weight:700}
 .badge.m{background:#e7efff;color:#1a5bd8}
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:20px}
-.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.k span{color:var(--mut);font-size:14px}.k b{display:block;font-size:30px;margin:6px 0 2px}.k em{font-style:normal;font-size:13px;color:var(--g);font-weight:700}.k em.d{color:#b3402a}
+.k{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.k span{color:var(--mut);font-size:14px}.k b{display:block;font-size:30px;margin:6px 0 2px}.k em{font-style:normal;font-size:13px;color:#2f7a64;font-weight:700}.k em.d{color:#b3402a}
 .row{display:grid;grid-template-columns:1.7fr 1fr;gap:16px;margin-bottom:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}.card h3{font-size:18px;margin-bottom:14px;display:flex;justify-content:space-between}.card h3 small{font-weight:400;color:var(--mut);font-size:13px}
-table{width:100%;border-collapse:collapse;font-size:15px}th{color:var(--mut);font-weight:600;text-align:right;padding:8px;border-bottom:1px solid var(--line);font-size:13px}td{padding:12px 8px;border-bottom:1px solid #efe5d7}
-.bar{height:8px;background:#eadfce;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
+table{width:100%;border-collapse:collapse;font-size:15px}th{color:var(--mut);font-weight:600;text-align:right;padding:8px;border-bottom:1px solid var(--line);font-size:13px}td{padding:12px 8px;border-bottom:1px solid #f6ece4}
+.bar{height:8px;background:#f4e6dc;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
 .creat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.cr{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}.cr .im{height:120px}.cr div+div{padding:10px;font-size:13px}.cr b{display:block;font-size:15px}
-.tl{font-size:14px}.tl p{padding:10px 0;border-bottom:1px solid #efe5d7;display:flex;gap:10px}.tl p:last-child{border:0}.dot{width:10px;height:10px;border-radius:50%;background:var(--o);margin-top:6px;flex:none}
-.tabs{display:flex;gap:6px;margin-bottom:20px}.tabs span{padding:9px 18px;border-radius:99px;background:#eadfce;color:var(--b);font-size:14px;font-weight:700}.tabs .on{background:var(--g);color:#fff}
+.tl{font-size:14px}.tl p{padding:10px 0;border-bottom:1px solid #f6ece4;display:flex;gap:10px}.tl p:last-child{border:0}.dot{width:10px;height:10px;border-radius:50%;background:var(--o);margin-top:6px;flex:none}
+.tabs{display:flex;gap:6px;margin-bottom:20px}.tabs span{padding:9px 18px;border-radius:99px;background:#f4e6dc;color:var(--b);font-size:14px;font-weight:700}.tabs .on{background:var(--g);color:#fff}
 </style></head><body>
 
 <!-- 1 LOGIN -->
 <div class="screen" id="s1"><div class="login">
-<div class="l"><div class="logo"><i>A</i>Alternative Dream</div>
+<div class="l"><div class="logo"><img src="assets/brand-sheet.png"></div>
 <div><h1>עוקבים אחרי הקמפיין שלכם<br>בזמן אמת</h1><p>תוצאות, הוצאות ויצירתיים של הקמפיינים שלכם במטא — במקום אחד, מעודכן אוטומטית.</p></div>
-<div><div class="pills"><span>● Facebook</span><span>● Instagram</span><span>● עדכון כל שעה</span></div><p style="font-size:13px;margin-top:20px;opacity:.7">מופעל על ידי פאם דיגיטל</p></div></div>
-<div class="r"><div class="box"><h2>כניסת לקוחות</h2><small>הכניסו את הפרטים שקיבלתם מפאם דיגיטל</small>
+<div><div class="pills"><span>● Facebook</span><span>● Instagram</span><span>● עדכון כל שעה</span></div></div></div>
+<div class="r"><div class="box"><h2>כניסת לקוחות</h2><small>הכניסו את הפרטים שקיבלתם מ-Femme Digital</small>
 <div class="f"><label>אימייל</label><div>name@company.co.il</div></div>
 <div class="f"><label>סיסמה</label><div>••••••••••</div></div>
 <button class="btn">כניסה לדשבורד</button><div class="pw">שכחתי סיסמה · כניסה עם קוד ב-WhatsApp</div></div></div>
@@ -51,11 +51,11 @@ table{width:100%;border-collapse:collapse;font-size:15px}th{color:var(--mut);fon
 
 <!-- 2 DASHBOARD -->
 <div class="screen" id="s2"><div class="app">
-<div class="side"><div class="logo"><i>A</i>Alternative</div>
+<div class="side"><div class="logo"><img src="assets/brand-sheet.png"></div>
 <a class="on">◉ סקירה כללית</a><a>▤ קמפיינים</a><a>◧ קריאייטיבים</a><a>☎ לידים</a><a>₪ תקציב וחשבוניות</a><a>⬇ דוחות</a><a>✉ פנייה לצוות</a>
-<div class="pam">מנוהל ע״י פאם דיגיטל<br>מחובר ל-Meta Ads ✓</div></div>
+<div class="pam">Femme Digital · סוכנות דיגיטל<br>מחובר ל-Meta Ads ✓</div></div>
 <div class="main">
-<div class="top"><div><h1>שלום דנה 👋</h1><div class="sub">סקירת ביצועים · 1–30 בספטמבר 2026</div></div><div class="user"><span class="badge m">● מחובר ל-Meta</span><span class="badge">עודכן לפני 12 דק׳</span><div class="av">ד</div></div></div>
+<div class="top"><div><h1>שלום דנה 🦋</h1><div class="sub">סקירת ביצועים · 1–30 בספטמבר 2026</div></div><div class="user"><span class="badge m">● מחובר ל-Meta</span><span class="badge">עודכן לפני 12 דק׳</span><div class="av">ד</div></div></div>
 <div class="kpis">
 <div class="k"><span>הוצאה</span><b>₪14,820</b><em>78% מהתקציב</em></div>
 <div class="k"><span>חשיפות</span><b>412K</b><em>▲ 14%</em></div>
@@ -63,39 +63,39 @@ table{width:100%;border-collapse:collapse;font-size:15px}th{color:var(--mut);fon
 <div class="k"><span>לידים</span><b>186</b><em>▲ 22%</em></div>
 <div class="k"><span>עלות לליד</span><b>₪79.7</b><em>▼ 11% (טוב)</em></div></div>
 <div class="row"><div class="card"><h3>לידים והוצאה לאורך זמן <small>30 ימים</small></h3>
-<svg viewBox="0 0 700 230" width="100%"><g stroke="#e3d8c9"><path d="M0 40H700M0 90H700M0 140H700M0 190H700"/></g>
-<path d="M0 170 C60 160 90 130 140 140 S230 90 290 100 S380 60 440 70 S560 40 700 25 L700 190 L0 190Z" fill="#52725a22"/>
-<path d="M0 170 C60 160 90 130 140 140 S230 90 290 100 S380 60 440 70 S560 40 700 25" fill="none" stroke="#52725a" stroke-width="3.5"/>
-<path d="M0 150 C80 150 120 160 180 130 S300 130 360 115 S500 120 600 100 S660 90 700 85" fill="none" stroke="#c46a2f" stroke-width="3" stroke-dasharray="7 6"/>
+<svg viewBox="0 0 700 230" width="100%"><g stroke="#eee0d6"><path d="M0 40H700M0 90H700M0 140H700M0 190H700"/></g>
+<path d="M0 170 C60 160 90 130 140 140 S230 90 290 100 S380 60 440 70 S560 40 700 25 L700 190 L0 190Z" fill="#b8515022"/>
+<path d="M0 170 C60 160 90 130 140 140 S230 90 290 100 S380 60 440 70 S560 40 700 25" fill="none" stroke="#b85150" stroke-width="3.5"/>
+<path d="M0 150 C80 150 120 160 180 130 S300 130 360 115 S500 120 600 100 S660 90 700 85" fill="none" stroke="#bc967a" stroke-width="3" stroke-dasharray="7 6"/>
 <g font-size="13" fill="#8a7d72"><text x="0" y="215">1.9</text><text x="340" y="215">15.9</text><text x="670" y="215">30.9</text></g></svg>
-<div style="display:flex;gap:20px;font-size:13px;color:var(--mut)"><span style="color:var(--g)">━ לידים</span><span style="color:var(--o)">╍ הוצאה</span></div></div>
+<div style="display:flex;gap:20px;font-size:13px;color:var(--mut)"><span style="color:var(--g)">━ לידים</span><span style="color:#bc967a">╍ הוצאה</span></div></div>
 <div class="card"><h3>פילוח לפי פלטפורמה</h3>
-<div style="display:flex;align-items:center;gap:22px"><svg width="150" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#eadfce" stroke-width="7"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#52725a" stroke-width="7" stroke-dasharray="58 42" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#c46a2f" stroke-width="7" stroke-dasharray="32 68" stroke-dashoffset="-58" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#72544b" stroke-width="7" stroke-dasharray="10 90" stroke-dashoffset="-90" transform="rotate(-90 21 21)"/></svg>
-<div style="font-size:15px;line-height:2.1"><span style="color:#52725a">●</span> Instagram 58%<br><span style="color:#c46a2f">●</span> Facebook 32%<br><span style="color:#72544b">●</span> Reels 10%</div></div></div></div>
+<div style="display:flex;align-items:center;gap:22px"><svg width="150" viewBox="0 0 42 42"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#f4e6dc" stroke-width="7"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#b85150" stroke-width="7" stroke-dasharray="58 42" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#bc967a" stroke-width="7" stroke-dasharray="32 68" stroke-dashoffset="-58" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#ffd6bc" stroke-width="7" stroke-dasharray="10 90" stroke-dashoffset="-90" transform="rotate(-90 21 21)"/></svg>
+<div style="font-size:15px;line-height:2.1"><span style="color:#b85150">●</span> Instagram 58%<br><span style="color:#bc967a">●</span> Facebook 32%<br><span style="color:#ffd6bc">●</span> Reels 10%</div></div></div></div>
 <div class="card"><h3>קמפיינים פעילים <small>הצג הכל ←</small></h3><table><tr><th>קמפיין</th><th>סטטוס</th><th>הוצאה</th><th>לידים</th><th>עלות לליד</th><th>ניצול תקציב</th></tr>
-<tr><td><b>אוהלי גלמפינג – Lotus</b></td><td><span class="badge">פעיל</span></td><td>₪7,420</td><td>98</td><td>₪75.7</td><td style="width:150px"><div class="bar"><i style="width:82%"></i></div></td></tr>
-<tr><td><b>אוהלי Bell – קמפיין קיץ</b></td><td><span class="badge">פעיל</span></td><td>₪5,100</td><td>64</td><td>₪79.7</td><td><div class="bar"><i style="width:71%"></i></div></td></tr>
+<tr><td><b>השקת קורס – ליד מגנט</b></td><td><span class="badge">פעיל</span></td><td>₪7,420</td><td>98</td><td>₪75.7</td><td style="width:150px"><div class="bar"><i style="width:82%"></i></div></td></tr>
+<tr><td><b>וובינר חי – הרשמה</b></td><td><span class="badge">פעיל</span></td><td>₪5,100</td><td>64</td><td>₪79.7</td><td><div class="bar"><i style="width:71%"></i></div></td></tr>
 <tr><td><b>רימרקטינג – גולשי אתר</b></td><td><span class="badge">פעיל</span></td><td>₪2,300</td><td>24</td><td>₪95.8</td><td><div class="bar"><i style="width:64%"></i></div></td></tr></table></div>
 </div></div></div>
 
 <!-- 3 CAMPAIGN DETAIL -->
 <div class="screen" id="s3"><div class="app">
-<div class="side"><div class="logo"><i>A</i>Alternative</div>
+<div class="side"><div class="logo"><img src="assets/brand-sheet.png"></div>
 <a>◉ סקירה כללית</a><a class="on">▤ קמפיינים</a><a>◧ קריאייטיבים</a><a>☎ לידים</a><a>₪ תקציב וחשבוניות</a><a>⬇ דוחות</a><a>✉ פנייה לצוות</a>
-<div class="pam">מנוהל ע״י פאם דיגיטל<br>מחובר ל-Meta Ads ✓</div></div>
+<div class="pam">Femme Digital · סוכנות דיגיטל<br>מחובר ל-Meta Ads ✓</div></div>
 <div class="main">
-<div class="top"><div><div class="sub">קמפיינים ←</div><h1>אוהלי גלמפינג – Lotus</h1></div><div class="user"><span class="badge">● פעיל</span><button class="btn" style="padding:10px 18px">⬇ הורדת דוח PDF</button></div></div>
+<div class="top"><div><div class="sub">קמפיינים ←</div><h1>השקת קורס – ליד מגנט</h1></div><div class="user"><span class="badge">● פעיל</span><button class="btn" style="padding:10px 18px">⬇ הורדת דוח PDF</button></div></div>
 <div class="tabs"><span class="on">ביצועים</span><span>קריאייטיבים</span><span>קהלים</span><span>לידים</span><span>עדכוני צוות</span></div>
 <div class="kpis"><div class="k"><span>הוצאה</span><b>₪7,420</b><em>מתוך ₪9,000</em></div><div class="k"><span>CTR</span><b>2.8%</b><em>▲ 0.4</em></div><div class="k"><span>CPC</span><b>₪0.79</b><em>▼ 8%</em></div><div class="k"><span>לידים</span><b>98</b><em>▲ 18%</em></div><div class="k"><span>עלות לליד</span><b>₪75.7</b><em>▼ 13%</em></div></div>
 <div class="row"><div class="card"><h3>קריאייטיבים מובילים <small>לפי לידים</small></h3><div class="creat">
-<div class="cr"><div class="im" style="background:linear-gradient(135deg,#52725a,#a9bfa0)"></div><div><b>וידאו – לילה באוהל</b>41 לידים · CTR 3.4%</div></div>
-<div class="cr"><div class="im" style="background:linear-gradient(135deg,#c46a2f,#e9b27d)"></div><div><b>קרוסלה – דגמי Lotus</b>33 לידים · CTR 2.7%</div></div>
-<div class="cr"><div class="im" style="background:linear-gradient(135deg,#72544b,#c0a396)"></div><div><b>תמונה – זריחה</b>24 לידים · CTR 2.1%</div></div></div>
+<div class="cr"><div class="im" style="background:linear-gradient(135deg,#b85150,#ffd6bc)"></div><div><b>וידאו – סיפור לקוחה</b>41 לידים · CTR 3.4%</div></div>
+<div class="cr"><div class="im" style="background:linear-gradient(135deg,#bc967a,#ffd6bc)"></div><div><b>קרוסלה – שלבי התוכנית</b>33 לידים · CTR 2.7%</div></div>
+<div class="cr"><div class="im" style="background:linear-gradient(135deg,#47454d,#ddf5ee)"></div><div><b>תמונה – לפני/אחרי</b>24 לידים · CTR 2.1%</div></div></div>
 <h3 style="margin-top:22px">לידים אחרונים</h3><table><tr><th>שם</th><th>טלפון</th><th>מקור</th><th>זמן</th></tr><tr><td>מיכל כ.</td><td>05•-•••-4821</td><td>Instagram</td><td>לפני 14 דק׳</td></tr><tr><td>יובל ר.</td><td>05•-•••-1937</td><td>Facebook</td><td>לפני שעה</td></tr></table></div>
 <div class="card tl"><h3>עדכוני הצוות</h3>
 <p><span class="dot"></span><span><b>הוספנו קהל חדש</b><br>Lookalike מרוכשים · לפני יומיים</span></p>
 <p><span class="dot"></span><span><b>הוזל קריאייטיב חלש</b><br>העברת תקציב לוידאו · לפני 4 ימים</span></p>
 <p><span class="dot"></span><span><b>המלצה:</b> להגדיל תקציב ב-₪1,500<br>הלידים הכי זולים בסוף שבוע</span></p>
-<p><span class="dot"></span><span><b>שוחרר קריאייטיב חדש</b><br>וידאו – לילה באוהל · לפני שבוע</span></p></div></div>
+<p><span class="dot"></span><span><b>שוחרר קריאייטיב חדש</b><br>וידאו – סיפור לקוחה · לפני שבוע</span></p></div></div>
 </div></div></div>
 </body></html>
