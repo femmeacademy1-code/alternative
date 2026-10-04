@@ -7,8 +7,8 @@ audio_source = "cam1"      # מאיזה מקור לקחת את הסאונד: cam
 
 [output]
 file = "out/podcast.mp4"
-width = 1920
-height = 1080
+width = 1080
+height = 1920
 fps = "auto"               # "auto" = לפי מצלמה 1, או מספר כמו 30 / "30000/1001"
 crf = 18                   # איכות: נמוך = איכות גבוהה וקובץ גדול
 preset = "medium"
@@ -18,7 +18,7 @@ jobs = 4                   # כמה קטעים לרנדר במקביל
 [subtitles]
 enabled = true
 language = "he"
-model = "large-v3"         # אפשר גם "medium" (מהיר יותר) או מודל עברית ייעודי
+model = "medium"          # large-v3 מדויק יותר אבל איטי מאוד על מק. אפשר גם "small"
 device = "auto"            # "cuda" אם יש כרטיס מסך, אחרת "cpu"
 compute_type = "auto"
 initial_prompt = ""        # שמות/מונחים שחשוב שיתומללו נכון, למשל "דני, פודקאסט אלטרנטיבה"
