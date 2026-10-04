@@ -1,0 +1,39 @@
+# הגדרות עורך הפודקאסט. נתיבים יחסיים לתיקייה הזו.
+
+[input]
+cams = ["cam1.mp4", "cam2.mp4", "cam3.mp4"]   # שלוש הזוויות
+external_audio = ""        # אופציונלי: קובץ אודיו חיצוני (למשל מקליט נפרד)
+audio_source = "cam1"      # מאיזה מקור לקחת את הסאונד: cam1 / cam2 / cam3 / external
+
+[output]
+file = "out/podcast.mp4"
+width = 1920
+height = 1080
+fps = "auto"               # "auto" = לפי מצלמה 1, או מספר כמו 30 / "30000/1001"
+crf = 18                   # איכות: נמוך = איכות גבוהה וקובץ גדול
+preset = "medium"
+loudnorm = true            # נרמול עוצמת קול (-16 LUFS, מתאים ליוטיוב/ספוטיפיי)
+jobs = 4                   # כמה קטעים לרנדר במקביל
+
+[subtitles]
+enabled = true
+language = "he"
+model = "large-v3"         # אפשר גם "medium" (מהיר יותר) או מודל עברית ייעודי
+device = "auto"            # "cuda" אם יש כרטיס מסך, אחרת "cpu"
+compute_type = "auto"
+initial_prompt = ""        # שמות/מונחים שחשוב שיתומללו נכון, למשל "דני, פודקאסט אלטרנטיבה"
+max_chars_per_line = 32
+max_cue_seconds = 5.5
+font = "Arial"             # גופן שמותקן אצלך ותומך בעברית (Arial, Heebo, Assistant...)
+font_size = 18
+margin_bottom = 20
+
+[shots]
+# איך לבחור זווית. mode = "audio": המצלמה שהסאונד בה חזק ביותר (מי שמדבר).
+# זה עובד כשלכל מצלמה יש מיקרופון קרוב לדובר שלה. mode = "rotate": מעבר מחזורי.
+mode = "audio"
+wide_cam = 1               # הזווית הרחבה (מוצגת כשאף אחד לא מוביל, או כשצילום ארוך מדי)
+min_shot = 3.0             # אורך מינימלי של שוט בשניות
+max_shot = 20.0            # אחרי כמה שניות לחזור לזווית הרחבה
+margin_db = 4.0            # כמה חזק יותר צריך להיות דובר כדי לעבור אליו
+reaction = 0.8             # כמה זמן לחכות לפני מעבר
