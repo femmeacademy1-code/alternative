@@ -151,6 +151,7 @@
 <tr><th>שלדה</th><td>צינורות פלדה מגולוונים בטבילה חמה (Hot-Dip Galvanized) – עמידים בפני חלודה ומתאימים לשימוש חיצוני לאורך שנים</td></tr>
 <tr><th>כיסוי</th><td>בד אוקספורד 600D אטום למים, ללא מרפסת – הכול בד</td></tr>
 <tr><th>פתחים</th><td>דלת כניסה בפתח משולש · 2 חלונות בכל דופן (4 בסך הכול) עם רשתות</td></tr>
+<tr><th>ארובה</th><td>חיבור לארובה בגג – מתאים לחימום בתנור עצים</td></tr>
 <tr><th>עיגון</th><td>יתדות וחבלי עיגון</td></tr>
 </table>
 <div style="display:grid;gap:20px">
@@ -188,6 +189,7 @@
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>שלדת פלדה מגולוונת בטבילה חמה, מלאה</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>כיסוי בד אוקספורד 600D – ללא מרפסת</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>דלת משולשת ו־4 חלונות עם רשתות (2 בכל דופן)</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>חיבור לארובה בגג</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>יתדות וחבלי עיגון, הוראות הרכבה בעברית</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>ליווי טלפוני עד ההקמה</li>
 </ul>
@@ -267,8 +269,8 @@ zs.forEach(z=>{
 // ridge top-down crossed plane
 // interior furniture
 const FU=add(W,'furn');
-function box(w,h,d,x,y,z,col,sh){ // x,z centre, y = bottom (negative up); h height
- const g=add(FU,'',('position:absolute;left:0;top:0;width:0;height:0;transform:translate3d('+x+'px,'+y+'px,'+z+'px)'));
+function box(w,h,d,x,y,z,col,P){P=P||FU; // x,z centre, y = bottom (negative up); h height
+ const g=add(P,'',('position:absolute;left:0;top:0;width:0;height:0;transform:translate3d('+x+'px,'+y+'px,'+z+'px)'));
  const face=(cls,css)=>add(g,'f '+cls,css+';background:'+col);
  const dk=(c,k)=>c; 
  face('', 'width:'+w+'px;height:'+h+'px;left:'+(-w/2)+'px;top:'+(-h)+'px;transform:translateZ('+d/2+'px);filter:brightness(1)');
@@ -287,6 +289,11 @@ box(100,2,70,0,-0.1,-20,'#d9b99a');       // rug
 // table + stools near front-right
 box(44,24,44,70,-0.5,52,'#a0764d');
 box(16,14,16,70,-0.5,92,'#c9a77f');box(16,14,16,70,-0.5,12,'#c9a77f');
+// stove (interior only) + flue pipe through the roof (always visible)
+box(30,22,26,-60,-8,-40,'#2f2f2f');
+box(12,12,12,-60,-30,-40,'#2f2f2f',W);
+box(9,150,9,-60,-30,-40,'#3b3b3b',W);       // pipe from stove up through the roof
+box(20,3,20,-60,-139,-40,'#4a4a4a',W);     // roof flashing collar
 // door peek: a lantern near the door, visible from outside
 // controls
 let ry=-32,rx=-22,zoom=Math.max(.7,Math.min(1.45,document.getElementById('viewer').clientWidth/490)),auto=true,drag=false,lx=0,ly=0,lastT=performance.now();
