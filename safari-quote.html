@@ -65,6 +65,14 @@
 .price-card li svg{flex:none;color:var(--color-accent);margin-top:3px}
 .amount{font-family:var(--he-head);font-size:clamp(40px,6vw,68px);color:var(--orange-deep);line-height:1}
 .amount small{font-size:.35em;color:var(--brown)}
+.save{display:inline-block;margin-top:12px;background:var(--color-accent);color:var(--color-bg);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.disc{width:100%;border-collapse:collapse;margin-top:18px;background:var(--color-bg);border-radius:16px;overflow:hidden;font-size:15px}
+.disc th,.disc td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--color-divider)}
+.disc thead th{font-size:12px;color:var(--brown);font-weight:600}
+.disc tbody th{text-align:start;font-weight:600;color:var(--brown)}
+.disc s{opacity:.6}
+.disc .off td,.disc .off th{color:var(--orange-deep)}
+.disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
 .price-note{font-size:14px;margin-top:10px}
 .pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 @media (max-width:860px){.q-hero,.specs,.price-card{grid-template-columns:minmax(0,1fr)}.v-ui{justify-content:center}}
@@ -165,9 +173,17 @@
 </ul>
 </div>
 <div>
-<div class="muted">מחיר האוהל</div>
-<div class="amount" id="amount">₪ ______ <small>+ מע״מ</small></div>
-<p class="price-note muted">המחיר הסופי כולל משלוח ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
+<div class="muted">המחיר שלכם, כולל מע״מ</div>
+<div class="amount" id="amount">₪6,660 <small>כולל מע״מ</small></div>
+<span class="save">חיסכון של ₪740 – 10% הנחה</span>
+<table class="disc" aria-label="פירוט ההנחה">
+<thead><tr><th></th><th>לפני מע״מ</th><th>מע״מ 18%</th><th>כולל מע״מ</th></tr></thead>
+<tbody>
+<tr><th>מחיר מחירון</th><td>₪6,271</td><td>₪1,129</td><td><s>₪7,400</s></td></tr>
+<tr class="off"><th>הנחה 10%</th><td dir="ltr">−₪627</td><td dir="ltr">−₪113</td><td dir="ltr">−₪740</td></tr>
+<tr class="tot"><th>המחיר שלכם</th><td>₪5,644</td><td>₪1,016</td><td>₪6,660</td></tr>
+</tbody></table>
+<p class="price-note muted">משלוח ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
 <div class="pc-actions">
 <a class="btn btn-primary" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%90%D7%A9%D7%A8%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%A1%D7%A4%D7%90%D7%A8%D7%99%204%C3%975">אישור ההצעה בוואטסאפ</a>
 <button class="btn btn-secondary" type="button" onclick="print()">הדפסה / PDF</button>
