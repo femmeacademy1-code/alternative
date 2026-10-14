@@ -212,7 +212,6 @@ main,.wrap{font-size:18px}
 <div class="muted" id="gross" style="margin-top:6px;font-size:18px"></div>
 <span class="save" id="save"></span>
 <table class="disc" aria-label="פירוט ההנחה">
-<thead><tr><th></th><th>לפני מע״מ</th><th>מע״מ 18%</th><th>כולל מע״מ</th></tr></thead>
 <tbody id="dbody"></tbody></table>
 <p class="price-note muted">זמן ייצור ואספקה: כ־60 ימי עסקים. משלוח ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
 <div class="pc-actions">
@@ -324,20 +323,19 @@ spinBtn();apply();
 </script>
 <script>
 (function(){
-// Prices are VAT-inclusive; pre-VAT = price / 1.18, VAT = the remainder.
-const VAT=.18,LIST=7400,NET=6800;
+// Price is VAT-inclusive; VAT is taken off as 18% of that price (subtraction method).
+const PRICE=8500,RATE=.18;
 const r=n=>Math.round(n*100)/100;
-const f=n=>'₪'+n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2});
-const lx=r(LIST/(1+VAT)),lv=r(LIST-lx),nx=r(NET/(1+VAT)),nv=r(NET-nx),ox=r(lx-nx),ov=r(lv-nv),og=LIST-NET;
-const pct=(og/LIST*100).toFixed(1).replace('.0','');
+const f=n=>n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2})+' ₪';
+const vat=r(PRICE*RATE),net=r(PRICE-vat);
 document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
-document.getElementById('amount').innerHTML=f(NET)+' <small>כולל מע״מ</small>';
-document.getElementById('gross').textContent=f(nx)+' לפני מע״מ';
-document.getElementById('save').textContent='סה״כ הנחה של 8.8% – חיסכון של ₪30,000 בהזמנה';
+document.getElementById('amount').innerHTML=f(PRICE)+' <small>כולל מע״מ</small>';
+document.getElementById('gross').textContent=f(net)+' לפני מע״מ';
+document.getElementById('save').remove();
 document.getElementById('dbody').innerHTML=
- '<tr><th>מחיר מחירון</th><td>'+f(lx)+'</td><td>'+f(lv)+'</td><td><s>'+f(LIST)+'</s></td></tr>'+
- '<tr class="off"><th>הנחה</th><td dir="ltr">−'+f(ox)+'</td><td dir="ltr">−'+f(ov)+'</td><td dir="ltr">−'+f(og)+'</td></tr>'+
- '<tr class="tot"><th>המחיר שלכם</th><td>'+f(nx)+'</td><td>'+f(nv)+'</td><td>'+f(NET)+'</td></tr>';
+ '<tr><th>מחיר האוהל כולל מע״מ</th><td>'+f(PRICE)+'</td></tr>'+
+ '<tr class="off"><th>מע״מ 18% (בהפחתה)</th><td dir="ltr">−'+f(vat)+'</td></tr>'+
+ '<tr class="tot"><th>מחיר לפני מע״מ</th><td>'+f(net)+'</td></tr>';
 })();
 </script>
 <a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
