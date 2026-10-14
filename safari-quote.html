@@ -72,6 +72,9 @@
 .disc tbody th{text-align:start;font-weight:600;color:var(--brown)}
 .disc s{opacity:.6}
 .disc .off td,.disc .off th{color:var(--orange-deep)}
+.disc .hd th{background:color-mix(in srgb,var(--orange) 12%,var(--color-bg));color:var(--orange-deep);text-align:start;font-size:15px}
+.disc .sub td,.disc .sub th{border-bottom:0}
+.disc td{text-align:end;white-space:nowrap}
 .disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
 .price-note{font-size:14px;margin-top:10px}
 .pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
@@ -323,19 +326,20 @@ spinBtn();apply();
 </script>
 <script>
 (function(){
-// Price is VAT-inclusive; VAT is taken off as 18% of that price (subtraction method).
-const PRICE=8500,RATE=.18;
+// Prices are VAT-inclusive; VAT is taken off as 18% of the price (subtraction method).
+const ORIG=7800,FINAL=7440,RATE=.18;
 const r=n=>Math.round(n*100)/100;
 const f=n=>n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2})+' ₪';
-const vat=r(PRICE*RATE),net=r(PRICE-vat);
+const block=(title,price,tot)=>{const v=r(price*RATE),n=r(price-v);
+ return '<tr class="hd"><th colspan="2">'+title+'</th></tr>'+
+ '<tr><th>סכום כולל מע״מ</th><td>'+f(price)+'</td></tr>'+
+ '<tr class="off"><th>מע״מ 18% (בהפחתה)</th><td dir="ltr">−'+f(v)+'</td></tr>'+
+ '<tr class="'+(tot?'tot':'sub')+'"><th>סכום לפני מע״מ</th><td>'+f(n)+'</td></tr>'};
 document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
-document.getElementById('amount').innerHTML=f(PRICE)+' <small>כולל מע״מ</small>';
-document.getElementById('gross').textContent=f(net)+' לפני מע״מ';
+document.getElementById('amount').innerHTML=f(FINAL)+' <small>כולל מע״מ</small>';
+document.getElementById('gross').textContent=f(r(FINAL-FINAL*RATE))+' לפני מע״מ';
 document.getElementById('save').remove();
-document.getElementById('dbody').innerHTML=
- '<tr><th>מחיר האוהל כולל מע״מ</th><td>'+f(PRICE)+'</td></tr>'+
- '<tr class="off"><th>מע״מ 18% (בהפחתה)</th><td dir="ltr">−'+f(vat)+'</td></tr>'+
- '<tr class="tot"><th>מחיר לפני מע״מ</th><td>'+f(net)+'</td></tr>';
+document.getElementById('dbody').innerHTML=block('המחיר המקורי',ORIG,false)+block('סכום סופי לתשלום – אחרי הנחה',FINAL,true);
 })();
 </script>
 <a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
