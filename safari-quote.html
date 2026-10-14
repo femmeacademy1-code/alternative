@@ -202,10 +202,6 @@ main,.wrap{font-size:18px}
 </ul>
 </div>
 <div>
-<div class="seg" role="radiogroup" aria-label="כמות" style="margin-bottom:18px">
-<label class="seg-opt"><input type="radio" name="qty" value="1">אוהל בודד</label>
-<label class="seg-opt"><input type="radio" name="qty" value="50" checked>הזמנה של 50 אוהלים</label>
-</div>
 <div class="muted" id="qlabel">המחיר שלכם</div>
 <div class="amount" id="amount"></div>
 <div class="muted" id="gross" style="margin-top:6px;font-size:18px"></div>
@@ -213,7 +209,6 @@ main,.wrap{font-size:18px}
 <table class="disc" aria-label="פירוט ההנחה">
 <thead><tr><th></th><th>לפני מע״מ</th><th>מע״מ 18%</th><th>כולל מע״מ</th></tr></thead>
 <tbody id="dbody"></tbody></table>
-<p class="muted" id="unit" style="margin:10px 0 0;font-size:16px"></p>
 <p class="price-note muted">זמן ייצור ואספקה: כ־60 ימי עסקים. משלוח ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
 <div class="pc-actions">
 <a id="wa" class="btn btn-primary" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%90%D7%A9%D7%A8%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%91%D7%A7%D7%AA%D7%94%20%28Cabin%29%204%C3%975">אישור ההצעה בוואטסאפ</a>
@@ -329,7 +324,7 @@ const f=n=>'₪'+n.toLocaleString('en-US',{minimumFractionDigits:Number.isIntege
 function draw(q){
  const list=UNIT*q,off=list*DISC,net=list-off;
  const lv=list*VAT,ov=off*VAT,nv=net*VAT;
- document.getElementById('qlabel').textContent=q>1?'המחיר להזמנה של '+q+' אוהלים':'המחיר שלכם';
+ document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
  document.getElementById('amount').innerHTML=f(net)+' <small>+ מע״מ</small>';
  document.getElementById('gross').textContent=f(net+nv)+' כולל מע״מ (18%)';
  document.getElementById('save').textContent='חיסכון של '+f(off)+' לפני מע״מ – 10% הנחה';
@@ -337,11 +332,9 @@ function draw(q){
  '<tr><th>מחיר מחירון</th><td>'+f(list)+'</td><td>'+f(lv)+'</td><td><s>'+f(list+lv)+'</s></td></tr>'+
  '<tr class="off"><th>הנחה 10%</th><td dir="ltr">−'+f(off)+'</td><td dir="ltr">−'+f(ov)+'</td><td dir="ltr">−'+f(off+ov)+'</td></tr>'+
  '<tr class="tot"><th>המחיר שלכם</th><td>'+f(net)+'</td><td>'+f(nv)+'</td><td>'+f(net+nv)+'</td></tr>';
- document.getElementById('unit').textContent=q>1?'מחיר ליחידה אחרי הנחה: '+f(net/q)+' + מע״מ':'';
- const wa=document.getElementById('wa');if(wa)wa.href='https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני רוצה לאשר הצעת מחיר ל־'+(q>1?q+' אוהלי':'אוהל')+' בקתה (Cabin) 4×5');
+  const wa=document.getElementById('wa');if(wa)wa.href='https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני רוצה לאשר הצעת מחיר להזמנת כמות של מעל 30 אוהלי בקתה (Cabin) 4×5');
 }
-document.querySelectorAll('input[name=qty]').forEach(i=>i.onchange=()=>draw(+i.value));
-draw(50);
+draw(1);
 })();
 </script>
 <a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
