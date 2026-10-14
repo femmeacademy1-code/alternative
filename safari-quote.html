@@ -261,10 +261,10 @@ add(W,'f fab-f','width:6px;height:304px;left:-3px;top:-152px;background:#d9c7a6;
 // frame bars
 function bar(css,t){const d=add(W,'bar',css);d.style.transform=t;return d}
 const T=4;
-const zs=[-150,150];
+const zs=[-150,-75,0,75,150];
 zs.forEach(z=>{
  // columns (two crossed planes for volume)
- [-120,120].forEach(x=>{
+ if(Math.abs(z)===150)[-120,120].forEach(x=>{
   bar('width:'+T+'px;height:90px;left:'+(x-T/2)+'px;top:-90px','translateZ('+z+'px)');
   bar('width:'+T+'px;height:90px;left:'+(x-T/2)+'px;top:-90px','translateZ('+z+'px) rotateY(90deg)');
  });
