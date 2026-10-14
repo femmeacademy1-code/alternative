@@ -75,6 +75,9 @@
 .disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
 .price-note{font-size:14px;margin-top:10px}
 .pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:24px}
+.gal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
+.gal img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
 @media (max-width:860px){.q-hero,.specs,.price-card{grid-template-columns:minmax(0,1fr)}.v-ui{justify-content:center}}
 @media print{.nav,.fab,.v-ui,.pc-actions{display:none}}
 </style>
@@ -83,7 +86,7 @@
 <a class="skip-link" href="#viewer">דילוג לתוכן</a>
 <nav class="nav">
 <a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a>
-<div class="nav-links"><a href="#viewer">הדמיה תלת־ממדית</a><a href="#spec">מפרט</a><a href="#price">הצעת המחיר</a></div>
+<div class="nav-links"><a href="#viewer">הדמיה תלת־ממדית</a><a href="#gallery">תמונות</a><a href="#spec">מפרט</a><a href="#price">הצעת המחיר</a></div>
 <a class="btn btn-primary" href="https://wa.me/972515490099">דברו איתנו</a>
 </nav>
 <div class="wrap">
@@ -119,6 +122,16 @@
 </div>
 </div>
 </header>
+
+<section class="sec" id="gallery" style="padding-bottom:0">
+<span class="kicker">השראה</span>
+<h2 class="sec-title">כך זה נראה בשטח</h2>
+<div class="gal">
+<figure><img src="assets/safari-forest.jpg" alt="אוהל ספארי בחול בין העצים" loading="lazy"></figure>
+<figure><img src="assets/safari-desert.jpg" alt="אוהל ספארי בבד לבן בשקיעה במדבר" loading="lazy"></figure>
+</div>
+<p class="muted" style="font-size:13px;margin:10px 0 0">תמונות להמחשת הדגם והאווירה. האוהל המוצע ללא מרפסת.</p>
+</section>
 
 <section class="sec" id="spec" style="padding-top:calc(1.5*var(--lead))">
 <span class="kicker">המפרט</span>
