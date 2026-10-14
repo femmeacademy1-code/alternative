@@ -74,7 +74,8 @@
 .disc .off td,.disc .off th{color:var(--orange-deep)}
 .disc .hd th{background:color-mix(in srgb,var(--orange) 12%,var(--color-bg));color:var(--orange-deep);text-align:start;font-size:15px}
 .disc .sub td,.disc .sub th{border-bottom:0}
-.disc td{text-align:end;white-space:nowrap}
+.disc td{text-align:center;white-space:nowrap}
+@media (max-width:560px){.disc{font-size:13px}.disc th,.disc td{padding:9px 3px}.disc tbody th{width:25%;font-size:13px}.disc thead th{font-size:11px}}
 .disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
 .price-note{font-size:14px;margin-top:10px}
 .pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
@@ -215,6 +216,7 @@ main,.wrap{font-size:18px}
 <div class="muted" id="gross" style="margin-top:6px;font-size:18px"></div>
 <span class="save" id="save"></span>
 <table class="disc" aria-label="פירוט ההנחה">
+<thead><tr><th></th><th>לפני מע״מ</th><th>מע״מ 18%</th><th>כולל מע״מ</th></tr></thead>
 <tbody id="dbody"></tbody></table>
 <p class="price-note muted">זמן ייצור ואספקה: כ־60 ימי עסקים. משלוח ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
 <div class="pc-actions">
@@ -330,16 +332,13 @@ spinBtn();apply();
 const ORIG=7800,FINAL=7440,RATE=.18;
 const r=n=>Math.round(n*100)/100;
 const f=n=>n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2})+' ₪';
-const block=(title,price,tot)=>{const v=r(price*RATE),n=r(price-v);
- return '<tr class="hd"><th colspan="2">'+title+'</th></tr>'+
- '<tr><th>סכום כולל מע״מ</th><td>'+f(price)+'</td></tr>'+
- '<tr class="off"><th>מע״מ 18% (בהפחתה)</th><td dir="ltr">−'+f(v)+'</td></tr>'+
- '<tr class="'+(tot?'tot':'sub')+'"><th>סכום לפני מע״מ</th><td>'+f(n)+'</td></tr>'};
+const row=(title,price,cls)=>{const v=r(price*RATE),n=r(price-v);
+ return '<tr class="'+cls+'"><th>'+title+'</th><td>'+f(n)+'</td><td>'+f(v)+'</td><td>'+f(price)+'</td></tr>'};
 document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
 document.getElementById('amount').innerHTML=f(FINAL)+' <small>כולל מע״מ</small>';
 document.getElementById('gross').textContent=f(r(FINAL-FINAL*RATE))+' לפני מע״מ';
 document.getElementById('save').remove();
-document.getElementById('dbody').innerHTML=block('המחיר המקורי',ORIG,false)+block('סכום סופי לתשלום – אחרי הנחה',FINAL,true);
+document.getElementById('dbody').innerHTML=row('מחיר מקורי',ORIG,'')+row('סופי לתשלום',FINAL,'tot');
 })();
 </script>
 <a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
