@@ -272,8 +272,6 @@ zs.forEach(z=>{
  const len=Math.hypot(120,78),a=Math.atan2(78,120)*180/Math.PI;
  bar('width:'+len+'px;height:'+T+'px;left:0;top:-1.5px;transform-origin:0 50%','translateZ('+z+'px) translate(-120px,-90px) rotateZ(-'+a+'deg)');
  bar('width:'+len+'px;height:'+T+'px;left:-'+len+'px;top:-1.5px;transform-origin:100% 50%','translateZ('+z+'px) translate(120px,-90px) rotateZ('+a+'deg)');
- // cross tie (collar) at ~2.3 m
- bar('width:144px;height:'+T+'px;left:-72px;top:-123px','translateZ('+z+'px)');
 });
 // longitudinal: ridge + eaves + purlins
 [[0,-168],[-120,-90],[120,-90],[-120,-1.5],[120,-1.5]].forEach(([x,y])=>{
