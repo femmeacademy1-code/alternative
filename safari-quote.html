@@ -38,7 +38,7 @@
 .win i{position:absolute;left:60px;top:24px;width:40px;height:50px;background:repeating-linear-gradient(45deg,#8fa3a3 0 2px,#a9bbb9 2px 4px);border:3px solid #c9b48f;border-radius:3px}
 .bar{position:absolute;background:linear-gradient(90deg,#9aa4a6,#e9eef0 45%,#9aa4a6);opacity:0;transition:opacity .5s;pointer-events:none}
 .world.m-frame .bar,.world.m-int .bar{opacity:1}
-.world.m-frame .fab-f{opacity:.07}
+.world.m-frame .fab-f{opacity:.06}
 .world.m-int .roof,.world.m-int .wend-front,.world.m-int .wside-r{opacity:0}
 .world.m-int .wend-back,.world.m-int .wside-l{opacity:.95}
 .furn .f{opacity:0;transition:opacity .5s}
@@ -77,7 +77,9 @@
 .pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:24px}
 .gal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
+.gal2 img{aspect-ratio:3/2}
 .gal img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:560px){.gal2{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:860px){.q-hero,.specs,.price-card{grid-template-columns:minmax(0,1fr)}.v-ui{justify-content:center}}
 @media print{.nav,.fab,.v-ui,.pc-actions{display:none}}
 </style>
@@ -130,7 +132,12 @@
 <figure><img src="assets/safari-forest.jpg" alt="אוהל ספארי בחול בין העצים" loading="lazy"></figure>
 <figure><img src="assets/safari-desert.jpg" alt="אוהל ספארי בבד לבן בשקיעה במדבר" loading="lazy"></figure>
 </div>
-<p class="muted" style="font-size:13px;margin:10px 0 0">תמונות להמחשת הדגם והאווירה. האוהל המוצע ללא מרפסת.</p>
+<h3 style="margin:36px 0 0;font-size:clamp(22px,2.4vw,30px)">מבפנים</h3>
+<div class="gal gal2">
+<figure><img src="assets/safari-in1.jpg" alt="פנים אוהל ספארי עם תנור, שולחן וכיסאות" loading="lazy"></figure>
+<figure><img src="assets/safari-in2.jpg" alt="פנים אוהל ספארי עם מיטה, ספה ופתח כניסה משולש" loading="lazy"></figure>
+</div>
+<p class="muted" style="font-size:13px;margin:10px 0 0">תמונות להמחשת הדגם והאווירה. הריהוט והאביזרים אינם כלולים, והאוהל המוצע ללא מרפסת.</p>
 </section>
 
 <section class="sec" id="spec" style="padding-top:calc(1.5*var(--lead))">
@@ -138,7 +145,7 @@
 <h2 class="sec-title">מה בדיוק מקבלים</h2>
 <div class="specs">
 <table class="spec-t">
-<tr><th>דגם</th><td>ספארי – גג גמלון</td></tr>
+<tr><th>דגם</th><td>ספארי</td></tr>
 <tr><th>מידות</th><td>4×5 מ׳ (רוחב × אורך) · 20 מ״ר</td></tr>
 <tr><th>גובה</th><td>2.80 מ׳ בשיא הגג</td></tr>
 <tr><th>שלדה</th><td>צינורות פלדה מגולוונים בטבילה חמה (Hot-Dip Galvanized) – עמידים בפני חלודה ומתאימים לשימוש חיצוני לאורך שנים</td></tr>
@@ -150,7 +157,7 @@
 <figure class="draw" style="margin:0">
 <svg viewBox="0 0 360 230" role="img" aria-label="חזית – רוחב 4 מטר, גובה 2.80 מטר">
 <g fill="#f7eddc" stroke="#72544b" stroke-width="2"><path d="M60 200V104L180 38L300 104V200Z"/></g>
-<rect x="150" y="116" width="60" height="84" fill="#e6d6bf" stroke="#72544b" stroke-width="2"/>
+<path d="M146 200L180 52L214 200Z" fill="#e6d6bf" stroke="#72544b" stroke-width="2"/>
 <g stroke="#c46a2f" stroke-width="1.5" fill="none"><path d="M60 218H300M60 212V224M300 212V224"/><path d="M328 38V200M322 38H334M322 200H334"/></g>
 <text x="180" y="214" text-anchor="middle" dy="14" style="font-size:13px">4.00 מ׳</text>
 <text x="334" y="124" text-anchor="start" transform="rotate(90 334 124)" dy="-8" style="font-size:13px" >2.80 מ׳</text>
@@ -226,7 +233,7 @@ const add=(p,cls,css,html)=>{const d=document.createElement('div');d.className=c
 add(W,'shadow');add(W,'f floor');
 // end walls (pentagon) with door opening in front
 const pent='M0 168V54L120 0L240 54V168Z';
-const door='M85 48H155V168H85Z';
+const door='M64 168L120 10L176 168Z';
 const front=add(W,'f fab-f wall-end wend-front');
 front.style.clipPath='path(evenodd,"'+pent+door+'")';
 add(W,'f fab-f wall-end wend-back').style.clipPath='path("'+pent+'")';
@@ -234,17 +241,17 @@ add(W,'f fab-f wall-end wend-back').style.clipPath='path("'+pent+'")';
 const wins='<i></i><i style="left:130px"></i><i style="left:200px"></i>';
 add(W,'f fab-f wall-side wside-r win',null,wins);add(W,'f fab-f wall-side wside-l win',null,wins);
 // roof
-add(W,'f roof r');add(W,'f roof l');
+add(W,'f fab-f roof r');add(W,'f fab-f roof l');
 add(W,'f fab-f','width:6px;height:304px;left:-3px;top:-152px;background:#d9c7a6;transform:translateY(-168px) rotateX(90deg)');
 // frame bars
 function bar(css,t){const d=add(W,'bar',css);d.style.transform=t;return d}
-const T=3;
+const T=4;
 const zs=[-150,-75,0,75,150];
 zs.forEach(z=>{
  // columns (two crossed planes for volume)
  [-120,120].forEach(x=>{
-  bar('width:'+T+'px;height:114px;left:'+(x-1.5)+'px;top:-114px','translateZ('+z+'px)');
-  bar('width:'+T+'px;height:114px;left:'+(x-1.5)+'px;top:-114px','translateZ('+z+'px) rotateY(90deg)');
+  bar('width:'+T+'px;height:114px;left:'+(x-T/2)+'px;top:-114px','translateZ('+z+'px)');
+  bar('width:'+T+'px;height:114px;left:'+(x-T/2)+'px;top:-114px','translateZ('+z+'px) rotateY(90deg)');
  });
  // rafters (within XY plane at z)
  const len=Math.hypot(120,54),a=Math.atan2(54,120)*180/Math.PI;
