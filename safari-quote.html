@@ -319,22 +319,20 @@ spinBtn();apply();
 </script>
 <script>
 (function(){
-const UNIT=7400,VAT=.18,DISC=.10;
-const f=n=>'₪'+n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(Math.round(n*100)/100)?0:2,maximumFractionDigits:2});
-function draw(q){
- const list=UNIT*q,off=list*DISC,net=list-off;
- const lv=list*VAT,ov=off*VAT,nv=net*VAT;
- document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
- document.getElementById('amount').innerHTML=f(net)+' <small>+ מע״מ</small>';
- document.getElementById('gross').textContent=f(net+nv)+' כולל מע״מ (18%)';
- document.getElementById('save').textContent='חיסכון של '+f(off)+' לפני מע״מ – 10% הנחה';
- document.getElementById('dbody').innerHTML=
- '<tr><th>מחיר מחירון</th><td>'+f(list)+'</td><td>'+f(lv)+'</td><td><s>'+f(list+lv)+'</s></td></tr>'+
- '<tr class="off"><th>הנחה 10%</th><td dir="ltr">−'+f(off)+'</td><td dir="ltr">−'+f(ov)+'</td><td dir="ltr">−'+f(off+ov)+'</td></tr>'+
- '<tr class="tot"><th>המחיר שלכם</th><td>'+f(net)+'</td><td>'+f(nv)+'</td><td>'+f(net+nv)+'</td></tr>';
-  const wa=document.getElementById('wa');if(wa)wa.href='https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני רוצה לאשר הצעת מחיר להזמנת כמות של מעל 30 אוהלי בקתה (Cabin) 4×5');
-}
-draw(1);
+// Prices are given VAT-inclusive; the pre-VAT and VAT columns are derived (18%).
+const VAT=.18,LIST=7400,NET=6800;
+const r=n=>Math.round(n*100)/100;
+const f=n=>'₪'+n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2});
+const lx=r(LIST/(1+VAT)),lv=r(LIST-lx),nx=r(NET/(1+VAT)),nv=r(NET-nx),ox=r(lx-nx),ov=r(lv-nv),og=LIST-NET;
+const pct=(og/LIST*100).toFixed(1).replace('.0','');
+document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
+document.getElementById('amount').innerHTML=f(NET)+' <small>כולל מע״מ</small>';
+document.getElementById('gross').textContent=f(nx)+' + מע״מ (18%)';
+document.getElementById('save').textContent='חיסכון של '+f(og)+' כולל מע״מ – הנחה של כ־'+pct+'%';
+document.getElementById('dbody').innerHTML=
+ '<tr><th>מחיר מחירון</th><td>'+f(lx)+'</td><td>'+f(lv)+'</td><td><s>'+f(LIST)+'</s></td></tr>'+
+ '<tr class="off"><th>הנחה</th><td dir="ltr">−'+f(ox)+'</td><td dir="ltr">−'+f(ov)+'</td><td dir="ltr">−'+f(og)+'</td></tr>'+
+ '<tr class="tot"><th>המחיר שלכם</th><td>'+f(nx)+'</td><td>'+f(nv)+'</td><td>'+f(NET)+'</td></tr>';
 })();
 </script>
 <a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
