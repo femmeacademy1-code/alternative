@@ -329,7 +329,7 @@ spinBtn();apply();
 <script>
 (function(){
 // Prices are VAT-inclusive; VAT is taken off as 18% of the price (subtraction method).
-const ORIG=7800,FINAL=7440,RATE=.18;
+const ORIG=8400,FINAL=7800,RATE=.18;
 const r=n=>Math.round(n*100)/100;
 const f=n=>n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2})+' ₪';
 const row=(title,price,cls)=>{const v=r(price*RATE),n=r(price-v);
