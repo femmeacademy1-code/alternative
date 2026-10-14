@@ -318,15 +318,15 @@ spinBtn();apply();
 </script>
 <script>
 (function(){
-// Prices are given VAT-inclusive; the pre-VAT and VAT columns are derived (18%).
+// Prices are VAT-inclusive; VAT is shown as 18% of the inclusive price (house convention).
 const VAT=.18,LIST=7400,NET=6800;
 const r=n=>Math.round(n*100)/100;
 const f=n=>'₪'+n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2});
-const lx=r(LIST/(1+VAT)),lv=r(LIST-lx),nx=r(NET/(1+VAT)),nv=r(NET-nx),ox=r(lx-nx),ov=r(lv-nv),og=LIST-NET;
+const lv=r(LIST*VAT),lx=r(LIST-lv),nv=r(NET*VAT),nx=r(NET-nv),ox=r(lx-nx),ov=r(lv-nv),og=LIST-NET;
 const pct=(og/LIST*100).toFixed(1).replace('.0','');
 document.getElementById('qlabel').textContent='מחיר לאוהל – להזמנת כמות של מעל 30 אוהלים';
 document.getElementById('amount').innerHTML=f(NET)+' <small>כולל מע״מ</small>';
-document.getElementById('gross').textContent=f(nx)+' + מע״מ (18%)';
+document.getElementById('gross').textContent=f(nx)+' לפני מע״מ';
 document.getElementById('save').textContent='חיסכון של '+f(og)+' כולל מע״מ – הנחה של כ־'+pct+'%';
 document.getElementById('dbody').innerHTML=
  '<tr><th>מחיר מחירון</th><td>'+f(lx)+'</td><td>'+f(lv)+'</td><td><s>'+f(LIST)+'</s></td></tr>'+
