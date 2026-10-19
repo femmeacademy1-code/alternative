@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>כיפה גאודזית 1V – 15 משולשים זהים | הדמיה ושרטוט ייצור</title>
+<meta name="description" content="הדמיה תלת־ממדית ושרטוט ייצור לכיסוי בד של כיפה גאודזית 1V: 15 משולשים שווי־צלעות זהים, בסיס מחומש.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#f3ece2;--surface:#e8dfd1;--text:#4a342c;--brown:#72544b;--orange:#c46a2f;--orange-d:#a4531c;--green:#52725a;--line:rgba(43,37,34,.16);--A:#d89a5f;--B:#8fa585}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+h1,h2,h3{color:var(--brown);line-height:1.15;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{padding:34px 0 10px}
+.kicker{color:var(--orange-d);font-weight:700;font-size:14px;letter-spacing:.03em}
+h1{font-size:clamp(30px,4.6vw,52px);margin-top:6px}
+.lead{margin:12px 0 0;max-width:62ch;font-size:19px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.chips li{background:color-mix(in srgb,var(--orange) 14%,var(--bg));color:var(--brown);padding:8px 14px;border-radius:999px;font-weight:700;font-size:15px}
+section{padding:34px 0}
+h2{font-size:clamp(24px,3vw,34px);margin-bottom:6px}
+.sub{margin:0 0 18px;color:color-mix(in srgb,var(--text) 78%,transparent)}
+.viewer{position:relative;border-radius:26px;background:radial-gradient(120% 90% at 50% 30%,#fbf6ee,#efe3d1 72%,#e4d3ba);overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.viewer.drag{cursor:grabbing}
+canvas#c{display:block;width:100%;height:clamp(340px,56vw,600px)}
+.badge{position:absolute;top:12px;inset-inline-start:14px;font-size:12px;background:#fffa;border-radius:999px;padding:4px 10px;color:var(--brown);pointer-events:none}
+.info{position:absolute;top:12px;inset-inline-end:14px;background:#fffd;border-radius:14px;padding:8px 12px;font-size:14px;min-width:190px;pointer-events:none;box-shadow:0 8px 20px -12px rgba(60,40,30,.35)}
+.info b{color:var(--orange-d)}
+.ui{position:absolute;inset:auto 0 0 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;padding:12px 14px}
+.grp{display:flex;gap:6px;flex-wrap:wrap}
+button,.tg{font:inherit;font-size:14px;font-weight:700;color:var(--text);background:#fffc;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+button[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+button:hover{background:#fff}button[aria-pressed=true]:hover{background:var(--green)}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.card{background:var(--surface);border-radius:22px;padding:18px}
+.card svg{width:100%;height:auto;display:block}
+.card h3{font-size:20px;margin-bottom:2px}
+.card p{margin:0 0 8px;font-size:15px}
+table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:18px;overflow:hidden;font-size:16px}
+th,td{padding:11px 14px;text-align:start;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--orange-d);font-weight:700;font-size:14px;background:color-mix(in srgb,var(--orange) 10%,var(--surface))}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:center;white-space:nowrap}
+tr.tot td{font-weight:800;background:color-mix(in srgb,var(--green) 14%,var(--surface))}
+.ids{font-size:13px;line-height:1.9;color:var(--brown)}
+.ids span{display:inline-block;margin:0 2px 3px;padding:0 7px;border-radius:8px;background:#fff8;cursor:pointer}
+.ids span.sel,.ids span:hover{background:var(--orange);color:#fff}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 10px;font-size:14px;font-weight:700}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-inline-end:6px}
+label.sel{display:inline-flex;gap:8px;align-items:center;font-weight:700;margin:6px 0 14px}
+select{font:inherit;padding:8px 12px;border-radius:12px;border:1.5px solid var(--line);background:#fff}
+.note{font-size:14px;color:color-mix(in srgb,var(--text) 72%,transparent);margin:10px 0 0}
+polygon.t{cursor:pointer;stroke:#fff;stroke-width:1.4;transition:opacity .15s}
+polygon.t.sel{stroke:#c0504d;stroke-width:3}
+footer{padding:26px 0 50px;font-size:14px;color:color-mix(in srgb,var(--text) 70%,transparent)}
+@media(max-width:860px){.grid2{grid-template-columns:minmax(0,1fr)}.info{position:static;margin:10px;pointer-events:auto}.ui{position:static;justify-content:center;padding:6px 10px 14px}canvas#c{height:clamp(300px,82vw,460px)}}
+.tw{overflow-x:auto;border-radius:18px}.tw table{min-width:640px}
+@media print{.ui,.info,.badge{display:none}.viewer{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <span class="kicker">כיסוי בד לכיפה גאודזית – דגם אוהל השטח</span>
+  <h1>כיפה גאודזית 1V – 15 משולשים זהים</h1>
+  <p class="lead">הדגם לפי האוהל שבתמונה: משולש אחד שחוזר 15 פעמים (מכסה של 5, שורה של 5 ושורה של 5), עם בסיס מחומש. אורך הצלע ניתן לשינוי.</p>
+  <label class="sel">אורך צלע (ס״מ): <input id="edge" type="number" min="100" max="1200" step="5" style="font:inherit;width:96px;padding:6px 10px;border-radius:12px;border:1.5px solid var(--line)"> <button type="button" id="edgeGo">עדכון</button></label>
+  <ul class="chips" id="chips"></ul>
+</header>
+
+<main class="wrap">
+  <section id="view" aria-labelledby="h-view">
+    <h2 id="h-view">הדמיה תלת־ממדית</h2>
+    <p class="sub">גררו כדי לסובב. לחצו על משולש כדי לראות את הפרטים שלו ולסמן אותו בשרטוטים. מידות הכיפה מחושבות מאורך הצלע.</p>
+    <div class="viewer" id="viewer">
+      <span class="badge">הדמיה להמחשה</span>
+      <div class="info" id="info" aria-live="polite">עברו עם העכבר על משולש</div>
+      <canvas id="c" role="img" aria-label="הדמיה תלת־ממדית של כיפה גאודזית 2V"></canvas>
+      <div class="ui">
+        <div class="grp" role="group" aria-label="תצוגה">
+          <button type="button" data-mode="fabric" aria-pressed="true">בד</button>
+          <button type="button" data-mode="wire" aria-pressed="false">שלד</button>
+        </div>
+        <div class="grp" role="group" aria-label="אפשרויות">
+          
+          <button type="button" id="b-num" aria-pressed="false">מספור</button>
+          <button type="button" id="b-dim" aria-pressed="true">מידות</button>
+        </div>
+        <div class="grp">
+          <button type="button" id="b-in" aria-label="קרב">＋</button>
+          <button type="button" id="b-out" aria-label="הרחק">－</button>
+          <button type="button" id="b-spin" aria-pressed="true">סיבוב אוטומטי</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="drawing" aria-labelledby="h-draw">
+    <h2 id="h-draw">שרטוט ייצור – תבניות החיתוך</h2>
+    <p class="sub">משולש אחד בלבד. הקו המלא הוא קו התפר, והקו המקווקו הוא קו החיתוך עם תוספת תפר של <span id="seamTxt">4</span> ס״מ מכל צלע.</p>
+    <div class="card" style="max-width:640px"><h3>משולש T – שווה־צלעות</h3><p id="pA"></p><svg id="svgA" role="img" aria-label="תבנית משולש"></svg></div>
+  </section>
+
+  <section id="cut" aria-labelledby="h-cut">
+    <h2 id="h-cut">רשימת חיתוך וכמויות</h2>
+    <p class="sub">שטחים מחושבים מהגאומטריה המדויקת של הכיפה (רדיוס 4 מ׳).</p>
+    <div class="tw"><table id="tbl"></table></div>
+    <p class="note">שטח נטו הוא שטח המשולשים עצמם, בלי תפרים. שטח החיתוך כולל תוספת תפר של 4 ס״מ מכל צלע, ללא פחת.</p>
+  </section>
+
+  <section id="map" aria-labelledby="h-map">
+    <h2 id="h-map">מפת הרכבה – מבט מלמעלה</h2>
+    <p class="sub">המרכז הוא פסגת הכיפה. המספרים זהים לאלו שבהדמיה (לחצו על משולש כדי לסמן אותו).</p>
+    <div class="card">
+      <div class="legend"><span><i style="background:var(--A)"></i>T – שווה־צלעות (15)</span></div>
+      <svg id="svgTop" role="img" aria-label="מפת הרכבה – מבט מלמעלה"></svg>
+    </div>
+  </section>
+
+  <section id="fabric" aria-labelledby="h-fab">
+    <h2 id="h-fab">הערכת כמות בד</h2>
+    <p class="sub">חיתוך משולשים מתחלפים (הפוכים) לאורך רצועה, כדי לצמצם פחת. הערכה בלבד, ללא תוספת בטחון.</p>
+    <label class="sel">רוחב גליל הבד: <select id="roll"><option value="380">380 ס״מ</option><option value="400" selected>400 ס״מ</option><option value="450">450 ס״מ</option><option value="500">500 ס״מ</option></select></label>
+    <div class="tw"><table id="est"></table></div>
+  </section>
+</main>
+
+<footer class="wrap">הדמיה ושרטוט להמחשה. לפני ייצור יש לאמת מידות מול הקונסטרוקציה בפועל.</footer>
+
+<script>
+(function(){
+'use strict';
+/* ---------- parameters ---------- */
+var QA=parseFloat(new URLSearchParams(location.search).get('a'))||420,SEAM=4,R=QA/1.0514622,ZB=0.4472136;                 // sphere radius (cm), seam allowance (cm)
+var $=function(id){return document.getElementById(id)};
+var f1=function(n){return n.toLocaleString('he-IL',{maximumFractionDigits:1,minimumFractionDigits:1})};
+var f0=function(n){return Math.round(n).toLocaleString('he-IL')};
+
+/* ---------- geometry: 2V geodesic hemisphere ---------- */
+var P=(1+Math.sqrt(5))/2,V=[];
+[[0,1,P],[0,1,-P],[0,-1,P],[0,-1,-P],[1,P,0],[1,-P,0],[-1,P,0],[-1,-P,0],[P,0,1],[P,0,-1],[-P,0,1],[-P,0,-1]].forEach(function(v){var l=Math.hypot(v[0],v[1],v[2]);V.push([v[0]/l,v[1]/l,v[2]/l])});
+var dist=function(a,b){return Math.hypot(a[0]-b[0],a[1]-b[1],a[2]-b[2])};
+var edgeLen=dist(V[0],V[2]),adj=[];
+for(var i=0;i<12;i++){adj[i]=[];for(var j=0;j<12;j++)if(i!==j&&Math.abs(dist(V[i],V[j])-edgeLen)<1e-6)adj[i].push(j)}
+var faces=[];
+for(i=0;i<12;i++)for(j=i+1;j<12;j++)if(adj[i].indexOf(j)>-1)for(var k=j+1;k<12;k++)if(adj[i].indexOf(k)>-1&&adj[j].indexOf(k)>-1)faces.push([i,j,k]);
+var norm=function(v){var l=Math.hypot(v[0],v[1],v[2]);return [v[0]/l,v[1]/l,v[2]/l]};
+var mid=function(a,b){return norm([a[0]+b[0],a[1]+b[1],a[2]+b[2]])};
+var tris=faces.map(function(f){return [V[f[0]],V[f[1]],V[f[2]]]});   // 1V: the icosahedron faces themselves
+/* rotate so a 5-fold axis (an icosahedron vertex) points up: the 10 mid-edge vertices then lie on the equator, which becomes the flat base */
+var u=V[0];
+function rotToZ(u){var z=[0,0,1],c=u[2],k;            // k = u x z
+  k=[u[1]*z[2]-u[2]*z[1],u[2]*z[0]-u[0]*z[2],u[0]*z[1]-u[1]*z[0]];
+  var s=Math.hypot(k[0],k[1],k[2]);if(s<1e-9)return function(p){return p};
+  k=[k[0]/s,k[1]/s,k[2]/s];var th=Math.acos(c),ct=Math.cos(th),st=Math.sin(th);
+  return function(p){var kd=k[0]*p[0]+k[1]*p[1]+k[2]*p[2],kx=[k[1]*p[2]-k[2]*p[1],k[2]*p[0]-k[0]*p[2],k[0]*p[1]-k[1]*p[0]];
+    return [p[0]*ct+kx[0]*st+k[0]*kd*(1-ct),p[1]*ct+kx[1]*st+k[1]*kd*(1-ct),p[2]*ct+kx[2]*st+k[2]*kd*(1-ct)]}}
+var rot=rotToZ(u);
+var D=[];
+tris.forEach(function(t){var r=t.map(rot);if(r.every(function(p){return p[2]>=-ZB-1e-6}))D.push(r.map(function(p){return [p[0]*R,p[1]*R,(p[2]+ZB)*R]}))});
+/* per-triangle data */
+var T=D.map(function(p){
+  var e=[dist(p[0],p[1]),dist(p[1],p[2]),dist(p[2],p[0])],c=[(p[0][0]+p[1][0]+p[2][0])/3,(p[0][1]+p[1][1]+p[2][1])/3,(p[0][2]+p[1][2]+p[2][2])/3];
+  var s=(e[0]+e[1]+e[2])/2,area=Math.sqrt(s*(s-e[0])*(s-e[1])*(s-e[2])),srt=e.slice().sort(function(a,b){return a-b});
+  var isB=false;
+  return {p:p,c:c,e:srt,area:area,type:isB?'B':'A',az:Math.atan2(c[1],c[0])};
+});
+T.sort(function(a,b){var dz=Math.round(b.c[2]/15)-Math.round(a.c[2]/15);return dz||(a.az-b.az)});
+var cnt={A:0,B:0};T.forEach(function(t,i){t.i=i;t.id='T'+(++cnt[t.type])});
+var LA=T[0].e,LB=LA;
+var edgesA=LA[0],edgesB=LB[0];     // A: short=219 (x2), long=247 ; B: 247
+var shortA=LA[0],longA=LA[2],sideB=LB[0];
+var netTotal=T.reduce(function(s,t){return s+t.area},0)/1e4;
+var areaA=T.filter(function(t){return t.type==='A'})[0].area,areaB=areaA;
+var sum=function(type,fn){return T.filter(function(t){return t.type===type}).reduce(function(s,t){return s+fn(t)},0)};
+/* seam allowance: offset each edge outward by SEAM (mitered) => similar triangle scaled about the incenter */
+function inr(e,area){return area/((e[0]+e[1]+e[2])/2)}
+var rA=inr([shortA,shortA,longA],areaA),rB=inr([sideB,sideB,sideB],areaB);
+var kA=(rA+SEAM)/rA,kB=(rB+SEAM)/rB;
+var cutA=areaA*kA*kA,cutB=areaB*kB*kB;
+var nA=cnt.A,nB=cnt.B,cutTotal=(nA*cutA+nB*cutB)/1e4;
+window.__dome={ht:HT,count:T.length,A:nA,B:nB,netM2:netTotal,cutM2:cutTotal,shortA:shortA,longA:longA,sideB:sideB};
+
+/* ---------- header chips ---------- */
+var HT=(1+ZB)*R,BW=2*0.8944272*R;
+$('chips').innerHTML=['צלע '+f0(QA)+' ס״מ',T.length+' משולשים זהים','גובה '+(HT/100).toFixed(2)+' מ׳','בסיס מחומש (קוטר חוצה כ־'+(BW/100).toFixed(1)+' מ׳)','תוספת תפר '+SEAM+' ס״מ','כ־'+f0(netTotal)+' מ״ר בד נטו'].map(function(x){return '<li>'+x+'</li>'}).join('');
+$('edge').value=QA;$('edgeGo').addEventListener('click',function(){var v=parseFloat($('edge').value);if(v>0)location.search='?a='+v});
+$('seamTxt').textContent=SEAM;
+
+/* ---------- 3D viewer (canvas, no libraries) ---------- */
+var cv=$('c'),g=cv.getContext('2d'),viewer=$('viewer'),info=$('info');
+var yaw=-0.6,pitch=0.5,zoom=1,auto=true,mode='fabric',byType=true,showNum=false,showDim=true,sel=-1,hov=-1,drag=false,lx=0,ly=0,W=0,H=0,dpr=1,polys=[];
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;if(reduce)auto=false;
+function fit(){dpr=Math.min(2,window.devicePixelRatio||1);var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}
+function proj(p){var cy=Math.cos(yaw),sy=Math.sin(yaw),x1=p[0]*cy-p[1]*sy,y1=p[0]*sy+p[1]*cy,z1=p[2],cp=Math.cos(pitch),sp=Math.sin(pitch);
+  var dep=y1*cp-z1*sp,sc=Math.min(W,H*1.45)/(R*(W<560?3.2:3.9))*zoom,Dd=R*5,fac=Dd/(Dd+dep);
+  return [W/2+x1*sc*fac,H*0.66-(y1*sp+z1*cp)*sc*fac,dep]}
+function nrmView(n){var cy=Math.cos(yaw),sy=Math.sin(yaw),x1=n[0]*cy-n[1]*sy,y1=n[0]*sy+n[1]*cy,cp=Math.cos(pitch),sp=Math.sin(pitch);return [x1,y1*cp-n[2]*sp,y1*sp+n[2]*cp]}
+function shade(base,l){var m=base.match(/\w\w/g).map(function(h){return parseInt(h,16)});var k=0.62+0.5*l;return 'rgb('+m.map(function(v){return Math.max(0,Math.min(255,Math.round(v*k)))}).join(',')+')'}
+function draw(){
+  g.clearRect(0,0,W,H);polys=[];
+  /* ground disc */
+  g.beginPath();for(var a=0;a<=72;a++){var q=proj([Math.cos(a/72*6.2832)*R*1.0,Math.sin(a/72*6.2832)*R*1.0,0]);a?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1])}g.closePath();g.fillStyle='rgba(120,100,80,.13)';g.fill();
+  g.beginPath();for(a=0;a<=72;a++){q=proj([Math.cos(a/72*6.2832)*R,Math.sin(a/72*6.2832)*R,0]);a?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1])}g.closePath();g.strokeStyle='rgba(90,70,60,.35)';g.setLineDash([5,5]);g.lineWidth=1.2;g.stroke();g.setLineDash([]);
+  var items=T.map(function(t){var pp=t.p.map(proj),c=proj(t.c);return {t:t,pp:pp,dep:c[2],n:nrmView(norm(t.c))}});
+  items.sort(function(a,b){return b.dep-a.dep});
+  var back=[],front=[];
+  items.forEach(function(it){(it.n[1]<0?front:back).push(it)});
+  /* in view space the camera looks toward +y' with tilt; faces whose normal.y' < 0 point at the camera */
+  var drawIt=function(it,isBack){
+    var t=it.t,pp=it.pp,l=Math.max(0,(-(it.n[1])*0.5-it.n[0]*0.35+it.n[2]*0.7));
+    g.beginPath();g.moveTo(pp[0][0],pp[0][1]);g.lineTo(pp[1][0],pp[1][1]);g.lineTo(pp[2][0],pp[2][1]);g.closePath();
+    var isSel=t.i===sel,isHov=t.i===hov;
+    if(mode==='fabric'){
+      g.fillStyle=shade(byType?(t.type==='A'?'d89a5f':'8fa585'):'e6d8bf',Math.min(1,l));g.fill();
+      g.strokeStyle=isSel?'#c0504d':'rgba(255,255,255,.85)';g.lineWidth=isSel?3:1.3;g.stroke();
+      if(isHov&&!isSel){g.fillStyle='rgba(255,255,255,.28)';g.fill()}
+    }else{
+      g.fillStyle=isSel?'rgba(192,80,77,.22)':(isBack?'rgba(80,60,50,.02)':(byType?(t.type==='A'?'rgba(216,154,95,.16)':'rgba(143,165,133,.2)'):'rgba(255,255,255,.05)'));g.fill();
+      g.strokeStyle=isSel?'#c0504d':(isBack?'rgba(90,70,60,.28)':'rgba(90,70,60,.85)');g.lineWidth=isSel?2.6:(isBack?1:1.5);g.stroke();
+    }
+    if(!isBack)polys.push({i:t.i,pp:pp});
+    if(showNum&&(!isBack||mode==='wire')){var c=[(pp[0][0]+pp[1][0]+pp[2][0])/3,(pp[0][1]+pp[1][1]+pp[2][1])/3];g.font='700 '+Math.max(9,Math.min(14,W/62))+'px system-ui';g.textAlign='center';g.textBaseline='middle';g.fillStyle=mode==='fabric'?'rgba(40,25,20,.85)':'rgba(90,60,50,.9)';if(!isBack||mode==='wire'){g.fillText(t.id,c[0],c[1])}}
+  };
+  if(mode==='wire')back.forEach(function(it){drawIt(it,true)});
+  front.forEach(function(it){drawIt(it,false)});
+  if(showDim)dims();
+}
+function pill(txt,x,y){g.font='700 13px system-ui';var w=g.measureText(txt).width+16;g.fillStyle='rgba(255,255,255,.92)';g.beginPath();if(g.roundRect)g.roundRect(x-w/2,y-12,w,24,12);else g.rect(x-w/2,y-12,w,24);g.fill();g.fillStyle='#a4531c';g.textAlign='center';g.textBaseline='middle';g.fillText(txt,x,y+1)}
+function dims(){
+  var rr=0.8944272*R,a=proj([-rr,0,0]),b=proj([rr,0,0]);g.strokeStyle='#c46a2f';g.lineWidth=1.6;g.setLineDash([6,4]);g.beginPath();g.moveTo(a[0],a[1]);g.lineTo(b[0],b[1]);g.stroke();
+  var c0=proj([0,0,0]),c1=proj([0,0,HT]);g.beginPath();g.moveTo(c0[0],c0[1]);g.lineTo(c1[0],c1[1]);g.stroke();g.setLineDash([]);
+  [a,b,c0,c1].forEach(function(p){g.fillStyle='#c46a2f';g.beginPath();g.arc(p[0],p[1],3,0,6.283);g.fill()});
+  pill('קוטר חוצה '+(BW/100).toFixed(2)+' מ׳',(a[0]+b[0])/2,(a[1]+b[1])/2+22);pill('גובה '+(HT/100).toFixed(2)+' מ׳',(c0[0]+c1[0])/2+44,(c0[1]+c1[1])/2);
+}
+function hit(x,y){for(var i=polys.length-1;i>=0;i--){var p=polys[i].pp,d1=(x-p[1][0])*(p[0][1]-p[1][1])-(p[0][0]-p[1][0])*(y-p[1][1]),d2=(x-p[2][0])*(p[1][1]-p[2][1])-(p[1][0]-p[2][0])*(y-p[2][1]),d3=(x-p[0][0])*(p[2][1]-p[0][1])-(p[2][0]-p[0][0])*(y-p[0][1]);
+  var neg=d1<0||d2<0||d3<0,pos=d1>0||d2>0||d3>0;if(!(neg&&pos))return polys[i].i}return -1}
+function describe(t){if(!t)return 'עברו עם העכבר על משולש';var ed=t.type==='A'?f0(shortA)+' / '+f0(shortA)+' / '+f0(longA):f0(sideB)+' / '+f0(sideB)+' / '+f0(sideB);
+  return '<b>'+t.id+'</b> · '+(t.type==='A'?'שווה־צלעות':'שווה־צלעות')+'<br>צלעות (ס״מ): '+ed+'<br>שטח: '+f1(t.area/1e4)+' מ״ר'}
+function setSel(i){sel=i;info.innerHTML=describe(T[i]);paintSel();draw()}
+function paintSel(){document.querySelectorAll('polygon.t').forEach(function(p){p.classList.toggle('sel',+p.dataset.i===sel)});document.querySelectorAll('.ids span').forEach(function(s){s.classList.toggle('sel',+s.dataset.i===sel)})}
+function pt(e){var r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]}
+var moved=0;
+viewer.addEventListener('pointerdown',function(e){if(e.target.closest('.ui'))return;drag=true;moved=0;lx=e.clientX;ly=e.clientY;viewer.classList.add('drag');try{viewer.setPointerCapture(e.pointerId)}catch(_){}});
+viewer.addEventListener('pointermove',function(e){
+  if(drag){var dx=e.clientX-lx,dy=e.clientY-ly;moved+=Math.abs(dx)+Math.abs(dy);yaw+=dx*0.008;pitch=Math.max(0.05,Math.min(1.45,pitch+dy*0.006));lx=e.clientX;ly=e.clientY;if(moved>4){auto=false;sync()}draw();return}
+  var p=pt(e),h=hit(p[0],p[1]);if(h!==hov){hov=h;if(sel<0)info.innerHTML=describe(T[h]);draw()}});
+viewer.addEventListener('pointerup',function(e){var wasDrag=moved>5;drag=false;viewer.classList.remove('drag');if(!wasDrag&&!e.target.closest('.ui')){var p=pt(e),h=hit(p[0],p[1]);setSel(h===sel?-1:h)}});
+viewer.addEventListener('pointerleave',function(){if(hov!==-1){hov=-1;if(sel<0)info.innerHTML=describe(null);draw()}});
+viewer.addEventListener('wheel',function(e){e.preventDefault();zoom=Math.max(.6,Math.min(2.4,zoom*(e.deltaY<0?1.08:.93)));draw()},{passive:false});
+function sync(){$('b-spin').setAttribute('aria-pressed',auto)}
+document.querySelectorAll('[data-mode]').forEach(function(b){b.addEventListener('click',function(){mode=b.dataset.mode;document.querySelectorAll('[data-mode]').forEach(function(x){x.setAttribute('aria-pressed',x===b)});draw()})});
+function tog(id,get,set){$(id).addEventListener('click',function(){set(!get());this.setAttribute('aria-pressed',get());draw()})}
+tog('b-num',function(){return showNum},function(v){showNum=v});tog('b-dim',function(){return showDim},function(v){showDim=v});
+$('b-in').addEventListener('click',function(){zoom=Math.min(2.4,zoom*1.15);draw()});$('b-out').addEventListener('click',function(){zoom=Math.max(.6,zoom/1.15);draw()});
+$('b-spin').addEventListener('click',function(){auto=!auto;sync()});
+var last=0;function tick(t){if(auto&&!drag){yaw+=(t-last)*0.00028;draw()}last=t;requestAnimationFrame(tick)}
+addEventListener('resize',function(){fit();draw()});
+
+/* ---------- production drawing (SVG) ---------- */
+function ns(tag,attrs,txt){var e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(txt!=null)e.textContent=txt;return e}
+function pieceSVG(svg,edgesTop,base,e1,e2,label,qty,color){
+  /* triangle with horizontal base `base`, other sides e1 (left) e2 (right) */
+  var x2=(base*base+e1*e1-e2*e2)/(2*base),h=Math.sqrt(Math.max(0,e1*e1-x2*x2));
+  var A=[0,0],B=[base,0],C=[x2,h];                              // y up, flip below
+  var s=(base+e1+e2)/2,ar=base*h/2,r=ar/s,I=[(base*C[0]+e2*A[0]+e1*B[0])/(base+e1+e2),(base*C[1]+e2*A[1]+e1*B[1])/(base+e1+e2)];
+  var k=(r+SEAM)/r,off=[A,B,C].map(function(p){return [I[0]+(p[0]-I[0])*k,I[1]+(p[1]-I[1])*k]});
+  var minX=Math.min.apply(null,off.map(function(p){return p[0]})),maxX=Math.max.apply(null,off.map(function(p){return p[0]})),minY=Math.min.apply(null,off.map(function(p){return p[1]})),maxY=Math.max.apply(null,off.map(function(p){return p[1]}));
+  var pad=46,wUnits=maxX-minX,hUnits=maxY-minY,Wd=640,sc=(Wd-2*pad-40)/wUnits,Hd=hUnits*sc+2*pad+30;
+  svg.setAttribute('viewBox','0 0 '+Wd+' '+Hd);
+  var X=function(p){return pad+20+(p[0]-minX)*sc},Y=function(p){return Hd-pad-10-(p[1]-minY)*sc};
+  var poly=function(pts){return pts.map(function(p){return X(p)+','+Y(p)}).join(' ')};
+  svg.appendChild(ns('polygon',{points:poly(off),fill:'none',stroke:'#c46a2f','stroke-width':1.6,'stroke-dasharray':'7 5'}));
+  svg.appendChild(ns('polygon',{points:poly([A,B,C]),fill:color,'fill-opacity':.55,stroke:'#4a342c','stroke-width':2}));
+  var lab=function(txt,x,y,anchor,sz){svg.appendChild(ns('text',{x:x,y:y,'text-anchor':anchor||'middle','font-size':sz||15,'font-weight':700,fill:'#4a342c','font-family':'system-ui,Arial'},txt))};
+  lab(f0(base)+' ס״מ',(X(A)+X(B))/2,Y(A)+26);
+  var m1=[(A[0]+C[0])/2,(A[1]+C[1])/2],m2=[(B[0]+C[0])/2,(B[1]+C[1])/2];
+  lab(f0(e1)+' ס״מ',X(m1)-12,Y(m1)-6,'end');lab(f0(e2)+' ס״מ',X(m2)+12,Y(m2)-6,'start');
+  lab(label,(X(A)+X(B)+X(C))/3,(Y(A)+Y(B)+Y(C))/3+4,'middle',26);
+  lab('כמות: '+qty,(X(A)+X(B))/2,Y(A)+46);
+  return {cutW:(maxX-minX),cutH:(maxY-minY),h:h,ar:ar};
+}
+var pa=pieceSVG($('svgA'),0,longA,shortA,shortA,'T',nA+' יח׳','#d89a5f'),pb=pa;
+$('pA').textContent='שלוש צלעות '+f0(shortA)+' ס״מ · שטח '+f1(areaA/1e4)+' מ״ר · גובה '+f0(pa.h)+' ס״מ';
+
+/* ---------- cut list ---------- */
+var idsA=T.filter(function(t){return t.type==='A'}),idsB=T.filter(function(t){return t.type==='B'});
+var chip=function(arr){return arr.map(function(t){return '<span data-i="'+t.i+'">'+t.id+'</span>'}).join('')};
+$('tbl').innerHTML='<thead><tr><th>סוג</th><th>צלעות (ס״מ)</th><th class="num">כמות</th><th class="num">שטח ליחידה (מ״ר)</th><th class="num">סה״כ נטו (מ״ר)</th><th class="num">סה״כ חיתוך כולל תפר (מ״ר)</th></tr></thead><tbody>'+
+ '<tr><td>T – שווה־צלעות<div class="ids">'+chip(idsA)+'</div></td><td>'+f0(shortA)+' / '+f0(shortA)+' / '+f0(shortA)+'</td><td class="num">'+nA+'</td><td class="num">'+f1(areaA/1e4)+'</td><td class="num">'+f1(netTotal)+'</td><td class="num">'+f1(cutTotal)+'</td></tr></tbody>';
+
+/* ---------- assembly map (top view) ---------- */
+(function(){
+  var svg=$('svgTop'),S=760,c=S/2,sc=(S/2-30)/R;svg.setAttribute('viewBox','0 0 '+S+' '+S);
+  svg.appendChild(ns('circle',{cx:c,cy:c,r:R*sc,fill:'#fff6',stroke:'#72544b','stroke-width':1.5,'stroke-dasharray':'6 5'}));
+  T.forEach(function(t){var pts=t.p.map(function(p){return (c+p[0]*sc)+','+(c-p[1]*sc)}).join(' ');
+    var poly=ns('polygon',{points:pts,fill:t.type==='A'?'#d89a5f':'#8fa585','class':'t','data-i':t.i});
+    poly.appendChild(ns('title',{},t.id+' – '+(t.type==='A'?'שווה־צלעות':'שווה־צלעות')));
+    poly.addEventListener('click',function(){setSel(sel===t.i?-1:t.i)});svg.appendChild(poly);
+    svg.appendChild(ns('text',{x:c+t.c[0]*sc*1.0,y:c-t.c[1]*sc*1.0+5,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#2b1f1a','pointer-events':'none','font-family':'system-ui,Arial'},t.id))});
+  svg.appendChild(ns('circle',{cx:c,cy:c,r:4,fill:'#c0504d'}));
+})();
+document.querySelectorAll('.ids span').forEach(function(s){s.addEventListener('click',function(){setSel(sel===+s.dataset.i?-1:+s.dataset.i);$('view').scrollIntoView({behavior:'smooth',block:'start'})})});
+
+/* ---------- fabric estimate ---------- */
+function estimate(){
+  var w=+$('roll').value,rows='',tot=0,totArea=0;
+  [['T',nA,pa,cutA]].forEach(function(r){var perStrip=Math.max(0,Math.floor(w/r[2].cutH));
+    if(perStrip<1){rows+='<tr><td>'+r[0]+'</td><td colspan="4">רוחב הגליל קטן מגובה התבנית ('+f0(r[2].cutH)+' ס״מ)</td></tr>';tot=NaN;return}
+    var step=r[2].cutW/2,len=Math.ceil(r[1]/perStrip)*step+step;
+    rows+='<tr><td>'+r[0]+'</td><td class="num">'+f0(r[2].cutH)+' × '+f0(r[2].cutW)+'</td><td class="num">'+perStrip+'</td><td class="num">'+f1(len/100)+'</td><td class="num">'+f0(100*r[1]*r[3]/(w*len))+'%</td></tr>';
+    tot+=len;totArea+=r[1]*r[3]});
+  $('est').innerHTML='<thead><tr><th>תבנית</th><th class="num">מידות חיתוך (ס״מ)</th><th class="num">רצועות ברוחב הגליל</th><th class="num">אורך בד (מ׳)</th><th class="num">ניצולת</th></tr></thead><tbody>'+rows+
+   (isNaN(tot)?'':'<tr class="tot"><td>סה״כ</td><td></td><td class="num"></td><td class="num">'+f1(tot/100)+'</td><td class="num">'+f0(100*totArea/(w*tot))+'%</td></tr>')+'</tbody>';
+}
+$('roll').addEventListener('change',estimate);estimate();
+
+fit();info.innerHTML=describe(null);draw();requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
