@@ -626,3 +626,11 @@ html { overflow-x: clip; }
 .cookie-actions{gap:8px!important;flex-wrap:nowrap!important}
 .cookie-actions .btn{flex:0 0 auto!important;min-height:30px!important;padding:4px 14px!important;font-size:12.5px!important}
 @media(max-width:700px){.cookie-banner{padding:6px 10px!important;font-size:11.5px!important;gap:6px 10px!important}.cookie-banner p{flex-basis:100%}.cookie-actions{width:100%}.cookie-actions .btn{flex:1 1 0!important;min-height:30px!important;font-size:12px!important}}
+
+/* Cookie notice: small window dropping in from the TOP */
+.cookie-banner{top:10px!important;bottom:auto!important;inset-inline:0!important;margin-inline:auto!important;width:min(380px,calc(100% - 140px))!important;max-width:380px!important;border-radius:16px!important;border-width:1px!important;flex-direction:column!important;align-items:stretch!important;gap:8px!important;padding:10px 12px!important;font-size:12px!important;line-height:1.45!important;box-shadow:0 14px 34px rgba(0,0,0,.28)!important;transform:translateY(-24px)!important;z-index:80!important}
+.cookie-banner.is-open{transform:none!important}
+.cookie-banner p{flex:none!important}
+.cookie-actions{width:100%;flex-wrap:nowrap!important}
+.cookie-actions .btn{flex:1 1 0!important;min-height:30px!important;padding:4px 8px!important;font-size:12px!important}
+@media(max-width:700px){.cookie-banner{top:60px!important;width:calc(100% - 20px)!important;max-width:none!important}}
