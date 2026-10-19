@@ -190,6 +190,17 @@ document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});
 m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 </script>
+<style>
+@media(max-width:700px){
+.cover{display:flex!important;flex-direction:column;min-height:0!important;background:none!important;color:var(--color-text)}
+.cover::before{position:static!important;inset:auto!important;display:block;width:100%;aspect-ratio:16/10;background:url(assets/cover-home.jpg) center 55%/cover no-repeat!important}
+.cover .bh-in{padding:18px 16px 8px!important}
+.cover h1{color:var(--brown)!important;text-shadow:none!important;font-size:30px!important;max-width:none}
+.cover p:not(.stamp){color:var(--orange-deep)!important;text-shadow:none!important;font-size:18px!important}
+.cover .btn-light{background:transparent;color:var(--brown);border:1.5px solid var(--color-divider)}
+.cover .stamp{top:calc(100vw*10/16 - 40px);bottom:auto!important;inset-inline-end:12px;font-size:12px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -229,8 +240,6 @@ m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 </div>
 </section>
 
-<section class="whyus" aria-labelledby="whyus-h"><div class="whyus-in"><h2 id="whyus-h">למה לבחור בנו?</h2><div class="wcols"><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 98h90M42 98 78 38l32 60M22 98l22-42 14 26"/><circle cx="92" cy="30" r="9"/></svg><h3>אירוח ומגורים מחוברים לטבע אצלך בבית ובשטח</h3><p>עם האוהלים ומבנים על גלגלים, תוכלו ליצור פינה קסומה בגינה שלכם או להקים מבנה נעים בלב הטבע הפראי. כל מקום יכול להפוך לבית זמני מלא השראה, שבו תרגישו את הרוח, תיהנו מהנוף ותתחברו למרכיבים הבסיסיים של החיים. זה הזמן שלכם לשחרר את הדמיון, למצוא שלווה ולהתחבר מחדש עם הטבע שבסביבתכם.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M65 14 20 98h90Z M52 70h26 M40 84h50 M65 14v-8 M58 28l-6-12 M72 28l6-12"/></svg><h3>פתרונות אלטרנטיביים בהתאמה אישית</h3><p>בואו לגלות פתרונות אלטרנטיביים בהתאמה אישית, המיועדים להפוך כל חלום למציאות. אנו מציעים מגוון רחב של אוהלים ומבנים על גלגלים, המאפשרים לכם להתאים את החוויה בדיוק לצרכים שלכם. בין אם מדובר בהקמת מקום מגונן בגינה או בניית מבנה נייד בשטח הפתוח, כל פרט יכול להיות מותאם אישית – מהעיצוב והגודל ועד לתוספות נוחות שמעניקות את התחושה של בית. בחרו בחופש לחיות בדרך שלכם, היכן שתרצו.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="65" cy="22" r="14"/><path d="M26 44h78L65 98Z M30 106h70"/></svg><h3>אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם</h3><p>אנו מציעים צוות של אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם, שמחויבים להפוך את החזון שלכם למציאות. עם ניסיון רחב במגוון תחומים, צוותנו מעניק שירות מותאם אישית לכל לקוח, תוך תשומת לב לפרטים הקטנים. אנו עובדים בשיתוף פעולה הדוק עם הלקוחות כדי להבין את הצרכים והחלומות שלהם, וליצור מרחבים שמתחברים בהרמוניה עם הטבע.</p></div></div></div></section>
-
 <section class="wa-band "><div><h3>מתלבטים איזה אוהל מתאים לכם?</h3><p>נציג יעזור לבחור דגם וגודל לפי המקום והשימוש, בלי התחייבות.</p></div><a class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A2%D7%96%D7%A8%D7%94%20%D7%91%D7%91%D7%97%D7%99%D7%A8%D7%AA%20%D7%90%D7%95%D7%94%D7%9C%20%D7%92%D7%9C%D7%90%D7%9E%D7%A4%D7%99%D7%A0%D7%92"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>דברו איתנו בוואטסאפ</a></section>
 
 <section class="sec" id="why">
@@ -252,6 +261,8 @@ m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 <figure><img src="assets/team-couple.jpg" alt="אורין ואוריאל, צוות Alternative Dream"></figure>
 </div>
 </section>
+
+<section class="whyus" aria-labelledby="whyus-h"><div class="whyus-in"><h2 id="whyus-h">למה לבחור בנו?</h2><div class="wcols"><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 98h90M42 98 78 38l32 60M22 98l22-42 14 26"/><circle cx="92" cy="30" r="9"/></svg><h3>אירוח ומגורים מחוברים לטבע אצלך בבית ובשטח</h3><p>עם האוהלים ומבנים על גלגלים, תוכלו ליצור פינה קסומה בגינה שלכם או להקים מבנה נעים בלב הטבע הפראי. כל מקום יכול להפוך לבית זמני מלא השראה, שבו תרגישו את הרוח, תיהנו מהנוף ותתחברו מחדש לטבע.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M65 14 20 98h90Z M52 70h26 M40 84h50 M65 14v-8 M58 28l-6-12 M72 28l6-12"/></svg><h3>פתרונות אלטרנטיביים בהתאמה אישית</h3><p>בואו לגלות פתרונות אלטרנטיביים בהתאמה אישית, המיועדים להפוך כל חלום למציאות. מהעיצוב והגודל ועד תוספות נוחות שמעניקות תחושה של בית. בחרו בחופש לחיות בדרך שלכם, היכן שתרצו.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="65" cy="22" r="14"/><path d="M26 44h78L65 98Z M30 106h70"/></svg><h3>אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם</h3><p>צוות של אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם. עם ניסיון רחב ושירות מותאם אישית, אנו עובדים בשיתוף פעולה הדוק איתכם כדי ליצור מרחבים שמתחברים בהרמוניה עם הטבע.</p></div></div></div></section>
 
 <section class="wa-band warm"><div><h3>רוצים לראות מחיר והצעה?</h3><p>שלחו לנו הודעה ונחזור אליכם עם הצעה מותאמת.</p></div><a class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%92%D7%9C%D7%90%D7%9E%D7%A4%D7%99%D7%A0%D7%92"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>קבלו הצעת מחיר</a></section>
 
