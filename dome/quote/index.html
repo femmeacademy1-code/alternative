@@ -105,13 +105,10 @@ main,.wrap{font-size:18px}
 .qty tr.tot td,.qty tr.tot th{font-weight:800;background:color-mix(in srgb,var(--color-accent) 14%,var(--color-surface))}
 .tw{overflow-x:auto;border-radius:20px}
 </style>
-<script>try{if(window.self!==window.top)document.documentElement.classList.add('in-frame')}catch(e){document.documentElement.classList.add('in-frame')}</script>
 <style>
-/* embedded in another site (e.g. a Wix iframe): keep the floating controls at the TOP of the frame, where they are visible */
-html.in-frame .fab{top:10px!important;bottom:auto!important;left:12px!important;right:auto!important;z-index:60!important;animation:none!important;padding:9px 16px!important;font-size:15px!important}
-html.in-frame .fda-btn{top:10px!important;bottom:auto!important;z-index:61!important}
-html.in-frame .fda-panel{top:64px!important;bottom:auto!important;max-height:calc(100vh - 80px)!important}
-html.in-frame .cookie-banner{top:8px!important;bottom:auto!important;z-index:70!important}
+/* WhatsApp stays pinned at the TOP of every page; the accessibility button stays at the bottom */
+.fab{top:12px!important;bottom:auto!important;left:12px!important;right:auto!important;z-index:60!important;animation:none!important;padding:9px 16px!important;font-size:15px!important;gap:6px!important}
+@media(max-width:700px){.fab{top:8px!important;left:8px!important;padding:7px 13px!important;font-size:14px!important}}
 </style>
 </head>
 <body>

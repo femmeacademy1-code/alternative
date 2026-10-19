@@ -146,6 +146,11 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 .hero .btn-ghost,.home-hero .btn-ghost{background:var(--orange-deep);color:#fff!important;border:0;padding:12px 24px;font-weight:700;box-shadow:0 14px 24px -14px rgba(164,83,28,.8)}
 .hero .btn-ghost:hover{background:#8c4416;color:#fff}
 </style>
+<style>
+/* WhatsApp stays pinned at the TOP of every page; the accessibility button stays at the bottom */
+.fab{top:12px!important;bottom:auto!important;left:12px!important;right:auto!important;z-index:60!important;animation:none!important;padding:9px 16px!important;font-size:15px!important;gap:6px!important}
+@media(max-width:700px){.fab{top:8px!important;left:8px!important;padding:7px 13px!important;font-size:14px!important}}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#bell">דילוג לתוכן</a>
