@@ -226,6 +226,10 @@ if(matchMedia('(prefers-reduced-motion:reduce)').matches||matchMedia('(max-width
 var t=false;function f(){t=false;var r=c.getBoundingClientRect();if(r.bottom<0)return;bg.style.transform='translate3d(0,'+(-r.top*0.3).toFixed(1)+'px,0)'}
 addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});f()});
 </script>
+<style>
+.cover-logo{position:absolute;z-index:2;top:clamp(18px,3vw,34px);inset-inline:0;margin:0 auto;width:clamp(170px,19vw,260px);height:auto;filter:drop-shadow(0 3px 14px rgba(0,0,0,.45));pointer-events:none}
+@media(max-width:700px){.cover-logo{top:12px;width:150px}.cover{background:var(--color-bg)!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -246,7 +250,7 @@ addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{p
 <a href="#talk">צור קשר</a>
 </nav>
 </header>
-<section class="cover" aria-label="פתיחה"><div class="cover-bg" aria-hidden="true"></div>
+<section class="cover" aria-label="פתיחה"><div class="cover-bg" aria-hidden="true"></div><img class="cover-logo" src="assets/logo-white.png" alt="Alternative Dream">
 <div class="bh-in">
 <h1>לא צריך לנסוע רחוק כדי למצוא חופש</h1>
 <p>עם אוהל גלאמפינג או מבנה אלטרנטיבי, כל גינה או שטח יכולים להפוך למרחב נעים ומעורר השראה לאירוח ומגורים.</p>
