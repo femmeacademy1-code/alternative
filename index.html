@@ -164,14 +164,52 @@ footer a.ltr,footer a[href^="mailto"],footer a[href^="tel"]{font-size:16px!impor
 footer p{font-size:16px!important}
 }
 </style>
+<style>
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px max(var(--edge,20px),calc((100% - 1200px)/2 + var(--edge,20px)));background:color-mix(in srgb,var(--color-bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-divider)}
+.topbar .nav-brand img{height:52px!important;display:block}
+.tb-actions{display:flex;align-items:center;gap:10px}
+.tb-wa{padding:8px 18px!important;font-size:15px!important;min-height:0}
+.tb-btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--color-divider);font-weight:700;font-size:15px;color:var(--brown);background:var(--color-bg)}
+.tb-btn:hover{background:#fff}.tb-btn:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.tb-ic{display:grid;gap:3.5px;width:18px}.tb-ic i{display:block;height:2px;background:var(--brown);border-radius:2px;transition:transform .25s,opacity .2s}
+.tb-btn[aria-expanded=true] .tb-ic i:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.tb-btn[aria-expanded=true] .tb-ic i:nth-child(2){opacity:0}
+.tb-btn[aria-expanded=true] .tb-ic i:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+.menu{position:absolute;top:100%;inset-inline-end:max(var(--edge,20px),calc((100% - 1200px)/2 + var(--edge,20px)));width:min(300px,calc(100% - 24px));background:var(--color-bg);border:1px solid var(--color-divider);border-radius:22px;box-shadow:0 26px 44px -22px rgba(60,40,30,.5);padding:10px;display:grid;gap:2px;margin-top:8px}
+.menu[hidden]{display:none}
+.menu .m-h{margin:8px 12px 2px;font-size:13px;font-weight:700;letter-spacing:.05em;color:var(--orange-deep)}
+.menu a{display:block;padding:12px 14px;border-radius:14px;font-size:18px;font-weight:700;color:#3b2a24!important;text-decoration:none}
+.menu a:hover,.menu a:focus-visible{background:color-mix(in srgb,var(--orange) 12%,var(--color-bg));outline:none}
+@media(max-width:700px){.topbar{padding:5px 14px}.topbar .nav-brand img{height:42px!important}.tb-wa{padding:7px 14px!important;font-size:14px!important}.tb-btn{padding:7px 13px;font-size:14px}.menu{inset-inline-end:12px;inset-inline-start:12px;width:auto}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('menuBtn'),m=document.getElementById('menuPanel');if(!b||!m)return;
+function set(o){m.hidden=!o;b.setAttribute('aria-expanded',o)}
+b.addEventListener('click',function(e){e.stopPropagation();set(m.hidden)});
+document.addEventListener('click',function(e){if(!m.hidden&&!m.contains(e.target)&&e.target!==b)set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});
+m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
+</script>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
-<nav class="nav">
+<header class="topbar">
 <a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a>
-<div class="nav-links"><a href="index.html" aria-current="page">דף הבית</a><a href="lotus.html">אוהלי לוטוס</a><a href="bell.html">אוהלי פעמון</a><a href="#about">מי אנחנו</a><a href="#contact">צור קשר</a></div>
-<a class="btn btn-primary" href="https://wa.me/972515490099">דברו איתנו</a>
+<div class="tb-actions">
+<a class="btn btn-primary tb-wa" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9D%20%D7%A0%D7%A6%D7%99%D7%92">דברו איתנו</a>
+<button type="button" class="tb-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel"><span class="tb-ic" aria-hidden="true"><i></i><i></i><i></i></span><span>תפריט</span></button>
+</div>
+<nav class="menu" id="menuPanel" aria-label="תפריט ראשי" hidden>
+<p class="m-h">קטלוגים</p>
+<a href="lotus.html">אוהלי לוטוס</a>
+<a href="bell.html">אוהלי פעמון</a>
+<p class="m-h">באתר</p>
+<a href="index.html">דף הבית</a>
+<a href="#whyus-h">למה לבחור בנו</a>
+<a href="#faq">שאלות נפוצות</a>
+<a href="#talk">צור קשר</a>
 </nav>
+</header>
 <section class="cover" aria-label="פתיחה">
 <div class="bh-in">
 <h1>לא צריך לנסוע רחוק כדי למצוא חופש</h1>
