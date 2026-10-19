@@ -149,6 +149,13 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 .bell-hero{min-height:56vh!important}
 }
 </style>
+<style>
+.cover{background-attachment:fixed}
+.cover .stamp{position:absolute;z-index:1;inset-inline-end:clamp(14px,3vw,36px);bottom:12px;margin:0;font-size:14px;font-weight:700;letter-spacing:.04em;color:#fff;background:rgba(30,22,16,.45);backdrop-filter:blur(4px);padding:5px 14px;border-radius:999px}
+.cover .stamp::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#e6c987;margin-inline-end:8px}
+@media(max-width:900px),(hover:none){.cover{background-attachment:scroll}}
+@media(prefers-reduced-motion:reduce){.cover{background-attachment:scroll}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -163,6 +170,7 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 <p>עם אוהל גלאמפינג או מבנה אלטרנטיבי, כל גינה או שטח יכולים להפוך למרחב נעים ומעורר השראה לאירוח ומגורים.</p>
 <div class="row"><a class="btn btn-primary" href="lotus.html">לקטלוג אוהלי לוטוס</a><a class="btn btn-light" href="bell.html">לקטלוג אוהלי פעמון</a></div>
 </div>
+<p class="stamp">חאן מידורה, קדם ערבה</p>
 </section>
 <div class="wrap">
 
