@@ -289,6 +289,12 @@ html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;rig
 .price-card li{justify-content:center;text-align:center}
 .chips{justify-content:center}
 </style>
+<style>
+.cover::before{background:linear-gradient(180deg,rgba(25,18,12,.28),rgba(25,18,12,.5) 55%,rgba(25,18,12,.78))!important;z-index:1!important}
+.cover .bh-in,.cover-logo{z-index:3!important}
+.cover .stamp{position:absolute!important;z-index:4!important;bottom:8px!important;top:auto!important;inset-inline-start:14px!important;inset-inline-end:auto!important;font-size:9px!important;color:rgba(255,255,255,.92)!important;background:rgba(0,0,0,.28)!important;padding:2px 8px!important;border-radius:999px;margin:0}
+@media(max-width:700px){.cover::before{background:linear-gradient(rgba(25,18,12,.28),rgba(25,18,12,.28)),url(assets/cover-home.jpg) center 55%/cover no-repeat!important;z-index:0!important}.cover .stamp{top:calc(100vw*10/16 - 22px)!important;bottom:auto!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
