@@ -146,6 +146,13 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 .hero .btn-ghost,.home-hero .btn-ghost{background:var(--orange-deep);color:#fff!important;border:0;padding:12px 24px;font-weight:700;box-shadow:0 14px 24px -14px rgba(164,83,28,.8)}
 .hero .btn-ghost:hover{background:#8c4416;color:#fff}
 </style>
+<style>
+.cover .stamp,.hero-wrap .stamp-c{font-size:11px!important;font-weight:600!important;letter-spacing:.02em!important;padding:2px 9px!important;background:rgba(30,22,16,.38)!important;backdrop-filter:none!important}
+.cover .stamp{bottom:8px!important}
+.cover .stamp::before,.hero-wrap .stamp-c::before{width:5px!important;height:5px!important;margin-inline-end:5px!important}
+.hero-wrap .stamp-c{bottom:2px!important}
+@media(max-width:700px){.cover .stamp{top:calc(100vw*10/16 - 26px)!important;font-size:10.5px!important;padding:2px 8px!important;bottom:auto!important}.hero-wrap .stamp-c{font-size:10.5px!important}}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
