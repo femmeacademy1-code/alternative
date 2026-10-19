@@ -619,3 +619,10 @@ body[data-layout="cards"] .m-fig{aspect-ratio:16/9}
 
 /* Keep the page from shifting sideways on narrow RTL screens. */
 html { overflow-x: clip; }
+
+/* Compact cookie bar: a slim strip pinned to the very bottom */
+.cookie-banner{inset-inline:0!important;bottom:0!important;max-width:none!important;margin:0!important;border-radius:0!important;border-width:1px 0 0 0!important;flex-direction:row!important;align-items:center;justify-content:center;gap:12px 18px!important;padding:7px 14px!important;font-size:12.5px!important;line-height:1.4!important;box-shadow:0 -6px 18px rgba(0,0,0,.12)!important;flex-wrap:wrap}
+.cookie-banner p{flex:1 1 280px;min-width:0}
+.cookie-actions{gap:8px!important;flex-wrap:nowrap!important}
+.cookie-actions .btn{flex:0 0 auto!important;min-height:30px!important;padding:4px 14px!important;font-size:12.5px!important}
+@media(max-width:700px){.cookie-banner{padding:6px 10px!important;font-size:11.5px!important;gap:6px 10px!important}.cookie-banner p{flex-basis:100%}.cookie-actions{width:100%}.cookie-actions .btn{flex:1 1 0!important;min-height:30px!important;font-size:12px!important}}
