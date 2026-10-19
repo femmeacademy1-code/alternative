@@ -156,6 +156,7 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 .fab.fab-ic:hover{transform:scale(1.08)}
 @media(max-width:700px){.fab.fab-ic{width:42px;height:42px}.fab.fab-ic svg{width:30px;height:30px}}
 </style>
+<style>.bgal2{grid-template-columns:repeat(6,minmax(0,1fr))}.bgal2 .g-b{grid-column:span 4}.bgal2 .g-a{grid-column:span 2}@media(max-width:700px){.bgal2{grid-template-columns:repeat(2,minmax(0,1fr))}.bgal2 .g-b,.bgal2 .g-a{grid-column:span 2;grid-row:span 2}}</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#bell">דילוג לתוכן</a>
@@ -202,11 +203,9 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 <section class="sec" id="gallery" style="padding-bottom:0">
 <span class="kicker">מהשטח</span>
 <h2 class="sec-title">כך נראה אוהל פעמון</h2>
-<div class="bgal">
-<figure class="g-a"><img src="assets/bell-1.jpg" alt="אוהל פעמון ביער בשעת בין ערביים" loading="lazy"></figure>
+<div class="bgal bgal2">
 <figure class="g-b"><img src="assets/bell-2.jpg" alt="פנים אוהל פעמון עם מיטה ושטיח" loading="lazy"></figure>
-<figure class="g-c"><img src="assets/bell-3.jpg" alt="אוהלי פעמון בשקיעה מול הרים" loading="lazy"></figure>
-<figure class="g-d"><img src="assets/bell-4.jpg" alt="מתחם אוהלי פעמון עם פינת אש" loading="lazy"></figure>
+<figure class="g-a"><img src="assets/bell-4.jpg" alt="מתחם אוהלי פעמון עם פינת אש" loading="lazy"></figure>
 </div>
 </section>
 
@@ -225,7 +224,7 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>אחריות יצרן 12 חודשים</li>
 </ul>
 </div>
-<figure class="inc-fig washed"><img src="assets/bell-1.jpg" alt="אוהל פעמון בשעת בין ערביים"></figure>
+<figure class="inc-fig washed"><img src="assets/89e48064.jpg" alt="אוהל פעמון"></figure>
 </div>
 </section>
 
@@ -270,7 +269,7 @@ const img=(id,ext)=>`${W}839d13_${id}~mv2.${ext}/v1/fill/w_800,h_1000,al_c,q_80,
 const MODELS={
 bell:{kicker:'אוהל פעמון',title:'דגמי אוהל גלאמפינג פעמון',sub:'המפרט המלא',cta:'להזמנת פעמון',
 features:['בד אוקספורד 100% אטום למים','דלת כניסה עם רשת','חלונות גדולים עם רשתות','יתדות וחבלי עיגון','תיק נשיאה'],
-photos:['assets/bell-2.jpg','assets/bell-1.jpg','assets/bell-3.jpg','assets/bell-4.jpg','assets/bell-5.jpg'],
+photos:['assets/9f78ce2e.jpg','assets/89e48064.jpg','assets/cdb442f4.jpg'],
 sizes:[{n:'פעמון 3M',d:'3 מטר',h:'250 ס״מ',w:'21 ק״ג',c:'2-3 אנשים',p:'₪3,600'},{n:'פעמון 4M',d:'4 מטר',h:'250 ס״מ',w:'26 ק״ג',c:'4-5 אנשים',p:'₪4,000'},{n:'פעמון 5M',d:'5 מטר',h:'300 ס״מ',w:'37 ק״ג',c:'6-7 אנשים',p:'₪5,000'},{n:'פעמון 7M',d:'7 מטר',h:'400 ס״מ',w:'59 ק״ג',c:'10-12 אנשים',p:'₪7,500'}],
 fitTitle:'למי מתאים הפעמון?',
 fit:['משפחות המחפשות חוויית קמפינג יוקרתית','בעלי צימרים הרוצים להוסיף יחידות אירוח','שימוש פרטי בחצר או במגרש','אירועים חד-פעמיים – חתונות, חגיגות, סדנאות','גני אירועים וחוות חקלאיות']},
