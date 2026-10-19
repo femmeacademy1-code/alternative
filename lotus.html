@@ -25,27 +25,37 @@
 
 <style>.nav-solo{justify-content:center!important}.nav-solo .nav-brand{margin:0!important}</style>
 <style>
-.cover{position:relative;min-height:min(84vh,700px);display:grid;align-items:end;color:#fff;background:#6b4a2b url(assets/cover-desert.jpg) center 55%/cover no-repeat}
-.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,18,12,.12),rgba(25,18,12,.78))}
+.cover{position:relative;min-height:min(84vh,700px);display:grid;align-items:end;color:#fff;background:#6b4a2b url(assets/cover-desert.jpg) center 40%/cover no-repeat}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,18,12,0),rgba(25,18,12,.7))}
 .cover .bh-in{position:relative;z-index:1;max-width:1200px;width:100%;margin:0 auto;padding:clamp(60px,9vw,120px) var(--edge,24px) clamp(34px,5vw,64px)}
 .cover h1{color:#fff;font-size:clamp(34px,5.2vw,68px);margin:0;line-height:1.08;text-shadow:0 2px 24px rgba(0,0,0,.4);max-width:18ch}
 .cover p{font-size:clamp(17px,1.9vw,23px);margin:16px 0 0;max-width:46ch;line-height:1.6;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.4)}
 .cover .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .btn-light{background:rgba(255,255,255,.92);color:#2b241d}.btn-light:hover{background:#fff}
 </style>
+<style>
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:26px;max-width:760px;margin-inline:auto}
+.vids figure{margin:0;border-radius:26px;overflow:hidden;background:#2b241d;aspect-ratio:9/16;box-shadow:0 24px 40px -26px rgba(60,40,30,.5)}
+.vids video{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:560px){.vids{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+</style>
 </head>
 <body data-layout="cards">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
 
 <header class="nav nav-solo"><a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a></header>
-<section class="cover" aria-label="פתיחה">
-<div class="bh-in">
-<h1>קטלוג אוהלי לוטוס</h1>
-<p>אוהלי לוטוס לאירוח, מגורים וריטריטים בטבע.</p>
-<div class="row"><a class="btn btn-primary" href="https://wa.me/972515490099">אני רוצה לדבר עם נציג</a><a class="btn btn-light" href="#lotus">לגדלים ולמפרט</a></div>
-</div>
-</section>
 <div class="wrap">
+<section class="hero">
+<div>
+<h1>קטלוג אוהלי לוטוס</h1>
+<h2 class="muted">אוהלי לוטוס לאירוח, מגורים וריטריטים בטבע</h2>
+<div class="row">
+<a class="btn btn-primary" href="https://wa.me/972515490099">אני רוצה לדבר עם נציג</a>
+<a class="btn btn-ghost" href="#lotus">לגדלים ולמפרט</a>
+</div>
+</div>
+<figure class="hero-fig washed"><img src="assets/cover-desert.jpg" alt="אוהלי לוטוס במדבר" style="object-position:50% 70%"></figure>
+</section>
 
 <section class="sec" id="why">
 <span class="kicker">למה לבחור בנו</span>
@@ -67,6 +77,15 @@
 </section>
 
 <section class="model" id="lotus" data-model="lotus"></section>
+
+<section class="sec" id="inside" style="padding-bottom:0">
+<span class="kicker">מבפנים</span>
+<h2 class="sec-title">כך מרגיש אוהל לוטוס מבפנים</h2>
+<div class="vids">
+<figure><video src="assets/video/lotus-1.mp4" poster="assets/video/lotus-1.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: פנים אוהל לוטוס"></video></figure>
+<figure><video src="assets/video/lotus-2.mp4" poster="assets/video/lotus-2.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: אוהל לוטוס בהקמה"></video></figure>
+</div>
+</section>
 
 <section class="sec" id="included">
 <div class="inc">
@@ -155,4 +174,11 @@ sec.querySelectorAll('.thumbs button').forEach(b=>b.addEventListener('click',()=
 <script src="assets/cookies.js?v=1" defer></script>
 <script src="a11y-widget.js" defer data-color="#c67139" data-statement="accessibility.html"></script>
 <script>/* when the catalog is embedded in another site (iframe), open outside links (WhatsApp, the main site) in a new tab */(function(){try{if(window.self===window.top)return}catch(e){}document.querySelectorAll('a[href^="http"]').forEach(function(a){a.target="_blank";a.rel="noopener"})})();</script>
+<script>
+/* looping muted videos: play only while visible */
+(function(){var v=[].slice.call(document.querySelectorAll('.vids video'));if(!v.length)return;var calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(calm){v.forEach(function(x){x.controls=true});return}
+if(!('IntersectionObserver' in window)){v.forEach(function(x){x.play&&x.play().catch(function(){})});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var x=e.target;if(e.isIntersecting){var p=x.play();if(p&&p.catch)p.catch(function(){})}else x.pause()})},{threshold:.35});v.forEach(function(x){io.observe(x)})})();
+</script>
 </body></html>
