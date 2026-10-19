@@ -340,6 +340,15 @@ footer img{margin-inline:auto}
 .legal-links,.footer-legal{justify-content:center!important}
 }
 </style>
+<style>
+/* centered FAQ */
+.faq{margin-inline:auto}
+.faq summary{justify-content:center!important;text-align:center!important;position:relative;padding-inline:44px!important}
+.faq summary::after{position:absolute;inset-inline-end:4px;top:50%;transform:translateY(-50%)}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{text-align:center!important}
+#faq .kicker,#faq .sec-title{text-align:center!important}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
