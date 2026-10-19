@@ -52,6 +52,17 @@
 .cover .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .btn-light{background:rgba(255,255,255,.92);color:#2b241d}.btn-light:hover{background:#fff}
 </style>
+<style>
+.faq{display:grid;gap:12px;margin-top:22px;max-width:860px}
+.faq details{background:var(--color-surface);border-radius:20px;padding:0 22px;transition:background .2s}
+.faq details[open]{background:color-mix(in srgb,var(--orange) 10%,var(--color-surface))}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;font-size:18px;color:var(--brown);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--orange-deep);flex:none;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;line-height:1.75;font-size:17px}
+.faq summary:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:12px}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -100,6 +111,12 @@
 <p>אנחנו, אורין ואוריאל, זוג ושותפים לחיים ולחלום האלטרנטיבי.<br>מאמינים שחופש נמצא בחיבור לטבע, ואתם לא צריכים לנסוע רחוק כדי למצוא אותו.<br>עם אוהלי גלאמפינג ומבנים על גלגלים, אנחנו יוצרים מרחבים שמשלבים יוקרה, קיימות וחיבור אנושי – לחופשה, מגורים או עסק.<br>בואו להפוך כל שטח לפינה קסומה!</p>
 <figure><img src="assets/team-couple.jpg" alt="אורין ואוריאל, צוות Alternative Dream"></figure>
 </div>
+</section>
+
+<section class="sec" id="faq" style="padding-bottom:0">
+<span class="kicker">שאלות ותשובות</span>
+<h2 class="sec-title">שאלות נפוצות</h2>
+<div class="faq"><details><summary>האם אפשר לקבל הקמה של האוהל?</summary><p>כן. הקמה אפשרית בתוספת תשלום ובתיאום מול נציג. אפשר גם להקים לבד: האוהל מגיע עם הוראות הרכבה מפורטות בעברית, ואנחנו מלווים טלפונית עד הקמת האוהל הראשון.</p></details><details><summary>האם האוהל מצריך אישור או רישיון?</summary><p>לא. אוהל גלאמפינג אינו מצריך אישור, אלא אם מדובר במגורי קבע. אם בכוונתכם לשימוש כמגורים קבועים או לפעילות עסקית, כדאי לבדוק מול הרשות המקומית.</p></details><details><summary>האם המחיר כולל מע״מ ואספקה?</summary><p>המחיר כולל מע״מ ואינו כולל אספקה. מחיר האספקה נקבע לפי הכתובת, בתיאום מול נציג.</p></details><details><summary>מהו הבד של האוהל, והאם הוא אטום למים?</summary><p>האוהלים עשויים בד אוקספורד איכותי, אטום למים לחלוטין, עמיד בפני קרעים ושחיקה ובעל הגנה מקרינת UV.</p></details><details><summary>האם אפשר לגור באוהל כל השנה?</summary><p>האוהל מתאים לאירוח ולשימוש לאורך השנה, ובכל תנאי אוויר: גשם, טל או חום. אפשר להוסיף ארובה לתנור, ואוהלי לוטוס כוללים ציפוי נגד עובש ופטריות. לשימוש כמגורי קבע חשוב לבדוק את דרישות הרשות המקומית.</p></details><details><summary>כמה אנשים מתאימים לכל גודל?</summary><p>כל גודל מגיע עם קיבולת מפורטת בכרטיס שלו. לדוגמה, אוהל 4 מטר מתאים לכ־4–5 אנשים בלינה.</p></details><details><summary>האם יש חלונות, דלתות ורשתות נגד חרקים?</summary><p>כן. באוהלים יש דלתות וחלונות עם רשתות איכותיות שמאפשרות אוורור וזרימת אוויר גם כשהאוהל סגור.</p></details><details><summary>איזו אחריות יש על האוהל?</summary><p>אחריות יצרן של 12 חודשים. אנחנו עומדים מאחורי המוצר ותמיכה מלאה בכל שאלה.</p></details><details><summary>מה כלול ברכישה?</summary><p>אוהל מלא עם כל הציוד הדרוש להקמה: מוט מרכזי וקונסטרוקציה, יתדות וחבלי עיגון, תיק נשיאה והוראות הרכבה בעברית.</p></details><details><summary>איך מזמינים או מקבלים הצעת מחיר?</summary><p>פשוט שולחים לנו הודעה בוואטסאפ או מתקשרים. נציג יחזור אליכם, יתאים דגם וגודל, ויציע מחיר כולל אפשרויות הקמה ואספקה.</p></details></div>
 </section>
 
 <footer id="contact">
