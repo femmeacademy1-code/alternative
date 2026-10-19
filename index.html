@@ -63,6 +63,44 @@
 .faq details p{margin:0 0 20px;line-height:1.75;font-size:17px}
 .faq summary:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:12px}
 </style>
+<style>
+body{font-size:18px;line-height:1.7}
+.muted,.features li,.why-item p,.fit li,.inc li,dl,dd,dt{font-size:inherit}
+.why-item p{font-size:17px}.why-item h3{font-size:22px}
+.hero h2,.home-hero h2{font-size:clamp(20px,2.1vw,26px)!important}
+.sec-title{font-size:clamp(32px,4vw,50px)!important}
+.kicker{font-size:16px!important}
+.btn{font-size:17px}
+.features li{font-size:17px}
+.scard dd{font-size:18px}.scard dt{font-size:14px}.scard h3{font-size:24px}
+.price b{font-size:30px}
+.inc li{font-size:19px}
+.ship{font-size:17px}
+footer p,footer a{font-size:17px}
+.nav a{font-size:17px!important}
+.faq summary{font-size:20px}.faq details p{font-size:18px}
+.wa-band{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--color-accent);color:#f4efe6;border-radius:30px;padding:clamp(24px,4vw,44px) clamp(22px,4vw,52px);margin:clamp(36px,5vw,64px) 0;box-shadow:0 26px 44px -30px rgba(40,60,45,.6)}
+.wa-band h3{color:#fff;font-size:clamp(24px,3vw,36px);margin:0}
+.wa-band p{margin:6px 0 0;font-size:19px;color:#f4efe6;max-width:48ch}
+.wa-band .btn-primary{background:#fff;color:var(--color-accent)}.wa-band .btn-primary:hover{background:#f4efe6}
+.wa-band.warm{background:var(--orange-deep)}.wa-band.warm .btn-primary{color:var(--orange-deep)}
+.btn-xl{padding:16px 30px;font-size:19px;gap:10px;min-height:56px}
+.fab{font-size:17px!important;padding:14px 24px!important;animation:waPulse 2.8s ease-in-out infinite}
+@keyframes waPulse{0%,100%{box-shadow:0 0 0 0 rgba(82,114,90,.5)}50%{box-shadow:0 0 0 14px rgba(82,114,90,0)}}
+@media(prefers-reduced-motion:reduce){.fab{animation:none}}
+@media(max-width:700px){body{font-size:17px}.wa-band{flex-direction:column;align-items:flex-start}.wa-band .btn{width:100%;justify-content:center}}
+</style>
+<style>
+.whyus{background:#6e544b;color:#f1e6d3;margin:clamp(36px,5vw,64px) calc(50% - 50vw);padding:clamp(44px,6vw,84px) 20px}
+.whyus-in{max-width:1200px;margin:0 auto}
+.whyus h2{color:#e6c987;text-align:center;font-size:clamp(32px,4vw,52px);margin:0 0 clamp(28px,4vw,52px)}
+.wcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.wcol{text-align:center}
+.wcol svg{display:block;margin:0 auto 18px}
+.wcol h3{color:#e6c987;font-size:clamp(22px,2.2vw,28px);line-height:1.4;margin:0 0 16px}
+.wcol p{margin:0;font-size:18px;line-height:1.85;color:#f1e6d3}
+@media(max-width:860px){.wcols{grid-template-columns:minmax(0,1fr)}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -93,6 +131,10 @@
 </div>
 </section>
 
+<section class="whyus" aria-labelledby="whyus-h"><div class="whyus-in"><h2 id="whyus-h">למה לבחור בנו?</h2><div class="wcols"><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 98h90M42 98 78 38l32 60M22 98l22-42 14 26"/><circle cx="92" cy="30" r="9"/></svg><h3>אירוח ומגורים מחוברים לטבע אצלך בבית ובשטח</h3><p>עם האוהלים ומבנים על גלגלים, תוכלו ליצור פינה קסומה בגינה שלכם או להקים מבנה נעים בלב הטבע הפראי. כל מקום יכול להפוך לבית זמני מלא השראה, שבו תרגישו את הרוח, תיהנו מהנוף ותתחברו למרכיבים הבסיסיים של החיים. זה הזמן שלכם לשחרר את הדמיון, למצוא שלווה ולהתחבר מחדש עם הטבע שבסביבתכם.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M65 14 20 98h90Z M52 70h26 M40 84h50 M65 14v-8 M58 28l-6-12 M72 28l6-12"/></svg><h3>פתרונות אלטרנטיביים בהתאמה אישית</h3><p>בואו לגלות פתרונות אלטרנטיביים בהתאמה אישית, המיועדים להפוך כל חלום למציאות. אנו מציעים מגוון רחב של אוהלים ומבנים על גלגלים, המאפשרים לכם להתאים את החוויה בדיוק לצרכים שלכם. בין אם מדובר בהקמת מקום מגונן בגינה או בניית מבנה נייד בשטח הפתוח, כל פרט יכול להיות מותאם אישית – מהעיצוב והגודל ועד לתוספות נוחות שמעניקות את התחושה של בית. בחרו בחופש לחיות בדרך שלכם, היכן שתרצו.</p></div><div class="wcol"><svg viewBox="0 0 130 120" width="120" height="110" aria-hidden="true" stroke="#e6c987" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="65" cy="22" r="14"/><path d="M26 44h78L65 98Z M30 106h70"/></svg><h3>אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם</h3><p>אנו מציעים צוות של אנשי מקצוע מוכשרים לפיתוח, עיצוב ובניית המרחב שלכם, שמחויבים להפוך את החזון שלכם למציאות. עם ניסיון רחב במגוון תחומים, צוותנו מעניק שירות מותאם אישית לכל לקוח, תוך תשומת לב לפרטים הקטנים. אנו עובדים בשיתוף פעולה הדוק עם הלקוחות כדי להבין את הצרכים והחלומות שלהם, וליצור מרחבים שמתחברים בהרמוניה עם הטבע.</p></div></div></div></section>
+
+<section class="wa-band "><div><h3>מתלבטים איזה אוהל מתאים לכם?</h3><p>נציג יעזור לבחור דגם וגודל לפי המקום והשימוש, בלי התחייבות.</p></div><a class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A2%D7%96%D7%A8%D7%94%20%D7%91%D7%91%D7%97%D7%99%D7%A8%D7%AA%20%D7%90%D7%95%D7%94%D7%9C%20%D7%92%D7%9C%D7%90%D7%9E%D7%A4%D7%99%D7%A0%D7%92"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>דברו איתנו בוואטסאפ</a></section>
+
 <section class="sec" id="why">
 <span class="kicker">למה לבחור בנו</span>
 <h2 class="sec-title">למה לבחור באוהלי <span class="ltr">Alternative Dream</span>?</h2>
@@ -113,11 +155,15 @@
 </div>
 </section>
 
+<section class="wa-band warm"><div><h3>רוצים לראות מחיר והצעה?</h3><p>שלחו לנו הודעה ונחזור אליכם עם הצעה מותאמת.</p></div><a class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%92%D7%9C%D7%90%D7%9E%D7%A4%D7%99%D7%A0%D7%92"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>קבלו הצעת מחיר</a></section>
+
 <section class="sec" id="faq" style="padding-bottom:0">
 <span class="kicker">שאלות ותשובות</span>
 <h2 class="sec-title">שאלות נפוצות</h2>
 <div class="faq"><details><summary>האם אפשר לקבל הקמה של האוהל?</summary><p>כן. הקמה אפשרית בתוספת תשלום ובתיאום מול נציג. אפשר גם להקים לבד: האוהל מגיע עם הוראות הרכבה מפורטות בעברית, ואנחנו מלווים טלפונית עד הקמת האוהל הראשון.</p></details><details><summary>האם האוהל מצריך אישור או רישיון?</summary><p>לא. אוהל גלאמפינג אינו מצריך אישור, אלא אם מדובר במגורי קבע. אם בכוונתכם לשימוש כמגורים קבועים או לפעילות עסקית, כדאי לבדוק מול הרשות המקומית.</p></details><details><summary>האם המחיר כולל מע״מ ואספקה?</summary><p>המחיר כולל מע״מ ואינו כולל אספקה. מחיר האספקה נקבע לפי הכתובת, בתיאום מול נציג.</p></details><details><summary>מהו הבד של האוהל, והאם הוא אטום למים?</summary><p>האוהלים עשויים בד אוקספורד איכותי, אטום למים לחלוטין, עמיד בפני קרעים ושחיקה ובעל הגנה מקרינת UV.</p></details><details><summary>האם אפשר לגור באוהל כל השנה?</summary><p>האוהל מתאים לאירוח ולשימוש לאורך השנה, ובכל תנאי אוויר: גשם, טל או חום. אפשר להוסיף ארובה לתנור, ואוהלי לוטוס כוללים ציפוי נגד עובש ופטריות. לשימוש כמגורי קבע חשוב לבדוק את דרישות הרשות המקומית.</p></details><details><summary>כמה אנשים מתאימים לכל גודל?</summary><p>כל גודל מגיע עם קיבולת מפורטת בכרטיס שלו. לדוגמה, אוהל 4 מטר מתאים לכ־4–5 אנשים בלינה.</p></details><details><summary>האם יש חלונות, דלתות ורשתות נגד חרקים?</summary><p>כן. באוהלים יש דלתות וחלונות עם רשתות איכותיות שמאפשרות אוורור וזרימת אוויר גם כשהאוהל סגור.</p></details><details><summary>איזו אחריות יש על האוהל?</summary><p>אחריות יצרן של 12 חודשים. אנחנו עומדים מאחורי המוצר ותמיכה מלאה בכל שאלה.</p></details><details><summary>מה כלול ברכישה?</summary><p>אוהל מלא עם כל הציוד הדרוש להקמה: מוט מרכזי וקונסטרוקציה, יתדות וחבלי עיגון, תיק נשיאה והוראות הרכבה בעברית.</p></details><details><summary>איך מזמינים או מקבלים הצעת מחיר?</summary><p>פשוט שולחים לנו הודעה בוואטסאפ או מתקשרים. נציג יחזור אליכם, יתאים דגם וגודל, ויציע מחיר כולל אפשרויות הקמה ואספקה.</p></details></div>
 </section>
+
+<section class="wa-band "><div><h3>נעים להכיר, בואו נדבר</h3><p>כתבו לנו בוואטסאפ ונחזור אליכם בהקדם.</p></div><a class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9D%20%D7%A0%D7%A6%D7%99%D7%92"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>לשיחה עם נציג</a></section>
 
 <footer id="contact">
 <div>
