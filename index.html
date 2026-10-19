@@ -209,7 +209,7 @@ m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 @media(max-width:700px){.cover .stamp{top:calc(100vw*10/16 - 26px)!important;font-size:10.5px!important;padding:2px 8px!important;bottom:auto!important}.hero-wrap .stamp-c{font-size:10.5px!important}}
 </style>
 <style>
-.topbar{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:var(--color-bg)!important;transform:translateZ(0);will-change:transform;contain:layout paint}
+.topbar{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:var(--color-bg)!important;}
 .topbar .nav-brand img{height:52px!important;width:auto!important}
 .menu{transform:translateZ(0)}
 html{scroll-padding-top:70px}
@@ -295,6 +295,7 @@ html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;rig
 .cover .stamp{position:absolute!important;z-index:4!important;bottom:8px!important;top:auto!important;inset-inline-start:14px!important;inset-inline-end:auto!important;font-size:9px!important;color:rgba(255,255,255,.92)!important;background:rgba(0,0,0,.28)!important;padding:2px 8px!important;border-radius:999px;margin:0}
 @media(max-width:700px){.cover::before{background:linear-gradient(rgba(25,18,12,.28),rgba(25,18,12,.28)),url(assets/cover-home.jpg) center 55%/cover no-repeat!important;z-index:0!important}.cover .stamp{top:calc(100vw*10/16 - 22px)!important;bottom:auto!important}}
 </style>
+<style>.topbar{contain:none!important;overflow:visible!important;z-index:40!important}.menu{z-index:50!important}</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
