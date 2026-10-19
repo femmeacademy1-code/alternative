@@ -208,6 +208,24 @@ m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 .hero-wrap .stamp-c{bottom:2px!important}
 @media(max-width:700px){.cover .stamp{top:calc(100vw*10/16 - 26px)!important;font-size:10.5px!important;padding:2px 8px!important;bottom:auto!important}.hero-wrap .stamp-c{font-size:10.5px!important}}
 </style>
+<style>
+.topbar{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:var(--color-bg)!important;transform:translateZ(0);will-change:transform;contain:layout paint}
+.topbar .nav-brand img{height:52px!important;width:auto!important}
+.menu{transform:translateZ(0)}
+html{scroll-padding-top:70px}
+</style>
+<style>
+.cover{background:#6b4a2b!important;overflow:hidden}
+.cover-bg{position:absolute;inset:-12% 0;background:url(assets/cover-home.jpg) center 55%/cover no-repeat;will-change:transform;transform:translate3d(0,0,0)}
+.cover::before{z-index:0}.cover-bg{z-index:0}.cover .bh-in,.cover .stamp{z-index:1}
+@media(max-width:700px){.cover-bg{display:none}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){var bg=document.querySelector('.cover-bg'),c=document.querySelector('.cover');if(!bg||!c)return;
+if(matchMedia('(prefers-reduced-motion:reduce)').matches||matchMedia('(max-width:700px)').matches)return;
+var t=false;function f(){t=false;var r=c.getBoundingClientRect();if(r.bottom<0)return;bg.style.transform='translate3d(0,'+(-r.top*0.3).toFixed(1)+'px,0)'}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f)}},{passive:true});f()});
+</script>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
@@ -228,7 +246,7 @@ m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)})});
 <a href="#talk">צור קשר</a>
 </nav>
 </header>
-<section class="cover" aria-label="פתיחה">
+<section class="cover" aria-label="פתיחה"><div class="cover-bg" aria-hidden="true"></div>
 <div class="bh-in">
 <h1>לא צריך לנסוע רחוק כדי למצוא חופש</h1>
 <p>עם אוהל גלאמפינג או מבנה אלטרנטיבי, כל גינה או שטח יכולים להפוך למרחב נעים ומעורר השראה לאירוח ומגורים.</p>
