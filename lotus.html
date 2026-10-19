@@ -24,23 +24,28 @@
 
 
 <style>.nav-solo{justify-content:center!important}.nav-solo .nav-brand{margin:0!important}</style>
+<style>
+.cover{position:relative;min-height:min(84vh,700px);display:grid;align-items:end;color:#fff;background:#6b4a2b url(assets/cover-desert.jpg) center 55%/cover no-repeat}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,18,12,.12),rgba(25,18,12,.78))}
+.cover .bh-in{position:relative;z-index:1;max-width:1200px;width:100%;margin:0 auto;padding:clamp(60px,9vw,120px) var(--edge,24px) clamp(34px,5vw,64px)}
+.cover h1{color:#fff;font-size:clamp(34px,5.2vw,68px);margin:0;line-height:1.08;text-shadow:0 2px 24px rgba(0,0,0,.4);max-width:18ch}
+.cover p{font-size:clamp(17px,1.9vw,23px);margin:16px 0 0;max-width:46ch;line-height:1.6;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.cover .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.btn-light{background:rgba(255,255,255,.92);color:#2b241d}.btn-light:hover{background:#fff}
+</style>
 </head>
 <body data-layout="cards">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
 
 <header class="nav nav-solo"><a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a></header>
-<div class="wrap">
-<section class="hero">
-<div>
+<section class="cover" aria-label="פתיחה">
+<div class="bh-in">
 <h1>קטלוג אוהלי לוטוס</h1>
-<h2 class="muted">אוהלי לוטוס לאירוח, מגורים וריטריטים בטבע</h2>
-<div class="row">
-<a class="btn btn-primary" href="https://wa.me/972515490099">אני רוצה לדבר עם נציג</a>
-<a class="btn btn-ghost" href="#lotus">לגדלים ולמפרט</a>
+<p>אוהלי לוטוס לאירוח, מגורים וריטריטים בטבע.</p>
+<div class="row"><a class="btn btn-primary" href="https://wa.me/972515490099">אני רוצה לדבר עם נציג</a><a class="btn btn-light" href="#lotus">לגדלים ולמפרט</a></div>
 </div>
-</div>
-<figure class="hero-fig washed"><img src="assets/6fb61681.jpg" alt="אוהל לוטוס"></figure>
 </section>
+<div class="wrap">
 
 <section class="sec" id="why">
 <span class="kicker">למה לבחור בנו</span>
