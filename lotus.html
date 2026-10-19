@@ -23,15 +23,12 @@
 
 
 
+<style>.nav-solo{justify-content:center!important}.nav-solo .nav-brand{margin:0!important}</style>
 </head>
 <body data-layout="cards">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
 
-<nav class="nav">
-<a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a>
-<div class="nav-links"><a href="index.html">דף הבית</a><a href="lotus.html" aria-current="page">אוהלי לוטוס</a><a href="bell.html">אוהלי פעמון</a><a href="index.html#contact">צור קשר</a></div>
-<a class="btn btn-primary" href="https://wa.me/972515490099">דברו איתנו</a>
-</nav>
+<header class="nav nav-solo"><a class="nav-brand" href="index.html"><img src="assets/16677773.png" alt="Alternative Dream"></a></header>
 <div class="wrap">
 <section class="hero">
 <div>
@@ -60,13 +57,11 @@
 <section class="sec" style="padding-bottom:0">
 <span class="kicker">הדגמים שלנו</span>
 <h2 class="sec-title">בחרו גודל</h2>
-<p class="muted" style="margin:0">בחרו גודל כדי לראות מפרט ומחיר</p>
-<div class="vat"><span>הצגת מחירים:</span><div class="seg" role="radiogroup" aria-label="מע״מ"><label class="seg-opt"><input type="radio" name="vat" value="0" checked="">לא כולל מע״מ</label><label class="seg-opt"><input type="radio" name="vat" value="1">כולל מע״מ</label></div></div>
+<p class="muted" style="margin:0">המחירים כוללים מע״מ</p>
+
 </section>
 
 <section class="model" id="lotus" data-model="lotus"></section>
-
-<section class="sec" style="padding-bottom:0"><div class="patch"><div><h3>מחפשים דגם אחר?</h3><p class="muted">גם אוהלי פעמון מחכים לכם</p></div><a class="btn btn-secondary" href="bell.html">לקטלוג אוהלי פעמון</a></div></section>
 
 <section class="sec" id="included">
 <div class="inc">
@@ -129,9 +124,9 @@ sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנ�
 fitTitle:'למי מתאים הלוטוס?',
 fit:['מתחמי אירוח מקצועיים – צימרים, גלמפינג, קמפינגים ברמה גבוהה','מארגני ריטריטים וסדנאות – יוגה, וורקשופים, פעילויות קבוצתיות','בעלי עסקים תיירותיים – המחפשים להציע חוויה ייחודית לאורחים','שימוש פרטי יוקרתי – פינת אירוח מושלמת, "חדר" נוסף, משרד בטבע','אירועים מיוחדים – חתונות, חגיגות משפחתיות, אירוח VIP','חקלאים ובעלי קרקעות – פתרון לינה קבוע עם נוחות מקסימלית']}
 };
-const VAT=1.18;let vat=false;const renders=[];
-const price=p=>{const n=+p.replace(/[^\d]/g,'');return '₪'+Math.round(vat?n*VAT:n).toLocaleString('en-US')};
-const vatNote=()=>vat?'(כולל מע״מ)':'(לא כולל מע״מ)';
+const renders=[];
+const price=p=>{const n=+p.replace(/[^\d]/g,'');return '₪'+n.toLocaleString('en-US')};
+const vatNote=()=>'(כולל מע״מ)';
 const layout=document.body.dataset.layout||'switcher';
 const specDl=s=>`<dl>${[['קוטר',s.d],['גובה',s.h],['משקל',s.w],['קיבולת',s.c,'cap']].filter(r=>r[1]).map(([t,v,c])=>`<div${c?` class="${c}"`:''}><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
 const priceRow=s=>`<div class="price"><b>${price(s.p)}</b><span class="muted">${vatNote()}</span></div>`;
@@ -148,7 +143,6 @@ sec.querySelectorAll('input[type=radio]').forEach(x=>x.addEventListener('change'
 const main=sec.querySelector('.m-fig img');
 sec.querySelectorAll('.thumbs button').forEach(b=>b.addEventListener('click',()=>{sec.querySelectorAll('.thumbs button').forEach(x=>x.setAttribute('aria-pressed',x===b));main.src=m.photos[+b.dataset.i]}));
 });
-document.querySelectorAll('input[name=vat]').forEach(x=>x.addEventListener('change',()=>{vat=x.value==='1';renders.forEach(f=>f())}));
 </script>
 
 
