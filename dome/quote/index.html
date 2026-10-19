@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הצעת מחיר – כיסוי בד לכיפה גאודזית 2V בקוטר 8 מ׳ | Alternative Dream</title>
+<meta name="description" content="הצעת מחיר לכיסוי בד אוקספורד 600D לכיפה גאודזית 2V בקוטר 8 מ׳: 40 משולשים (30 שווי־שוקיים ו־10 שווי־צלעות), כ־93 מ״ר נטו.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f3ece2">
+<link rel="stylesheet" href="../../assets/site.css?v=3">
+<style>
+.q-hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(20px,4vw,48px) 0}
+.q-hero h1{font-size:clamp(32px,4.4vw,54px);line-height:1.08;margin:0}
+.q-hero h1 em{font-style:normal;color:var(--orange-deep)}
+.q-hero .lead{font-size:clamp(17px,1.7vw,21px);line-height:1.6;margin:16px 0 0;color:var(--orange-deep);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.chips li{background:color-mix(in srgb,var(--orange) 14%,var(--color-bg));color:var(--brown);padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px}
+.q-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px}
+.q-meta b{display:block;color:var(--orange-deep);font-size:12px;letter-spacing:.04em}
+.viewer{position:relative;border-radius:28px;background:radial-gradient(120% 90% at 50% 30%,#fbf6ee 0%,#efe3d1 70%,#e6d6bf 100%);overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.viewer.drag{cursor:grabbing}
+.stage{height:clamp(380px,44vw,520px);perspective:1500px;perspective-origin:50% 38%;display:flex;align-items:center;justify-content:center}
+.world{position:relative;width:0;height:0;transform-style:preserve-3d;transform:translateY(40px) rotateX(-22deg) rotateY(-32deg) scale(var(--zoom,1.45))}
+.world *{transform-style:preserve-3d;box-sizing:border-box}
+.shadow{position:absolute;left:-190px;top:-185px;width:380px;height:370px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,40,25,.28),rgba(60,40,25,0));transform:translateY(2px) rotateX(90deg)}
+.f{position:absolute;backface-visibility:visible;transition:opacity .5s}
+.floor{left:-120px;top:-150px;width:240px;height:300px;background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,0) 45%,rgba(0,0,0,.06)),repeating-linear-gradient(90deg,transparent 0 119px,rgba(90,85,78,.28) 119px 120px),#a9b0ad;transform:rotateX(90deg)}
+.fab-f{background:#f7eddc}
+.wall-end{width:240px;height:168px;left:-120px;top:-168px}
+.wall-side{width:300px;height:90px;left:-150px;top:-90px}
+.roof{width:146px;height:304px;left:0;top:-152px;transform-origin:0 50%}
+.roof.r{background:linear-gradient(90deg,#f3e6cf,#ecdcc0);transform:translateY(-168px) rotateZ(33deg) rotateX(90deg)}
+.roof.l{background:linear-gradient(270deg,#e4d3b6,#dcc9aa);transform:translateY(-168px) scaleX(-1) rotateZ(33deg) rotateX(90deg)}
+.roof::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 60px,rgba(120,90,60,.12) 60px 61px)}
+.wend-front{transform:translateZ(150px);background:#f7eddc}
+.wend-back{transform:translateZ(-150px) rotateY(180deg);background:#efe2cb}
+.wside-r{transform:rotateY(90deg) translateZ(120px);background:#f1e4cd}
+.wside-l{transform:rotateY(-90deg) translateZ(120px);background:#e9dcc3}
+.win i{position:absolute;left:60px;top:18px;width:40px;height:46px;background:repeating-linear-gradient(45deg,#8fa3a3 0 2px,#a9bbb9 2px 4px);border:3px solid #c9b48f;border-radius:3px}
+.bar{position:absolute;background:#a3aeb1;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);opacity:0;transition:opacity .5s;pointer-events:none}
+.world.m-frame .bar,.world.m-int .bar{opacity:1}
+.world.m-frame .fab-f{opacity:.06}
+.world.m-int .roof,.world.m-int .wend-front,.world.m-int .wside-r{opacity:0}
+.world.m-int .wend-back,.world.m-int .wside-l{opacity:.95}
+.furn .f{opacity:0;transition:opacity .5s}
+.world.m-int .furn .f{opacity:1}
+.world.m-fab .furn .f{opacity:0}
+.world.m-fab .furn .door-peek{opacity:1}
+.v-ui{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;flex-wrap:wrap}
+.v-ui .seg-opt{font-size:14px;padding:8px 14px}
+.v-hint{position:absolute;top:14px;inset-inline:0;text-align:center;font-size:13px;color:var(--brown);opacity:.85;pointer-events:none}
+.v-ui .tool{display:flex;gap:8px}
+.badge-sim{position:absolute;top:12px;inset-inline-start:14px;font-size:12px;background:#fff8;border-radius:999px;padding:4px 10px;color:var(--brown)}
+.specs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);margin-top:28px;align-items:start}
+.spec-t{width:100%;border-collapse:collapse;background:var(--color-surface);border-radius:20px;overflow:hidden}
+.spec-t th,.spec-t td{padding:14px 18px;text-align:start;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.spec-t th{width:38%;color:var(--orange-deep);font-weight:600}
+.spec-t tr:last-child>*{border-bottom:0}
+.draw{background:var(--color-surface);border-radius:20px;padding:18px}
+.draw svg{width:100%;height:auto;display:block}
+.draw figcaption{font-size:13px;margin-top:6px;text-align:center}
+.draw text{font-family:var(--he-body);font-size:13px;fill:var(--brown);font-weight:600}
+.price-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center;background:var(--color-surface);border-radius:28px;padding:clamp(22px,4vw,48px)}
+.price-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.price-card li{display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.price-card li svg{flex:none;color:var(--color-accent);margin-top:3px}
+.amount{font-family:var(--he-head);font-size:clamp(40px,6vw,68px);color:var(--orange-deep);line-height:1}
+.amount small{font-size:.35em;color:var(--brown)}
+.save{display:inline-block;margin-top:12px;background:var(--color-accent);color:var(--color-bg);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.disc{width:100%;border-collapse:collapse;margin-top:18px;background:var(--color-bg);border-radius:16px;overflow:hidden;font-size:15px}
+.disc th,.disc td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--color-divider)}
+.disc thead th{font-size:12px;color:var(--brown);font-weight:600}
+.disc tbody th{text-align:start;font-weight:600;color:var(--brown)}
+.disc s{opacity:.6}
+.disc .off td,.disc .off th{color:var(--orange-deep)}
+.disc .hd th{background:color-mix(in srgb,var(--orange) 12%,var(--color-bg));color:var(--orange-deep);text-align:start;font-size:15px}
+.disc .sub td,.disc .sub th{border-bottom:0}
+.disc td{text-align:center;white-space:nowrap}
+@media (max-width:560px){.disc{font-size:13px}.disc th,.disc td{padding:9px 3px}.disc tbody th{width:25%;font-size:13px}.disc thead th{font-size:11px}}
+.disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
+.price-note{font-size:14px;margin-top:10px}
+.pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:24px}
+.gal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
+.gal2 img{aspect-ratio:3/2}
+.gal img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:560px){.gal2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.q-hero,.specs,.price-card{grid-template-columns:minmax(0,1fr)}.v-ui{justify-content:center}}
+main,.wrap{font-size:18px}
+.q-hero .lead{font-size:clamp(19px,1.9vw,23px)}
+.chips li{font-size:17px}.q-meta{font-size:16px}.q-meta b{font-size:13px}
+.spec-t{font-size:18px}.price-card li{font-size:18px}.disc{font-size:17px}.disc thead th{font-size:13px}.price-note{font-size:16px}.save{font-size:16px}
+.draw text{font-size:15px}.gal+p,.sec p.muted{font-size:15px!important}
+@media print{.nav,.fab,.v-ui,.pc-actions{display:none}}
+</style>
+<style>
+.q-hero{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.preview{border-radius:26px;overflow:hidden;background:#efe3d1;position:relative}
+.preview img{display:block;width:100%;height:auto}
+.preview .btn{position:absolute;inset-inline-start:14px;bottom:14px}
+.qty{width:100%;border-collapse:collapse;background:var(--color-surface);border-radius:20px;overflow:hidden}
+.qty th,.qty td{padding:13px 16px;text-align:start;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.qty th{color:var(--orange-deep);font-weight:600;font-size:15px}
+.qty td.n{text-align:center;white-space:nowrap}
+.qty tr:last-child>*{border-bottom:0}
+.qty tr.tot td,.qty tr.tot th{font-weight:800;background:color-mix(in srgb,var(--color-accent) 14%,var(--color-surface))}
+.tw{overflow-x:auto;border-radius:20px}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#spec">דילוג לתוכן</a>
+<nav class="nav">
+<a class="nav-brand" href="../../index.html"><img src="../../assets/16677773.png" alt="Alternative Dream"></a>
+<div class="nav-links"><a href="#spec">מפרט</a><a href="#qty">כמויות</a><a href="#price">הצעת המחיר</a></div>
+<a class="btn btn-primary" href="https://wa.me/972515490099">דברו איתנו</a>
+</nav>
+<div class="wrap">
+<header class="q-hero">
+<div>
+<span class="kicker">הצעת מחיר</span>
+<h1>כיסוי בד לכיפה גאודזית <em>2V</em> בקוטר <bdi dir="ltr">8</bdi> מ׳</h1>
+<p class="lead">40 משולשי בד חתוכים ומוכנים להרכבה: 30 שווי־שוקיים ו־10 שווי־צלעות, בד אוקספורד 600D אטום למים.</p>
+<ul class="chips">
+<li>קוטר 8 מ׳ · גובה 4 מ׳</li><li>40 משולשים</li><li>בד אוקספורד 600D</li><li>כ־93 מ״ר בד נטו</li>
+</ul>
+<div class="q-meta">
+<div><b>תאריך</b><span id="qdate"></span></div>
+<div><b>תוקף ההצעה</b>30 יום</div>
+</div>
+</div>
+<div class="preview">
+<img src="dome-preview.webp" alt="הדמיה של כיפה גאודזית 2V בקוטר 8 מ׳" width="1060" height="561">
+<a class="btn btn-primary" href="../index.html">להדמיה ולשרטוט הייצור המלאים</a>
+</div>
+</header>
+
+<section class="sec" id="spec" style="padding-top:calc(1.5*var(--lead))">
+<span class="kicker">המפרט</span>
+<h2 class="sec-title">מה בדיוק מקבלים</h2>
+<div class="tw"><table class="spec-t" style="min-width:560px">
+<tr><th>מוצר</th><td>כיסוי בד לכיפה גאודזית 2V (חצי כדור) בקוטר 8 מ׳</td></tr>
+<tr><th>חלוקה</th><td>40 משולשים: 30 שווי־שוקיים (219 / 219 / 247 ס״מ) ו־10 שווי־צלעות (247 ס״מ)</td></tr>
+<tr><th>בד</th><td>בד אוקספורד 600D אטום למים</td></tr>
+<tr><th>תפרים</th><td>תוספת תפר של 4 ס״מ מכל צלע</td></tr>
+<tr><th>שטח</th><td>כ־93.3 מ״ר נטו · כ־104.8 מ״ר חיתוך כולל תפרים</td></tr>
+<tr><th>סימון</th><td>מספור כל משולש לפי מפת הרכבה (A1–A30 ו־B1–B10)</td></tr>
+</table></div>
+</section>
+
+<section class="sec" id="qty" style="padding-top:0">
+<span class="kicker">כמויות</span>
+<h2 class="sec-title">חיתוך וכמויות</h2>
+<div class="tw"><table class="qty" style="min-width:560px">
+<thead><tr><th>סוג</th><th>צלעות (ס״מ)</th><th class="n">כמות</th><th class="n">שטח נטו (מ״ר)</th><th class="n">שטח חיתוך כולל תפר (מ״ר)</th></tr></thead>
+<tbody>
+<tr><td>A – שווה־שוקיים</td><td>219 / 219 / 247</td><td class="n">30</td><td class="n">67.0</td><td class="n">75.3</td></tr>
+<tr><td>B – שווה־צלעות</td><td>247 / 247 / 247</td><td class="n">10</td><td class="n">26.5</td><td class="n">29.5</td></tr>
+<tr class="tot"><td>סה״כ</td><td></td><td class="n">40</td><td class="n">93.3</td><td class="n">104.8</td></tr>
+</tbody></table></div>
+<p class="muted" style="font-size:15px;margin:10px 0 0">הערכת בד גולמי: כ־55 מ׳ אורך בגליל ברוחב 280 ס״מ (ניצולת כ־68%), ללא תוספת בטחון.</p>
+</section>
+
+<section class="sec" id="price" style="padding-top:0">
+<span class="kicker">ההצעה</span>
+<h2 class="sec-title">הצעת המחיר</h2>
+<div class="price-card">
+<div>
+<ul>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>40 משולשי בד חתוכים לפי תבניות הייצור</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>בד אוקספורד 600D אטום למים</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>תפרים עם תוספת של 4 ס״מ</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>מספור ומפת הרכבה לכל משולש</li>
+</ul>
+</div>
+<div>
+<div class="muted" id="qlabel">מחיר כיסוי הבד</div>
+<div class="amount" id="amount"></div>
+<div class="muted" id="gross" style="margin-top:6px;font-size:18px"></div>
+<div class="tw"><table class="disc" aria-label="פירוט המחיר"><thead><tr><th></th><th>לפני מע״מ</th><th>מע״מ 18%</th><th>כולל מע״מ</th></tr></thead><tbody id="dbody"></tbody></table></div>
+<p class="price-note muted">זמן ייצור ואספקה ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
+<div class="pc-actions">
+<a id="wa" class="btn btn-primary" href="#">אישור ההצעה בוואטסאפ</a>
+<button class="btn btn-secondary" type="button" onclick="print()">הדפסה / PDF</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div>
+<p class="brand">Alternative Dream</p>
+<p><strong>צרו איתנו קשר עכשיו:</strong><br><a class="ltr" href="tel:0532277714">0532277714</a> · <a class="ltr" href="mailto:altnativedream@gmail.com">altnativedream@gmail.com</a></p>
+<p class="muted">שעות פעילות: ראשון–חמישי 9:00–18:00 | שישי 9:00–13:00</p>
+</div>
+<img src="../../assets/3a1d3897.png" alt="">
+<nav class="legal-links footer-legal" aria-label="מידע משפטי">
+<a href="../../terms.html">תקנון</a><a href="../../privacy.html">מדיניות פרטיות</a><a href="../../accessibility.html">הצהרת נגישות</a>
+</nav>
+</footer>
+</div>
+<script>
+(function(){
+// Prices are VAT-inclusive; VAT is taken off as 18% of the price (subtraction method). Fill ORIG (list) and FINAL (after discount) in shekels.
+var ORIG=null,FINAL=null,RATE=.18;
+var r=function(n){return Math.round(n*100)/100};
+var f=function(n){return n.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2})+' ₪'};
+var DASH='<span class="muted">₪ ______</span>';
+function row(title,price,cls){var v=price==null?null:r(price*RATE),n=price==null?null:r(price-v);
+  return '<tr class="'+cls+'"><th>'+title+'</th><td>'+(n==null?'—':f(n))+'</td><td>'+(v==null?'—':f(v))+'</td><td>'+(price==null?'—':f(price))+'</td></tr>'}
+var shown=FINAL!=null?FINAL:ORIG;
+document.getElementById('amount').innerHTML=shown==null?DASH+' <small>כולל מע״מ</small>':f(shown)+' <small>כולל מע״מ</small>';
+document.getElementById('gross').textContent=shown==null?'':f(r(shown-shown*RATE))+' לפני מע״מ';
+document.getElementById('dbody').innerHTML=row('מחיר מקורי',ORIG,'')+row('סופי לתשלום',FINAL,'tot');
+document.getElementById('wa').href='https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני רוצה לאשר הצעת מחיר לכיסוי בד לכיפה גאודזית 2V בקוטר 8 מ׳');
+var d=new Date();document.getElementById('qdate').textContent=d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear();
+})();
+</script>
+<a class="btn btn-primary fab" href="https://wa.me/972515490099">דברו איתנו</a>
+<script src="../../assets/cookies.js?v=1" defer></script>
+<script src="../../a11y-widget.js" defer data-color="#c67139" data-statement="../../accessibility.html"></script>
+</body></html>
