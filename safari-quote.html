@@ -102,6 +102,13 @@ main,.wrap{font-size:18px}
 .fab.fab-ic:hover{transform:scale(1.08)}
 @media(max-width:700px){.fab.fab-ic{width:42px;height:42px}.fab.fab-ic svg{width:30px;height:30px}}
 </style>
+<style>
+/* sticky floating pair: WhatsApp + accessibility, top-left, on every page (header itself is NOT sticky) */
+.fab.fab-ic{top:10px!important;left:10px!important;bottom:auto!important;right:auto!important}
+html .fda-btn{opacity:1!important;pointer-events:auto!important;top:10px!important;bottom:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;left:64px!important;right:auto!important;z-index:61!important;width:46px!important;height:46px!important;box-shadow:0 8px 20px -6px rgba(60,40,30,.5)!important}
+html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;right:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;max-height:calc(100vh - 80px)!important}
+@media(max-width:700px){.fab.fab-ic{width:40px!important;height:40px!important;top:8px!important;left:8px!important}html .fda-btn{width:40px!important;height:40px!important;top:8px!important;left:56px!important}html .fda-panel{top:56px!important;left:8px!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#viewer">דילוג לתוכן</a>

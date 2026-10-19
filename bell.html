@@ -158,6 +158,13 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 </style>
 <style>.bgal2{grid-template-columns:repeat(6,minmax(0,1fr))}.bgal2 .g-b{grid-column:span 4}.bgal2 .g-a{grid-column:span 2}@media(max-width:700px){.bgal2{grid-template-columns:repeat(2,minmax(0,1fr))}.bgal2 .g-b,.bgal2 .g-a{grid-column:span 2;grid-row:span 2}}</style>
 <style>.nav-solo{padding-block:14px 6px!important}.nav-solo .nav-brand img{height:clamp(110px,15vw,170px)!important;width:auto!important}@media(max-width:700px){.nav-solo{padding-block:8px 2px!important}.nav-solo .nav-brand img{height:96px!important}}</style>
+<style>
+/* sticky floating pair: WhatsApp + accessibility, top-left, on every page (header itself is NOT sticky) */
+.fab.fab-ic{top:10px!important;left:10px!important;bottom:auto!important;right:auto!important}
+html .fda-btn{opacity:1!important;pointer-events:auto!important;top:10px!important;bottom:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;left:64px!important;right:auto!important;z-index:61!important;width:46px!important;height:46px!important;box-shadow:0 8px 20px -6px rgba(60,40,30,.5)!important}
+html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;right:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;max-height:calc(100vh - 80px)!important}
+@media(max-width:700px){.fab.fab-ic{width:40px!important;height:40px!important;top:8px!important;left:8px!important}html .fda-btn{width:40px!important;height:40px!important;top:8px!important;left:56px!important}html .fda-panel{top:56px!important;left:8px!important}}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#bell">דילוג לתוכן</a>

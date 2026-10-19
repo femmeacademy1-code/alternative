@@ -164,6 +164,18 @@ footer{padding:calc(1.5*var(--lead)) 0 calc(2*var(--lead))!important;gap:14px!im
 @media(max-width:700px){.fab.fab-ic{width:42px;height:42px}.fab.fab-ic svg{width:30px;height:30px}}
 </style>
 <style>.nav-solo{padding-block:14px 6px!important}.nav-solo .nav-brand img{height:clamp(110px,15vw,170px)!important;width:auto!important}@media(max-width:700px){.nav-solo{padding-block:8px 2px!important}.nav-solo .nav-brand img{height:96px!important}}</style>
+<style>
+/* sticky floating pair: WhatsApp + accessibility, top-left, on every page (header itself is NOT sticky) */
+.fab.fab-ic{top:10px!important;left:10px!important;bottom:auto!important;right:auto!important}
+html .fda-btn{opacity:1!important;pointer-events:auto!important;top:10px!important;bottom:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;left:64px!important;right:auto!important;z-index:61!important;width:46px!important;height:46px!important;box-shadow:0 8px 20px -6px rgba(60,40,30,.5)!important}
+html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;right:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;max-height:calc(100vh - 80px)!important}
+@media(max-width:700px){.fab.fab-ic{width:40px!important;height:40px!important;top:8px!important;left:8px!important}html .fda-btn{width:40px!important;height:40px!important;top:8px!important;left:56px!important}html .fda-panel{top:56px!important;left:8px!important}}
+</style>
+<style>
+.cover .stamp,.hero-wrap .stamp-c{font-size:8.5px!important;font-weight:500!important;letter-spacing:0!important;padding:1px 6px!important;background:rgba(30,22,16,.3)!important;opacity:.9}
+.cover .stamp::before,.hero-wrap .stamp-c::before{width:3px!important;height:3px!important;margin-inline-end:3px!important}
+@media(max-width:700px){.cover .stamp{font-size:8px!important;top:calc(100vw*10/16 - 22px)!important}.hero-wrap .stamp-c{font-size:8px!important}}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
