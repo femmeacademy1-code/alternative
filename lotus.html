@@ -263,10 +263,10 @@ footer img{margin-inline:auto}
 .lgal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.6vw,18px);margin-top:24px}
 .lgal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
 .lgal img{width:100%;height:100%;object-fit:cover;display:block}
-.lg-a{grid-column:span 6;aspect-ratio:16/8}.lg-b{grid-column:span 2;aspect-ratio:1}.lg-c{grid-column:span 4;aspect-ratio:16/9}
+.lg-d{grid-column:span 6;aspect-ratio:16/9}.lg-d img{object-position:50% 45%}.lg-a{grid-column:span 6;aspect-ratio:16/8}.lg-b{grid-column:span 2;aspect-ratio:1}.lg-c{grid-column:span 4;aspect-ratio:16/9}
 .vids{max-width:900px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
 @media(max-width:700px){
-.lg-a,.lg-b,.lg-c{grid-column:span 6;aspect-ratio:4/3}
+.lg-a,.lg-b,.lg-c,.lg-d{grid-column:span 6;aspect-ratio:4/3}
 .vids{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 </style>
@@ -330,6 +330,7 @@ footer img{margin-inline:auto}
 <span class="kicker">מהשטח</span>
 <h2 class="sec-title">אוהלי לוטוס בפעולה</h2>
 <div class="lgal">
+<figure class="lg-d"><img src="assets/lotus-aerial.jpg" alt="שני אוהלי לוטוס על דק עץ בתוך יער" loading="lazy"></figure>
 <figure class="lg-a"><img src="assets/lotus-in-circle.jpg" alt="פנים אוהל לוטוס עם מעגל כסאות ואור שמש" loading="lazy"></figure>
 <figure class="lg-b"><img src="assets/lotus-forest.jpg" alt="אוהל לוטוס על דק ביער" loading="lazy"></figure>
 <figure class="lg-c"><img src="assets/lotus-night.jpg" alt="שני אוהלי לוטוס מוארים בלילה" loading="lazy"></figure>
@@ -413,7 +414,7 @@ fitTitle:'למי מתאים הפעמון?',
 fit:['משפחות המחפשות חוויית קמפינג יוקרתית','בעלי צימרים הרוצים להוסיף יחידות אירוח','שימוש פרטי בחצר או במגרש','אירועים חד-פעמיים – חתונות, חגיגות, סדנאות','גני אירועים וחוות חקלאיות']},
 lotus:{kicker:'אוהל לוטוס',title:'דגמי אוהלי לוטוס (Lotus)',sub:'המפרט המלא',cta:'להזמנת לוטוס',
 features:['בד אוקספורד 100% אטום למים','ציפוי נוגד עובש ופטריות','2 דלתות כניסה עם רשתות','4 חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לחשמל ומזגן','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
-photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg','assets/lotus-forest.jpg','assets/lotus-in-circle.jpg','assets/lotus-night.jpg'],
+photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg','assets/lotus-forest.jpg','assets/lotus-in-circle.jpg','assets/lotus-night.jpg','assets/lotus-aerial.jpg'],
 sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנשים בלינה, 8 אנשים בישיבה במעגל',p:'₪6,800'},{n:'לוטוס 5M',d:'5 מטר',h:'320 ס״מ',w:'66 ק״ג',c:'6-7 אנשים בלינה, 12-16 אנשים במעגל/סדנה',p:'₪7,500'},{n:'לוטוס 6M',d:'6 מטר',h:'375 ס״מ',w:'75 ק״ג',c:'8-9 אנשים בלינה, 20-25 בישיבה במעגל',p:'₪9,100'},{n:'לוטוס 8M',d:'8 מטר',h:'430 ס״מ',w:'92 ק״ג',c:'12+ אנשים בלינה, 30-40 אנשים בישיבה במעגל',p:'₪11,700'},{n:'לוטוס 9M',d:'9 מטר',h:'450 ס״מ',w:'100 ק״ג',c:'14+ אנשים בלינה, 40-50 אנשים בישיבה במעגל',p:'₪14,500'}],
 fitTitle:'למי מתאים הלוטוס?',
 fit:['מתחמי אירוח מקצועיים – צימרים, גלמפינג, קמפינגים ברמה גבוהה','מארגני ריטריטים וסדנאות – יוגה, וורקשופים, פעילויות קבוצתיות','בעלי עסקים תיירותיים – המחפשים להציע חוויה ייחודית לאורחים','שימוש פרטי יוקרתי – פינת אירוח מושלמת, "חדר" נוסף, משרד בטבע','אירועים מיוחדים – חתונות, חגיגות משפחתיות, אירוח VIP','חקלאים ובעלי קרקעות – פתרון לינה קבוע עם נוחות מקסימלית']}
