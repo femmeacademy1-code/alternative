@@ -376,6 +376,14 @@ footer img{margin-inline:auto}
 .cover .btn-light:hover{background:#8c4416!important;color:#fff!important}
 @media(max-width:700px){.cover .btn-light{background:var(--orange-deep)!important;color:#fff!important;border:0!important}}
 </style>
+<style>
+/* catalog cards: caption on TOP so the tent stays visible */
+.cat::after{background:linear-gradient(rgba(20,14,10,.82) 0%,rgba(20,14,10,.55) 28%,rgba(20,14,10,0) 55%)!important}
+.cat .in{top:0!important;bottom:auto!important;padding:clamp(16px,3vw,26px) clamp(16px,3vw,26px) 0!important}
+.cat{aspect-ratio:4/3.4!important}
+.cat img{object-position:50% 70%}
+@media(max-width:700px){.cat{aspect-ratio:1/1!important}.cat .in{padding-top:18px!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#catalogs">דילוג לתוכן</a>
