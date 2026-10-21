@@ -328,13 +328,6 @@ footer img{margin-inline:auto}
 <div class="ship"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>המחירים אינם כוללים אספקה</div>
 </section>
 
-<section class="sec" style="padding-bottom:0">
-<span class="kicker">הדגמים שלנו</span>
-<h2 class="sec-title">בחרו גודל</h2>
-<p class="muted" style="margin:0">המחירים כוללים מע״מ ואינם כוללים אספקה</p>
-
-</section>
-
 <section class="model" id="lotus" data-model="lotus"></section>
 
 <section class="wa-band warm"><div><h3>מעוניינים בלוטוס? קבלו הצעת מחיר</h3><p>כולל אפשרות הקמה בתיאום מול נציג.</p></div><a target="_blank" rel="noopener" class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%9C%D7%95%D7%98%D7%95%D7%A1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>שלחו הודעה עכשיו</a></section>
@@ -437,7 +430,7 @@ const sizes=`<div class="sizepick" id="sizes"><h3 class="sp-q">איזה גודל
 sec.innerHTML=`<div class="m-media"><figure class="m-fig washed"><img alt="${m.title}" src="${m.photos[0]}"></figure><div class="thumbs">${m.photos.map((p,i)=>`<button type="button" aria-label="תמונה ${i+1}" aria-pressed="${i===0}" data-i="${i}"><img src="${p}" alt=""></button>`).join('')}</div></div><div class="m-body">${head}${sizes}${layout==='cards'?fit+cta:cta+fit}</div>`;
 {const card=sec.querySelector('.sp-card'),btns=[].slice.call(sec.querySelectorAll('.sp-b'));let cur=0;
 const wa=s=>'https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני מעוניינ/ת ב'+s.n+' ('+s.d+')');
-const r=()=>{const s=m.sizes[cur];card.innerHTML=`<div class="sp-head"><h3>${s.n}</h3>${priceRow(s)}</div>${specDl(s)}<a class="btn btn-primary btn-xl" href="${wa(s)}">לשיחה בוואטסאפ על ${s.n}</a><p class="sp-note muted">הקמה בתוספת תשלום ובתיאום מול נציג · האספקה אינה כלולה</p>`};
+const r=()=>{const s=m.sizes[cur];card.innerHTML=`<div class="sp-head"><h3>${s.n}</h3>${priceRow(s)}</div>${specDl(s)}<a class="btn btn-primary btn-xl" href="${wa(s)}">לשיחה בוואטסאפ על ${s.n}</a><p class="sp-note muted">המחירים כוללים מע״מ · הקמה בתוספת תשלום ובתיאום מול נציג · האספקה אינה כלולה</p>`};
 btns.forEach(b=>b.addEventListener('click',()=>{cur=+b.dataset.i;btns.forEach(x=>x.setAttribute('aria-checked',x===b));r()}));
 r();renders.push(r)}
 const main=sec.querySelector('.m-fig img');
