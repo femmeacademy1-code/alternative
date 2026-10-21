@@ -283,6 +283,7 @@ footer img{margin-inline:auto}
 .inc-fig{max-width:none!important;width:100%;aspect-ratio:4/3}
 }
 </style>
+<style>#specs{scroll-margin-top:12px}@media(max-width:700px){#specs{scroll-margin-top:64px}}html{scroll-behavior:smooth}</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
@@ -295,7 +296,7 @@ footer img{margin-inline:auto}
 <h2 class="muted">אוהלי לוטוס לאירוח, מגורים וריטריטים בטבע</h2>
 <div class="row">
 <a target="_blank" rel="noopener" class="btn btn-primary" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A7%D7%98%D7%9C%D7%95%D7%92%20%D7%90%D7%95%D7%94%D7%9C%D7%99%20%D7%94%D7%9C%D7%95%D7%98%D7%95%D7%A1%20%D7%A9%D7%9C%20Alternative%20Dream.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%95%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%F0%9F%99%82">אני רוצה לדבר עם נציג</a>
-<a class="btn btn-ghost" href="#lotus">לגדלים ולמפרט</a>
+<a class="btn btn-ghost" href="#specs">לגדלים ולמפרט</a>
 </div>
 </div>
 <div class="hero-wrap"><figure class="hero-fig"><img src="assets/cover-desert.jpg" alt="אוהלי לוטוס במדבר" style="object-position:50% 70%"></figure><p class="stamp-c">חאן מידורה, קדם ערבה</p></div>
@@ -408,13 +409,13 @@ const MODELS={
 bell:{kicker:'אוהל פעמון',title:'דגמי אוהל גלאמפינג פעמון',sub:'המפרט המלא',cta:'להזמנת פעמון',
 features:['בד אוקספורד 100% אטום למים','דלת כניסה עם רשת','חלונות גדולים עם רשתות','יתדות וחבלי עיגון','תיק נשיאה'],
 photos:['assets/9f78ce2e.jpg','assets/89e48064.jpg','assets/cdb442f4.jpg'],
-sizes:[{n:'פעמון 3M',d:'3 מטר',h:'250 ס״מ',w:'21 ק״ג',c:'2-3 אנשים',p:'₪3,600'},{n:'פעמון 4M',d:'4 מטר',h:'250 ס״מ',w:'26 ק״ג',c:'4-5 אנשים',p:'₪4,000'},{n:'פעמון 5M',d:'5 מטר',h:'300 ס״מ',w:'37 ק״ג',c:'6-7 אנשים',p:'₪5,000'},{n:'פעמון 7M',d:'7 מטר',h:'400 ס״מ',w:'59 ק״ג',c:'10-12 אנשים',p:'₪7,500'}],
+sizes:[{n:'פעמון 3M',d:'3 מטר',h:'250 ס״מ',w:'21 ק״ג',c:'2-3 אנשים',p:'₪3,600'},{n:'פעמון 4M',d:'4 מטר',h:'250 ס״מ',w:'26 ק״ג',c:'4-5 אנשים',p:'₪4,000'},{n:'פעמון 5M',d:'5 מטר',h:'300 ס״מ',w:'37 ק״ג',c:'6-7 אנשים',p:'₪5,000'},{n:'פעמון 7M',d:'7 מטר',h:'400 ס״מ',w:'59 ק״ג',c:'10-12 אנשים',p:'₪7,500',win:'4 חלונות'}],
 fitTitle:'למי מתאים הפעמון?',
 fit:['משפחות המחפשות חוויית קמפינג יוקרתית','בעלי צימרים הרוצים להוסיף יחידות אירוח','שימוש פרטי בחצר או במגרש','אירועים חד-פעמיים – חתונות, חגיגות, סדנאות','גני אירועים וחוות חקלאיות']},
 lotus:{kicker:'אוהל לוטוס',title:'דגמי אוהלי לוטוס (Lotus)',sub:'המפרט המלא',cta:'להזמנת לוטוס',
-features:['בד אוקספורד 100% אטום למים','ציפוי נוגד עובש ופטריות','2 דלתות כניסה עם רשתות','4 חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לחשמל ומזגן','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
+features:['בד אוקספורד 100% אטום למים','ציפוי נוגד עובש ופטריות','2 דלתות כניסה עם רשתות','חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לחשמל ומזגן','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
 photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg','assets/lotus-in-circle.jpg','assets/lotus-night.jpg','assets/lotus-aerial.jpg'],
-sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנשים בלינה, 8 אנשים בישיבה במעגל',p:'₪6,800'},{n:'לוטוס 5M',d:'5 מטר',h:'320 ס״מ',w:'66 ק״ג',c:'6-7 אנשים בלינה, 12-16 אנשים במעגל/סדנה',p:'₪7,500'},{n:'לוטוס 6M',d:'6 מטר',h:'375 ס״מ',w:'75 ק״ג',c:'8-9 אנשים בלינה, 20-25 בישיבה במעגל',p:'₪9,100'},{n:'לוטוס 8M',d:'8 מטר',h:'430 ס״מ',w:'92 ק״ג',c:'12+ אנשים בלינה, 30-40 אנשים בישיבה במעגל',p:'₪11,700'},{n:'לוטוס 9M',d:'9 מטר',h:'450 ס״מ',w:'100 ק״ג',c:'14+ אנשים בלינה, 40-50 אנשים בישיבה במעגל',p:'₪14,500'}],
+sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנשים בלינה, 8 אנשים בישיבה במעגל',p:'₪6,800',win:'4 חלונות'},{n:'לוטוס 5M',d:'5 מטר',h:'320 ס״מ',w:'66 ק״ג',c:'6-7 אנשים בלינה, 12-16 אנשים במעגל/סדנה',p:'₪7,500',win:'4 חלונות'},{n:'לוטוס 6M',d:'6 מטר',h:'375 ס״מ',w:'75 ק״ג',c:'8-9 אנשים בלינה, 20-25 בישיבה במעגל',p:'₪9,100',win:'4 חלונות'},{n:'לוטוס 8M',d:'8 מטר',h:'430 ס״מ',w:'92 ק״ג',c:'12+ אנשים בלינה, 30-40 אנשים בישיבה במעגל',p:'₪11,700',win:'6 חלונות'},{n:'לוטוס 9M',d:'9 מטר',h:'450 ס״מ',w:'100 ק״ג',c:'14+ אנשים בלינה, 40-50 אנשים בישיבה במעגל',p:'₪14,500',win:'6 חלונות'}],
 fitTitle:'למי מתאים הלוטוס?',
 fit:['מתחמי אירוח מקצועיים – צימרים, גלמפינג, קמפינגים ברמה גבוהה','מארגני ריטריטים וסדנאות – יוגה, וורקשופים, פעילויות קבוצתיות','בעלי עסקים תיירותיים – המחפשים להציע חוויה ייחודית לאורחים','שימוש פרטי יוקרתי – פינת אירוח מושלמת, "חדר" נוסף, משרד בטבע','אירועים מיוחדים – חתונות, חגיגות משפחתיות, אירוח VIP','חקלאים ובעלי קרקעות – פתרון לינה קבוע עם נוחות מקסימלית']}
 };
@@ -422,11 +423,11 @@ const renders=[];
 const price=p=>{const n=+p.replace(/[^\d]/g,'');return '₪'+n.toLocaleString('en-US')};
 const vatNote=()=>'(כולל מע״מ)';
 const layout=document.body.dataset.layout||'switcher';
-const specDl=s=>`<dl>${[['קוטר',s.d],['גובה',s.h],['משקל',s.w],['קיבולת',s.c,'cap']].filter(r=>r[1]).map(([t,v,c])=>`<div${c?` class="${c}"`:''}><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
+const specDl=s=>`<dl>${[['קוטר',s.d],['גובה',s.h],['משקל',s.w],['חלונות',s.win],['קיבולת',s.c,'cap']].filter(r=>r[1]).map(([t,v,c])=>`<div${c?` class="${c}"`:''}><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
 const priceRow=s=>`<div class="price"><b>${price(s.p)}</b><span class="muted">${vatNote()}</span></div>`;
 document.querySelectorAll('[data-model]').forEach(sec=>{
 const key=sec.dataset.model,m=MODELS[key];
-const head=`<div class="m-head"><span class="kicker">${m.kicker}</span><h2 class="sec-title">${m.title}</h2><p class="muted" style="margin:0">${m.sub}</p><ul class="features">${m.features.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
+const head=`<div class="m-head" id="specs"><span class="kicker">${m.kicker}</span><h2 class="sec-title">${m.title}</h2><p class="muted" style="margin:0">${m.sub}</p><ul class="features">${m.features.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
 const fit=`<div class="fit"><h4>${m.fitTitle}</h4><ul>${m.fit.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
 const cta=`<a target="_blank" rel="noopener" class="btn btn-primary cta" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A7%D7%98%D7%9C%D7%95%D7%92%20%D7%90%D7%95%D7%94%D7%9C%D7%99%20%D7%94%D7%9C%D7%95%D7%98%D7%95%D7%A1%20%D7%A9%D7%9C%20Alternative%20Dream.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%95%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%F0%9F%99%82">${m.cta}</a>`;
 const sizes=`<div class="sizepick"><h3 class="sp-q">איזה גודל אתם מחפשים?</h3><div class="sp-btns" role="radiogroup" aria-label="גודל האוהל">${m.sizes.map((s,i)=>`<button type="button" class="sp-b" role="radio" aria-checked="${i===0}" data-i="${i}"><b>${s.n.split(' ')[1].replace('M','')}</b><span>מטר</span></button>`).join('')}</div><div class="sp-card" aria-live="polite"></div></div>`;
