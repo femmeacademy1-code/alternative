@@ -259,6 +259,30 @@ footer img{margin-inline:auto}
 .faq details p{text-align:center!important}
 #faq .kicker,#faq .sec-title{text-align:center!important}
 </style>
+<style>
+.lgal{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.6vw,18px);margin-top:24px}
+.lgal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
+.lgal img{width:100%;height:100%;object-fit:cover;display:block}
+.lg-a{grid-column:span 6;aspect-ratio:16/8}.lg-b{grid-column:span 2;aspect-ratio:1}.lg-c{grid-column:span 4;aspect-ratio:16/9}
+.vids{max-width:900px!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media(max-width:700px){
+.lg-a,.lg-b,.lg-c{grid-column:span 6;aspect-ratio:4/3}
+.vids{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+</style>
+<style>
+/* phone: bigger catalog photos */
+@media(max-width:820px){
+.m-media{width:100%;max-width:none!important;margin-inline:0!important}
+.m-fig{aspect-ratio:4/5!important;width:100%!important;border-radius:26px!important}
+.thumbs{gap:10px}
+.thumbs button{width:72px!important;height:72px!important}
+.thumbs{flex-wrap:wrap}
+.bgal{grid-auto-rows:clamp(150px,44vw,260px)!important}
+.hero-wrap{max-width:300px!important}
+.inc-fig{max-width:none!important;width:100%;aspect-ratio:4/3}
+}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#lotus">דילוג לתוכן</a>
@@ -302,11 +326,23 @@ footer img{margin-inline:auto}
 
 <section class="wa-band warm"><div><h3>מעוניינים בלוטוס? קבלו הצעת מחיר</h3><p>כולל אפשרות הקמה בתיאום מול נציג.</p></div><a target="_blank" rel="noopener" class="btn btn-primary btn-xl" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%90%D7%95%D7%94%D7%9C%20%D7%9C%D7%95%D7%98%D7%95%D7%A1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5Z"/></svg>שלחו הודעה עכשיו</a></section>
 
+<section class="sec" id="gallery" style="padding-bottom:0">
+<span class="kicker">מהשטח</span>
+<h2 class="sec-title">אוהלי לוטוס בפעולה</h2>
+<div class="lgal">
+<figure class="lg-a"><img src="assets/lotus-in-circle.jpg" alt="פנים אוהל לוטוס עם מעגל כסאות ואור שמש" loading="lazy"></figure>
+<figure class="lg-b"><img src="assets/lotus-forest.jpg" alt="אוהל לוטוס על דק ביער" loading="lazy"></figure>
+<figure class="lg-c"><img src="assets/lotus-night.jpg" alt="שני אוהלי לוטוס מוארים בלילה" loading="lazy"></figure>
+</div>
+</section>
+
 <section class="sec" id="inside" style="padding-bottom:0">
 <span class="kicker">מבפנים</span>
 <h2 class="sec-title">כך מרגיש אוהל לוטוס מבפנים</h2>
 <div class="vids">
 <figure><video src="assets/video/lotus-1.mp4" poster="assets/video/lotus-1.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: פנים אוהל לוטוס"></video></figure>
+<figure><video src="assets/video/lotus-3.mp4" poster="assets/video/lotus-3.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: אוהל לוטוס מואר בלילה"></video></figure>
+<figure><video src="assets/video/lotus-4.mp4" poster="assets/video/lotus-4.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: פנים אוהל לוטוס מבודד ומרוהט"></video></figure>
 <figure><video src="assets/video/lotus-2.mp4" poster="assets/video/lotus-2.jpg" muted loop playsinline preload="metadata" aria-label="סרטון: אוהל לוטוס בהקמה"></video></figure>
 </div>
 </section>
@@ -377,7 +413,7 @@ fitTitle:'למי מתאים הפעמון?',
 fit:['משפחות המחפשות חוויית קמפינג יוקרתית','בעלי צימרים הרוצים להוסיף יחידות אירוח','שימוש פרטי בחצר או במגרש','אירועים חד-פעמיים – חתונות, חגיגות, סדנאות','גני אירועים וחוות חקלאיות']},
 lotus:{kicker:'אוהל לוטוס',title:'דגמי אוהלי לוטוס (Lotus)',sub:'המפרט המלא',cta:'להזמנת לוטוס',
 features:['בד אוקספורד 100% אטום למים','ציפוי נוגד עובש ופטריות','2 דלתות כניסה עם רשתות','4 חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לחשמל ומזגן','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
-photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg'],
+photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg','assets/lotus-forest.jpg','assets/lotus-in-circle.jpg','assets/lotus-night.jpg'],
 sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנשים בלינה, 8 אנשים בישיבה במעגל',p:'₪6,800'},{n:'לוטוס 5M',d:'5 מטר',h:'320 ס״מ',w:'66 ק״ג',c:'6-7 אנשים בלינה, 12-16 אנשים במעגל/סדנה',p:'₪7,500'},{n:'לוטוס 6M',d:'6 מטר',h:'375 ס״מ',w:'75 ק״ג',c:'8-9 אנשים בלינה, 20-25 בישיבה במעגל',p:'₪9,100'},{n:'לוטוס 8M',d:'8 מטר',h:'430 ס״מ',w:'92 ק״ג',c:'12+ אנשים בלינה, 30-40 אנשים בישיבה במעגל',p:'₪11,700'},{n:'לוטוס 9M',d:'9 מטר',h:'450 ס״מ',w:'100 ק״ג',c:'14+ אנשים בלינה, 40-50 אנשים בישיבה במעגל',p:'₪14,500'}],
 fitTitle:'למי מתאים הלוטוס?',
 fit:['מתחמי אירוח מקצועיים – צימרים, גלמפינג, קמפינגים ברמה גבוהה','מארגני ריטריטים וסדנאות – יוגה, וורקשופים, פעילויות קבוצתיות','בעלי עסקים תיירותיים – המחפשים להציע חוויה ייחודית לאורחים','שימוש פרטי יוקרתי – פינת אירוח מושלמת, "חדר" נוסף, משרד בטבע','אירועים מיוחדים – חתונות, חגיגות משפחתיות, אירוח VIP','חקלאים ובעלי קרקעות – פתרון לינה קבוע עם נוחות מקסימלית']}
