@@ -263,6 +263,19 @@ footer img{margin-inline:auto}
 </style>
 <style>#sizes{scroll-margin-top:12px}@media(max-width:700px){#sizes{scroll-margin-top:64px}}html{scroll-behavior:smooth}</style>
 <style>.sp-b em{font-style:normal;font-size:13px;font-weight:600;opacity:.85;margin-top:2px}</style>
+<style>
+/* long bullet lists: right-aligned (start), not centered */
+.fit,.fit h4{text-align:start!important}
+.fit ul{display:block!important;padding:0!important;margin:0!important;list-style:none}
+.fit li{display:flex!important;align-items:flex-start;justify-content:flex-start!important;text-align:start!important;gap:10px;max-width:none!important;margin:0 0 12px!important;position:relative}
+.fit li::before{flex:none;margin:.62em 0 0 0!important;position:static!important;float:none!important;display:block!important}
+.inc>div:first-child{text-align:start!important}
+.inc ul{display:block!important;padding:0!important;margin:0}
+.inc li{display:flex!important;justify-content:flex-start!important;align-items:flex-start;text-align:start!important;gap:10px;margin:0 0 12px!important}
+.inc li svg{flex:none;margin-top:.25em}
+.inc li,.fit li{width:100%!important;box-sizing:border-box}
+.inc li{flex-direction:row}
+</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#bell">דילוג לתוכן</a>
