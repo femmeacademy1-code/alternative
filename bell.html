@@ -276,6 +276,7 @@ footer img{margin-inline:auto}
 .inc li,.fit li{width:100%!important;box-sizing:border-box}
 .inc li{flex-direction:row}
 </style>
+<style>.sp-b .sp-pr{margin-top:6px;font-size:15px;color:var(--orange-deep);font-weight:800;line-height:1}.sp-b[aria-checked=true] .sp-pr{color:#fff}</style>
 </head>
 <body data-layout="picker">
 <a class="skip-link" href="#bell">דילוג לתוכן</a>
@@ -385,7 +386,7 @@ sizes:[{n:'פעמון 3M',d:'3 מטר',h:'250 ס״מ',w:'21 ק״ג',c:'2-3 אנ�
 fitTitle:'למי מתאים הפעמון?',
 fit:['משפחות המחפשות חוויית קמפינג יוקרתית','בעלי צימרים הרוצים להוסיף יחידות אירוח','שימוש פרטי בחצר או במגרש','אירועים חד-פעמיים – חתונות, חגיגות, סדנאות','גני אירועים וחוות חקלאיות']},
 lotus:{kicker:'אוהל לוטוס',title:'דגמי אוהלי לוטוס (Lotus)',sub:'המפרט המלא',cta:'להזמנת לוטוס',
-features:['בד אוקספורד 100% אטום למים','2 דלתות כניסה עם רשתות','4 חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לחשמל ומזגן','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
+features:['בד אוקספורד 100% אטום למים','2 דלתות כניסה עם רשתות','4 חלונות גדולים עם רשתות','תוספת הצללה למרפסת חוץ','פתחים ייעודיים לקמין, למזגן ולחשמל','חלונות איוורור מרובים','יתדות וחבלי עיגון מחוזקים','תיק נשיאה פרימיום'],
 photos:['assets/6fb61681.jpg','assets/71656ce0.jpg','assets/c8ed406b.jpg'],
 sizes:[{n:'לוטוס 4M',d:'4 מטר',h:'280 ס״מ',w:'55 ק״ג',c:'4-5 אנשים בלינה, 8 אנשים בישיבה במעגל',p:'₪6,800'},{n:'לוטוס 5M',d:'5 מטר',h:'320 ס״מ',w:'66 ק״ג',c:'6-7 אנשים בלינה, 12-16 אנשים במעגל/סדנה',p:'₪7,500'},{n:'לוטוס 6M',d:'6 מטר',h:'375 ס״מ',w:'75 ק״ג',c:'8-9 אנשים בלינה, 20-25 בישיבה במעגל',p:'₪9,100'},{n:'לוטוס 8M',d:'8 מטר',h:'430 ס״מ',w:'92 ק״ג',c:'12+ אנשים בלינה, 30-40 אנשים בישיבה במעגל',p:'₪11,700'},{n:'לוטוס 9M',d:'9 מטר',h:'450 ס״מ',w:'100 ק״ג',c:'14+ אנשים בלינה, 40-50 אנשים בישיבה במעגל',p:'₪14,500'}],
 fitTitle:'למי מתאים הלוטוס?',
@@ -396,14 +397,14 @@ const price=p=>{const n=+p.replace(/[^\d]/g,'');return '₪'+n.toLocaleString('e
 const vatNote=()=>'(כולל מע״מ)';
 const layout=document.body.dataset.layout||'switcher';
 const area=s=>{const d=parseFloat(s.d);return d?(Math.PI*d*d/4).toFixed(1).replace(/\.0$/,''):''};
-const specDl=s=>`<dl>${[['קוטר',s.d],['שטח פנים',area(s)?'כ־'+area(s)+' מ״ר':''],['גובה',s.h],['משקל',s.w],['קיבולת',s.c,'cap']].filter(r=>r[1]).map(([t,v,c])=>`<div${c?` class="${c}"`:''}><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
+const specDl=s=>`<dl>${[['קוטר',s.d],['שטח פנים',area(s)?'כ־'+area(s)+' מ״ר':''],['גובה',s.h],['משקל',s.w],['פתחים','לקמין, למזגן ולחשמל'],['קיבולת',s.c,'cap']].filter(r=>r[1]).map(([t,v,c])=>`<div${c?` class="${c}"`:''}><dt>${t}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
 const priceRow=s=>`<div class="price"><b>${price(s.p)}</b><span class="muted">${vatNote()}</span></div>`;
 document.querySelectorAll('[data-model]').forEach(sec=>{
 const key=sec.dataset.model,m=MODELS[key];
 const head=`<div class="m-head" id="specs"><span class="kicker">${m.kicker}</span><h2 class="sec-title">${m.title}</h2><p class="muted" style="margin:0">${m.sub}</p><ul class="features">${m.features.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
 const fit=`<div class="fit"><h4>${m.fitTitle}</h4><ul>${m.fit.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
 const cta=`<a target="_blank" rel="noopener" class="btn btn-primary cta" href="https://wa.me/972515490099?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A7%D7%98%D7%9C%D7%95%D7%92%20%D7%90%D7%95%D7%94%D7%9C%D7%99%20%D7%94%D7%A4%D7%A2%D7%9E%D7%95%D7%9F%20%D7%A9%D7%9C%20Alternative%20Dream.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%9E%D7%99%D7%93%D7%A2%20%D7%95%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%F0%9F%99%82">${m.cta}</a>`;
-const sizes=`<div class="sizepick" id="sizes"><h3 class="sp-q">איזה גודל אתם מחפשים?</h3><div class="sp-btns" role="radiogroup" aria-label="גודל האוהל">${m.sizes.map((s,i)=>`<button type="button" class="sp-b" role="radio" aria-checked="${i===0}" data-i="${i}"><b>${s.n.split(' ')[1].replace('M','')}</b><span>מטר</span><em>כ־${area(s)} מ״ר</em></button>`).join('')}</div><div class="sp-card" aria-live="polite"></div></div>`;
+const sizes=`<div class="sizepick" id="sizes"><h3 class="sp-q">איזה גודל אתם מחפשים?</h3><div class="sp-btns" role="radiogroup" aria-label="גודל האוהל">${m.sizes.map((s,i)=>`<button type="button" class="sp-b" role="radio" aria-checked="${i===0}" data-i="${i}"><b>${s.n.split(' ')[1].replace('M','')}</b><span>מטר</span><em>כ־${area(s)} מ״ר</em><strong class="sp-pr">${s.p}</strong></button>`).join('')}</div><div class="sp-card" aria-live="polite"></div></div>`;
 sec.innerHTML=`<div class="m-media"><figure class="m-fig washed"><img alt="${m.title}" src="${m.photos[0]}"></figure><div class="thumbs">${m.photos.map((p,i)=>`<button type="button" aria-label="תמונה ${i+1}" aria-pressed="${i===0}" data-i="${i}"><img src="${p}" alt=""></button>`).join('')}</div></div><div class="m-body">${head}${sizes}${layout==='cards'?fit+cta:cta+fit}</div>`;
 {const card=sec.querySelector('.sp-card'),btns=[].slice.call(sec.querySelectorAll('.sp-b'));let cur=0;
 const wa=s=>'https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני מעוניינ/ת ב'+s.n+' ('+s.d+')');
