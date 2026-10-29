@@ -277,10 +277,13 @@ html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;rig
 @media(min-width:701px){
 .topbar{padding-block:8px!important;gap:clamp(18px,3vw,44px)!important}
 .topbar .nav-brand img{height:96px!important}
-.dnav{display:flex;align-items:center;gap:clamp(16px,2.4vw,34px)}
-.dnav a{font-size:19px;font-weight:700;color:#3b2a24;text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent}
+}
+@media(min-width:1000px){
+.topbar .nav-brand img{height:76px!important}
+.dnav{display:flex;flex-wrap:nowrap;align-items:center;gap:clamp(10px,1.5vw,26px);white-space:nowrap}
+.dnav a{font-size:clamp(14px,1.28vw,17px);font-weight:700;color:#3b2a24;text-decoration:none;padding:4px 1px;border-bottom:2px solid transparent}
 .dnav a:hover,.dnav a:focus-visible{color:var(--orange-deep);border-bottom-color:var(--orange-deep);outline:none}
-.tb-actions,#menuPanel{display:none!important}
+.tb-actions,#menuBtn,#menuPanel{display:none!important}
 }
 </style>
 <style>
