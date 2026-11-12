@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+<meta charset="utf-8">
+<script>
+/* auto-refresh: if a newer version of this page was published, reload once so no ?v= trick is needed */
+(function(){try{if(location.protocol==='file:')return;
+var k='ad-ver:'+location.pathname,g='ad-rl:'+location.pathname;
+fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.text():''}).then(function(t){
+ if(!t)return;var h=0,i;for(i=0;i<t.length;i++){h=(h*31+t.charCodeAt(i))|0}
+ var old=localStorage.getItem(k);localStorage.setItem(k,String(h));
+ if(old&&old!==String(h)&&!sessionStorage.getItem(g)){sessionStorage.setItem(g,'1');location.reload()}
+}).catch(function(){})}catch(e){}})();
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הצעת מחיר – כיפה גאודזית 2V בקוטר 6 מ׳ | Alternative Dream</title>
+<meta name="description" content="הצעת מחיר לכיסוי PVC בלבד לכיפה גאודזית 2V בקוטר 6 מ׳.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f3ece2">
+<link rel="stylesheet" href="../../assets/site.css?v=5">
+<style>
+.q-hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(20px,4vw,48px) 0}
+.q-hero h1{font-size:clamp(32px,4.4vw,54px);line-height:1.08;margin:0}
+.q-hero h1 em{font-style:normal;color:var(--orange-deep)}
+.q-hero .lead{font-size:clamp(17px,1.7vw,21px);line-height:1.6;margin:16px 0 0;color:var(--orange-deep);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;list-style:none}
+.chips li{background:color-mix(in srgb,var(--orange) 14%,var(--color-bg));color:var(--brown);padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px}
+.q-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px}
+.q-meta b{display:block;color:var(--orange-deep);font-size:12px;letter-spacing:.04em}
+.viewer{position:relative;border-radius:28px;background:radial-gradient(120% 90% at 50% 30%,#fbf6ee 0%,#efe3d1 70%,#e6d6bf 100%);overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.viewer.drag{cursor:grabbing}
+.stage{height:clamp(380px,44vw,520px);perspective:1500px;perspective-origin:50% 38%;display:flex;align-items:center;justify-content:center}
+.world{position:relative;width:0;height:0;transform-style:preserve-3d;transform:translateY(40px) rotateX(-22deg) rotateY(-32deg) scale(var(--zoom,1.45))}
+.world *{transform-style:preserve-3d;box-sizing:border-box}
+.shadow{position:absolute;left:-190px;top:-185px;width:380px;height:370px;border-radius:50%;background:radial-gradient(closest-side,rgba(60,40,25,.28),rgba(60,40,25,0));transform:translateY(2px) rotateX(90deg)}
+.f{position:absolute;backface-visibility:visible;transition:opacity .5s}
+.floor{left:-120px;top:-150px;width:240px;height:300px;background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,0) 45%,rgba(0,0,0,.06)),repeating-linear-gradient(90deg,transparent 0 119px,rgba(90,85,78,.28) 119px 120px),#a9b0ad;transform:rotateX(90deg)}
+.fab-f{background:#f7eddc}
+.wall-end{width:240px;height:168px;left:-120px;top:-168px}
+.wall-side{width:300px;height:90px;left:-150px;top:-90px}
+.roof{width:146px;height:304px;left:0;top:-152px;transform-origin:0 50%}
+.roof.r{background:linear-gradient(90deg,#f3e6cf,#ecdcc0);transform:translateY(-168px) rotateZ(33deg) rotateX(90deg)}
+.roof.l{background:linear-gradient(270deg,#e4d3b6,#dcc9aa);transform:translateY(-168px) scaleX(-1) rotateZ(33deg) rotateX(90deg)}
+.roof::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 60px,rgba(120,90,60,.12) 60px 61px)}
+.wend-front{transform:translateZ(150px);background:#f7eddc}
+.wend-back{transform:translateZ(-150px) rotateY(180deg);background:#efe2cb}
+.wside-r{transform:rotateY(90deg) translateZ(120px);background:#f1e4cd}
+.wside-l{transform:rotateY(-90deg) translateZ(120px);background:#e9dcc3}
+.win i{position:absolute;left:60px;top:18px;width:40px;height:46px;background:repeating-linear-gradient(45deg,#8fa3a3 0 2px,#a9bbb9 2px 4px);border:3px solid #c9b48f;border-radius:3px}
+.bar{position:absolute;background:#a3aeb1;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);opacity:0;transition:opacity .5s;pointer-events:none}
+.world.m-frame .bar,.world.m-int .bar{opacity:1}
+.world.m-frame .fab-f{opacity:.06}
+.world.m-int .roof,.world.m-int .wend-front,.world.m-int .wside-r{opacity:0}
+.world.m-int .wend-back,.world.m-int .wside-l{opacity:.95}
+.furn .f{opacity:0;transition:opacity .5s}
+.world.m-int .furn .f{opacity:1}
+.world.m-fab .furn .f{opacity:0}
+.world.m-fab .furn .door-peek{opacity:1}
+.v-ui{position:absolute;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;flex-wrap:wrap}
+.v-ui .seg-opt{font-size:14px;padding:8px 14px}
+.v-hint{position:absolute;top:14px;inset-inline:0;text-align:center;font-size:13px;color:var(--brown);opacity:.85;pointer-events:none}
+.v-ui .tool{display:flex;gap:8px}
+.badge-sim{position:absolute;top:12px;inset-inline-start:14px;font-size:12px;background:#fff8;border-radius:999px;padding:4px 10px;color:var(--brown)}
+.specs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);margin-top:28px;align-items:start}
+.spec-t{width:100%;border-collapse:collapse;background:var(--color-surface);border-radius:20px;overflow:hidden}
+.spec-t th,.spec-t td{padding:14px 18px;text-align:start;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.spec-t th{width:38%;color:var(--orange-deep);font-weight:600}
+.spec-t tr:last-child>*{border-bottom:0}
+.draw{background:var(--color-surface);border-radius:20px;padding:18px}
+.draw svg{width:100%;height:auto;display:block}
+.draw figcaption{font-size:13px;margin-top:6px;text-align:center}
+.draw text{font-family:var(--he-body);font-size:13px;fill:var(--brown);font-weight:600}
+.price-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center;background:var(--color-surface);border-radius:28px;padding:clamp(22px,4vw,48px)}
+.price-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.price-card li{display:flex;gap:10px;align-items:flex-start;line-height:1.5}
+.price-card li svg{flex:none;color:var(--color-accent);margin-top:3px}
+.amount{font-family:var(--he-head);font-size:clamp(40px,6vw,68px);color:var(--orange-deep);line-height:1}
+.amount small{font-size:.35em;color:var(--brown)}
+.save{display:inline-block;margin-top:12px;background:var(--color-accent);color:var(--color-bg);padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px}
+.disc{width:100%;border-collapse:collapse;margin-top:18px;background:var(--color-bg);border-radius:16px;overflow:hidden;font-size:15px}
+.disc th,.disc td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--color-divider)}
+.disc thead th{font-size:12px;color:var(--brown);font-weight:600}
+.disc tbody th{text-align:start;font-weight:600;color:var(--brown)}
+.disc s{opacity:.6}
+.disc .off td,.disc .off th{color:var(--orange-deep)}
+.disc .hd th{background:color-mix(in srgb,var(--orange) 12%,var(--color-bg));color:var(--orange-deep);text-align:start;font-size:15px}
+.disc .sub td,.disc .sub th{border-bottom:0}
+.disc td{text-align:center;white-space:nowrap}
+@media (max-width:560px){.disc{font-size:13px}.disc th,.disc td{padding:9px 3px}.disc tbody th{width:25%;font-size:13px}.disc thead th{font-size:11px}}
+.disc .tot td,.disc .tot th{background:color-mix(in srgb,var(--color-accent) 14%,var(--color-bg));font-weight:700;border-bottom:0}
+.price-note{font-size:14px;margin-top:10px}
+.pc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-top:24px}
+.gal figure{margin:0;border-radius:24px;overflow:hidden;background:var(--color-surface)}
+.gal2 img{aspect-ratio:3/2}
+.gal img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:560px){.gal2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.q-hero,.specs,.price-card{grid-template-columns:minmax(0,1fr)}.v-ui{justify-content:center}}
+main,.wrap{font-size:18px}
+.q-hero .lead{font-size:clamp(19px,1.9vw,23px)}
+.chips li{font-size:17px}.q-meta{font-size:16px}.q-meta b{font-size:13px}
+.spec-t{font-size:18px}.price-card li{font-size:18px}.disc{font-size:17px}.disc thead th{font-size:13px}.price-note{font-size:16px}.save{font-size:16px}
+.draw text{font-size:15px}.gal+p,.sec p.muted{font-size:15px!important}
+@media print{.nav,.fab,.v-ui,.pc-actions{display:none}}
+</style>
+<style>
+.q-hero{grid-template-columns:minmax(0,1fr);gap:28px}.q-hero .preview{order:-1}.q-hero .preview img{max-height:78vh;object-fit:cover}
+.preview{border-radius:26px;overflow:hidden;background:#efe3d1;position:relative}
+.preview img{display:block;width:100%;height:auto}
+.preview .btn{position:absolute;inset-inline-start:14px;bottom:14px}
+.qty{width:100%;border-collapse:collapse;background:var(--color-surface);border-radius:20px;overflow:hidden}
+.qty th,.qty td{padding:13px 16px;text-align:start;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.qty th{color:var(--orange-deep);font-weight:600;font-size:15px}
+.qty td.n{text-align:center;white-space:nowrap}
+.qty tr:last-child>*{border-bottom:0}
+.qty tr.tot td,.qty tr.tot th{font-weight:800;background:color-mix(in srgb,var(--color-accent) 14%,var(--color-surface))}
+.tw{overflow-x:auto;border-radius:20px}
+</style>
+<style>
+/* WhatsApp stays pinned at the TOP of every page; the accessibility button stays at the bottom */
+.fab{top:12px!important;bottom:auto!important;left:12px!important;right:auto!important;z-index:60!important;animation:none!important;padding:9px 16px!important;font-size:15px!important;gap:6px!important}
+@media(max-width:700px){.fab{top:8px!important;left:8px!important;padding:7px 13px!important;font-size:14px!important}}
+</style>
+<style>
+.fab.fab-ic{width:46px;height:46px;min-height:0;padding:0!important;border-radius:50%!important;display:grid;place-items:center;background:#fff!important;border:2px solid #fff;box-shadow:0 8px 20px -6px rgba(30,70,40,.55)}
+.fab.fab-ic:hover{transform:scale(1.08)}
+@media(max-width:700px){.fab.fab-ic{width:42px;height:42px}.fab.fab-ic svg{width:30px;height:30px}}
+</style>
+<style>
+/* sticky floating pair: WhatsApp + accessibility, top-left, on every page (header itself is NOT sticky) */
+.fab.fab-ic{top:10px!important;left:10px!important;bottom:auto!important;right:auto!important}
+html .fda-btn{opacity:1!important;pointer-events:auto!important;top:10px!important;bottom:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;left:64px!important;right:auto!important;z-index:61!important;width:46px!important;height:46px!important;box-shadow:0 8px 20px -6px rgba(60,40,30,.5)!important}
+html .fda-panel{top:64px!important;bottom:auto!important;left:10px!important;right:auto!important;inset-inline-start:auto!important;inset-inline-end:auto!important;max-height:calc(100vh - 80px)!important}
+@media(max-width:700px){.fab.fab-ic{width:40px!important;height:40px!important;top:8px!important;left:8px!important}html .fda-btn{width:40px!important;height:40px!important;top:8px!important;left:56px!important}html .fda-panel{top:56px!important;left:8px!important}}
+</style>
+<style>
+/* centered bullet lists */
+.fit{text-align:center}
+.fit h4{text-align:center}
+.fit ul{padding:0!important;margin-inline:auto;display:grid;justify-items:center;gap:8px}
+.fit li{text-align:center;display:block;max-width:34em;padding-inline:0!important}
+.fit li::before{position:static!important;display:inline-block;vertical-align:middle;margin-inline-end:10px;transform:none!important}
+.features{justify-content:center!important;text-align:center}
+.inc>div:first-child{text-align:center}
+.inc ul{padding:0!important;display:grid;justify-items:center;gap:10px;max-width:none!important}
+.inc li{justify-content:center;text-align:center;display:flex;align-items:center;gap:10px}
+.m-head{text-align:center}
+.m-head .features{justify-content:center}
+.price-card ul{justify-items:center}
+.price-card li{justify-content:center;text-align:center}
+.chips{justify-content:center}
+</style>
+<style>
+/* centered headings + bullets on every screen size */
+h1,h2,h3,.sec-title,.kicker,.m-head,.m-head>*,.fit h4,.home-hero>div,.hero>div,.sp-q{text-align:center!important}
+.hero .row,.home-hero .row,.cover .row,.bell-hero .row{justify-content:center!important}
+.hero h2,.home-hero h2,.hero p,.home-hero p{margin-inline:auto}
+.why-item,.why-item h3,.why-item p{text-align:center!important}
+.why-item .dot{margin-inline:auto}
+.features,.chips,.thumbs,.sp-btns{justify-content:center!important}
+.fit,.fit ul,.fit li,.inc>div:first-child,.inc li,.price-card li{text-align:center!important}
+.fit ul,.inc ul,.price-card ul{padding:0!important;display:grid!important;justify-items:center!important}
+.fit li,.inc li,.price-card li{justify-content:center!important;max-width:34em}
+.cover h1,.cover p,.bell-hero h1,.bell-hero p{text-align:center!important;margin-inline:auto!important}
+.cover .bh-in,.bell-hero .bh-in{text-align:center}
+.cover h1{max-width:20ch}
+.faq summary{justify-content:space-between;text-align:start}
+.wa-band{text-align:center;justify-content:center!important}
+.wa-band>div{text-align:center}
+.sizepick .sp-head{justify-content:center!important;text-align:center}
+.sp-card{text-align:center}
+.sp-card dl div{text-align:center}
+@media(max-width:700px){
+.hero,.home-hero{text-align:center}
+.hero h1,.home-hero h1{text-align:center!important}
+.cat .in{text-align:center;justify-items:center}
+.whyus h2,.whyus .wcol{text-align:center}
+.talk,.team{text-align:center}
+.wa-band{flex-direction:column!important;align-items:center!important}
+.wa-band .btn{width:100%}
+footer{text-align:center!important;grid-template-columns:minmax(0,1fr)!important;justify-items:center}
+footer img{margin-inline:auto}
+.legal-links,.footer-legal{justify-content:center!important}
+}
+</style>
+<style>.logo-only{display:flex;justify-content:center;padding:18px 0 4px}.logo-only img{height:clamp(84px,12vw,120px);width:auto}</style>
+<style>.tw{overflow:visible!important}.tw table,.spec-t,.disc{min-width:0!important;width:100%!important;table-layout:fixed}.spec-t th{width:30%}.spec-t th,.spec-t td,.disc th,.disc td{overflow-wrap:anywhere;word-break:normal}@media(max-width:560px){.spec-t th,.spec-t td{padding:11px 12px;font-size:16px}.disc th,.disc td{padding:9px 6px;font-size:14px}.disc td{white-space:normal}.spec-t th{width:34%}}</style>
+<style>.dg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}.dg figure{margin:0;border-radius:22px;overflow:hidden;background:var(--color-surface);aspect-ratio:4/5}.dg .g1{grid-column:span 3;aspect-ratio:16/8}.dg img{width:100%;height:100%;object-fit:cover;display:block}@media(max-width:700px){.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.dg .g1{grid-column:span 2;aspect-ratio:16/10}.dg figure:nth-child(4){grid-column:span 2;aspect-ratio:16/10}}</style>
+</head>
+<body>
+<header class="logo-only"><img src="../../assets/16677773.png" alt="Alternative Dream"></header>
+<div class="wrap">
+<header class="q-hero">
+<div>
+<span class="kicker">הצעת מחיר</span>
+<h1>כיפה גאודזית <em>2V</em> בקוטר <bdi dir="ltr">6</bdi> מ׳ – כיסוי בד בלבד</h1>
+<p class="lead">כיסוי בד חתוך ומוכן להרכבה, בד PVC 850 גרם מצופה דו־צדדית, בלאק־אאוט ועמיד UV. ההצעה כוללת את הכיסוי בלבד.</p>
+<ul class="chips">
+<li>קוטר 6 מ׳</li><li>בד PVC 850 גרם</li><li>כיסוי בלבד</li>
+</ul>
+<div class="q-meta">
+<div><b>תאריך</b><span id="qdate"></span></div>
+<div><b>תוקף ההצעה</b>30 יום</div>
+</div>
+</div>
+<div class="preview">
+<img src="../quote/dome-camp.jpg" alt="כיפות גאודזיות במתחם אירוח במדבר" width="1400" height="622">
+</div>
+</header>
+
+<section class="sec" id="gal" style="padding-top:0">
+<span class="kicker">כך זה נראה</span>
+<h2 class="sec-title">הכיפה בשטח ומבפנים</h2>
+<div class="dg">
+<figure class="g1"><img src="../quote/dome-inside.jpg" alt="פנים כיפה גאודזית מרוהט" loading="lazy"></figure>
+<figure><img src="../quote/dome-forest.jpg" alt="כיפה בין עצים" loading="lazy"></figure>
+<figure><img src="../quote/dome-night2.jpg" alt="כיפה מוארת בלילה" loading="lazy"></figure>
+<figure><img src="../quote/dome-stars.jpg" alt="כיפה מתחת לשמי כוכבים" loading="lazy"></figure>
+</div>
+<p class="muted" style="font-size:14px;margin:10px 0 0;text-align:center">תמונות להמחשה</p>
+</section>
+
+<section class="sec" id="spec" style="padding-top:calc(1.5*var(--lead))">
+<span class="kicker">המפרט</span>
+<h2 class="sec-title">מה בדיוק מקבלים</h2>
+<div class="tw"><table class="spec-t">
+<tr><th>מוצר</th><td>כיסוי בד לכיפה גאודזית 2V (חצי כדור) בקוטר 6 מ׳, כיסוי בלבד</td></tr>
+<tr><th>מידות הכיפה</th><td>קוטר 6.00 מ׳ · גובה 3.00 מ׳ · שטח רצפה כ־28 מ״ר</td></tr>
+<tr><th>משולשי בד</th><td>40 משולשים בשני סוגים:<br>30 משולשי A, שווי־שוקיים: <bdi dir="ltr">164 / 164 / 185</bdi> ס״מ<br>10 משולשי B, שווי־צלעות: <bdi dir="ltr">185 / 185 / 185</bdi> ס״מ</td></tr>
+<tr><th>שטח הבד</th><td>שטח נטו כ־52.5 מ״ר · שטח חיתוך עם תוספת תפר של 4 ס״מ מכל צלע כ־61 מ״ר, לפני פחת</td></tr>
+<tr><th>בד</th><td>PVC 850 גרם מצופה דו־צדדית, בלאק־אאוט (חוסם אור), עמיד UV, עובי 0.67 מ״מ</td></tr>
+<tr><th>אטימות</th><td>הכיפה כולה מבד, אטומה לגמרי (מומלץ)</td></tr>
+<tr><th>אופציה</th><td>חלק שקוף מ־PVC שקוף 950 גרם, עובי 0.75 מ״מ, כמו בחלק מהתמונות. <b>פחות מומלץ:</b> לחלק השקוף תוחלת חיים קצרה יותר מהבד, ולכן עדיף כיסוי בד מלא.</td></tr>
+<tr><th>תפרים</th><td>תפרים מחוזקים עם תוספת תפר</td></tr>
+<tr><th>לא כלול</th><td>שלד הכיפה, הקמה ואספקה</td></tr>
+</table></div>
+</section>
+
+
+
+<section class="sec" id="price" style="padding-top:0">
+<span class="kicker">ההצעה</span>
+<h2 class="sec-title">הצעת המחיר</h2>
+<div class="price-card">
+<div>
+<ul>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>כיסוי בד לכיפה 2V בקוטר 6 מ׳</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>40 משולשי בד חתוכים ומוכנים להרכבה</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>PVC 850 גרם, בלאק־אאוט ועמיד UV</li>
+<li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>תפרים מחוזקים</li>
+</ul>
+</div>
+<div>
+<div class="muted">סה״כ לתשלום</div>
+<div class="amount" id="amount">15,000 ₪ <small>פטור ממע״מ</small></div>
+<p class="price-note muted">המחיר פטור ממע״מ, לכיסוי בלבד, ואינו כולל שלד, הקמה ואספקה. זמן ייצור ייקבע בשיחה עם נציג. ההצעה בתוקף ל־30 יום.</p>
+<div class="pc-actions">
+<a id="wa" class="btn btn-primary" href="#">אישור ההצעה בוואטסאפ</a>
+<button class="btn btn-secondary" type="button" onclick="print()">הדפסה / PDF</button>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div>
+<p class="brand">Alternative Dream</p>
+<p><strong>צרו איתנו קשר עכשיו:</strong><br><a class="ltr" href="tel:0532277714">0532277714</a> · <a class="ltr" href="mailto:altnativedream@gmail.com">altnativedream@gmail.com</a></p>
+<p class="muted">שעות פעילות: ראשון–חמישי 9:00–18:00 | שישי 9:00–13:00</p>
+<p class="muted biz">Alternative Dream · אוריאל חלה חי · עוסק/ח.פ. 301294922 · ברנר 10, רמלה</p>
+</div>
+<img src="../../assets/3a1d3897.png" alt="">
+</footer>
+</div>
+<script>
+(function(){
+document.getElementById('wa').href='https://wa.me/972515490099?text='+encodeURIComponent('שלום, אני רוצה לאשר הצעת מחיר לכיסוי בד לכיפה גאודזית 2V בקוטר 6 מ׳ – 15,000 ₪ פטור ממע״מ');
+var d=new Date();document.getElementById('qdate').textContent=d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear();
+})();
+</script>
+</body></html>
