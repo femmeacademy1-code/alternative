@@ -187,6 +187,22 @@ footer img{margin-inline:auto}
 <style>.tw{overflow:visible!important}.tw table,.spec-t,.disc{min-width:0!important;width:100%!important;table-layout:fixed}.spec-t th{width:30%}.spec-t th,.spec-t td,.disc th,.disc td{overflow-wrap:anywhere;word-break:normal}@media(max-width:560px){.spec-t th,.spec-t td{padding:11px 12px;font-size:16px}.disc th,.disc td{padding:9px 6px;font-size:14px}.disc td{white-space:normal}.spec-t th{width:34%}}</style>
 <style>.dg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}.dg figure{margin:0;border-radius:22px;overflow:hidden;background:var(--color-surface);aspect-ratio:4/5}.dg .g1{grid-column:span 3;aspect-ratio:16/8}.dg img{width:100%;height:100%;object-fit:cover;display:block}@media(max-width:700px){.dg{grid-template-columns:repeat(2,minmax(0,1fr))}.dg .g1{grid-column:span 2;aspect-ratio:16/10}.dg figure:nth-child(4){grid-column:span 2;aspect-ratio:16/10}}</style>
 <style>.dg.two{grid-template-columns:repeat(2,minmax(0,1fr))}.dg.two figure{aspect-ratio:4/5}@media(max-width:560px){.dg.two{grid-template-columns:minmax(0,1fr)}}</style>
+<style>
+.layers{display:grid;gap:14px;margin-top:24px}
+.ly{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;align-items:start;background:var(--color-surface);border-radius:22px;padding:20px 22px}
+.ly .no{width:56px;height:56px;border-radius:50%;background:var(--orange-deep);color:var(--color-bg);display:grid;place-items:center;font-family:var(--he-head);font-size:26px}
+.ly h3{font-size:clamp(22px,2.6vw,28px);margin:0 0 4px;text-align:start!important;color:var(--brown)}
+.ly .pos{font-size:15px;color:var(--orange-deep);font-weight:600;margin-bottom:6px}
+.ly p{margin:0;font-size:17px;line-height:1.6}
+.ly .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding:0;list-style:none}
+.ly .tags li{background:color-mix(in srgb,var(--orange) 14%,var(--color-bg));color:var(--brown);padding:5px 12px;border-radius:999px;font-weight:600;font-size:15px}
+.ly.off{background:transparent;border:2px dashed var(--color-divider);opacity:.9}
+.ly.off .no{background:transparent;border:2px dashed var(--brown);color:var(--brown)}
+.ly .st{display:inline-block;margin-top:10px;font-weight:700;font-size:15px;border-radius:999px;padding:4px 12px}
+.ly .yes{background:var(--color-accent);color:var(--color-bg)}
+.ly .no2{background:var(--color-divider);color:var(--brown)}
+@media(max-width:560px){.ly{grid-template-columns:1fr;gap:10px}.ly .no{width:46px;height:46px;font-size:22px}}
+</style>
 </head>
 <body>
 <header class="logo-only"><img src="../../assets/16677773.png" alt="Alternative Dream"></header>
@@ -223,15 +239,38 @@ footer img{margin-inline:auto}
 <div class="tw"><table class="spec-t">
 <tr><th>מוצר</th><td>כיסוי חיצוני ופנימי ליורט בקוטר 6 מ׳. היורט עצמו אינו כלול</td></tr>
 <tr><th>מידות</th><td>קוטר 6 מ׳ · שטח כ־28 מ״ר · גובה קיר 190 ס״מ · גובה מרכזי 370 ס״מ</td></tr>
-<tr><th>כיסוי חיצוני</th><td>פוליאסטר אטום 850 גר׳/מ״ר, לקיר ולגג. אטום למים (≥5,000 מ״מ), עמיד UV ומעכב בעירה לפי תקן NFPA 701. 20 צבעים לבחירה</td></tr>
-<tr><th>כיסוי פנימי</th><td>קנבס 50% כותנה ו־50% קנבוס, 230 גר׳/מ״ר. 9 צבעים לבחירה</td></tr>
+<tr><th>כיסוי חיצוני</th><td>פוליאסטר אטום 850 גר׳/מ״ר, לקיר ולגג (שכבה 1)</td></tr>
+<tr><th>כיסוי פנימי</th><td>קנבס 50% כותנה ו־50% קנבוס, 230 גר׳/מ״ר (שכבה 3)</td></tr>
 <tr><th>צבעים</th><td>אפשר לבחור צבע לקיר, לגג ולבד הפנימי</td></tr>
 <tr><th>התאמה</th><td>מתאים לשלד יורט בקוטר 6 מ׳, או להחלפת כיסוי קיים. לתפירה מדויקת צריך למסור מידות ומיקומים מדויקים של הדלת והחלונות</td></tr>
-<tr><th>לא כלול</th><td>שלד עץ, דלת וחלונות, כיפת כוכבים, תוספות נלוות (כמו שכבת בידוד), הקמה ואספקה</td></tr>
+<tr><th>לא כלול</th><td>שלד עץ, דלת וחלונות, כיפת כוכבים, שכבת הבידוד (לבד צמר), הקמה ואספקה</td></tr>
 </table></div>
 </section>
 
 
+
+<section class="sec" id="layers" style="padding-top:0">
+<span class="kicker">מבנה הכיסוי</span>
+<h2 class="sec-title">שכבות הכיסוי</h2>
+<p class="muted" style="text-align:center;margin:0">מהחוץ פנימה</p>
+<div class="layers">
+<article class="ly"><span class="no">1</span><div>
+<h3>כיסוי חיצוני: פוליאסטר</h3><div class="pos">השכבה שמול מזג האוויר</div>
+<p>בד פוליאסטר עבה שמגן מפני גשם, שמש ורוח. אטום למים, עמיד לקרינת UV ומעכב בעירה לפי תקן NFPA 701. מכסה את הקיר ואת הגג.</p>
+<ul class="tags"><li>850 גר׳/מ״ר</li><li>אטימות ≥5,000 מ״מ</li><li>20 צבעים לבחירה</li></ul>
+<span class="st yes">כלול בהצעה</span></div></article>
+<article class="ly off"><span class="no">2</span><div>
+<h3>שכבת בידוד: לבד צמר</h3><div class="pos">השכבה שבאמצע</div>
+<p>שכבה עבה ששומרת על חום בחורף ועל קרירות בקיץ, ועמידה ללחות. נמצאת ביורט המלא, בין הכיסוי החיצוני לפנימי.</p>
+<ul class="tags"><li>1,130 גר׳/מ״ר</li></ul>
+<span class="st no2">לא כלולה בהצעה זו</span></div></article>
+<article class="ly"><span class="no">3</span><div>
+<h3>כיסוי פנימי: קנבס</h3><div class="pos">מה שרואים מבפנים</div>
+<p>קנבס טבעי ונושם מ־50% כותנה ו־50% קנבוס. נותן מראה רך וחם מבפנים.</p>
+<ul class="tags"><li>230 גר׳/מ״ר</li><li>9 צבעים לבחירה</li></ul>
+<span class="st yes">כלול בהצעה</span></div></article>
+</div>
+</section>
 
 <section class="sec" id="price" style="padding-top:0">
 <span class="kicker">ההצעה</span>
